@@ -64,9 +64,7 @@
     "postcss-loader": "^0.8.0"
   },
   "dependencies": {
-    "core-js": "^1.2.6",
     "lodash": "^3.10.1",
-    "normalize.css": "^3.0.3",
     "react": "^0.14.0",
     "react-addons-test-utils": "^0.14.0",
     "react-dom": "^0.14.0"
