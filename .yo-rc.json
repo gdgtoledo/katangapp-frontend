@@ -1,0 +1,7 @@
+{
+  "generator-react-webpack": {
+    "appName": "katangappFront",
+    "style": "sass",
+    "postcss": true
+  }
+}
