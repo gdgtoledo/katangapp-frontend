@@ -1,5 +1,5 @@
 require('normalize.css');
-require('styles/app.css');
+require('./app.scss');
 
 import 'core-js/fn/object/assign';
 import React from 'react';
@@ -19,5 +19,3 @@ App.defaultProps = {
 };
 
 ReactDOM.render(<App />, document.getElementById('app'));
-
-//export default AppComponent;
