@@ -2,8 +2,21 @@
 
 Katangapp is opensource app to control and view Toledo bus stops timing.
 
+## Install
+
+1. To use Katangapp you need **clone** or **fork** this repo and install
+
+2. You only need install [nodejs](https://nodejs.org/en/) `version > 4.0` and npm.
+
+3. Then you only need:
+
+	```
+	npm install
+	```
+
 ## Generating new components
-```bash
+
+```
 # After setup of course :)
 # cd my-new-project
 yo react-webpack:component my/namespaced/components/name
@@ -12,6 +25,7 @@ yo react-webpack:component my/namespaced/components/name
 The above command will create a new component, as well as its stylesheet and a basic testcase.
 
 ## Generating new stateless functional components
+
 ```
 yo react-webpack:component my/namespaced/components/name --stateless
 ```
@@ -24,11 +38,14 @@ ___Note___: You will still be able to set properties for stateless components!
 If you have enabled [PostCSS](https://github.com/postcss/postcss) at generation time, install your PostCSS plugins via npm and *require* it in **postcss** function in *cfg/base.js*.
 
 Example for autoprefixer:
-```bash
+
+```
 cd my-new-project
 npm install autoprefixer
 ```
+
 Require in *cfg/base.js*
+
 ```JavaScript
 ...
 postcss: function () {
@@ -43,6 +60,7 @@ postcss: function () {
 
 ## Usage
 The following commands are available in your project:
+
 ```bash
 # Start for development
 npm start # or
