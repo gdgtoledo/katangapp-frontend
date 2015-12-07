@@ -24,7 +24,7 @@
   "author": "Craftsmanship Toledo",
   "devDependencies": {
     "babel-core": "^6.0.0",
-    "babel-eslint": "^5.0.0-beta4"
+    "babel-eslint": "^5.0.0-beta4",
     "babel-loader": "^6.0.0",
     "babel-preset-es2015": "^6.0.15",
     "babel-preset-react": "^6.0.15",
