@@ -1,9 +1,11 @@
 require('normalize.css');
 require('styles/app.css');
 
+import 'core-js/fn/object/assign';
 import React from 'react';
+import ReactDOM from 'react-dom';
 
-class AppComponent extends React.Component {
+class App extends React.Component {
   render() {
     return (
       <main>
@@ -13,7 +15,9 @@ class AppComponent extends React.Component {
   }
 }
 
-AppComponent.defaultProps = {
+App.defaultProps = {
 };
 
-export default AppComponent;
+ReactDOM.render(<App />, document.getElementById('app'));
+
+//export default AppComponent;
