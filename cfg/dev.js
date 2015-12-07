@@ -13,7 +13,7 @@ var config = _.merge({
     'webpack/hot/only-dev-server',
     './src/components/app'
   ],
-  cache: true,
+  cache: false,
   devtool: 'eval',
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
