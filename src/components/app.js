@@ -1,7 +1,5 @@
-require('normalize.css');
 require('./app.scss');
 
-import 'core-js/fn/object/assign';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
