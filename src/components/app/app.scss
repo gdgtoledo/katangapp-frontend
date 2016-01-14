@@ -1,0 +1,32 @@
+@import '/styles/setup',
+        '/styles/colors',
+        '/styles/utilities';
+
+@import '../logo/logo',
+        '../buttons/btn',
+        '../buttons/circle',
+        '../geolocalizer/geolocalizer',
+        '../slider/slider',
+        '../home/home';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-size: $base---font-size;
+}
+
+.ktg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+    padding: 3vh 3vw;
+
+    background-image: url('../../images/home.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
