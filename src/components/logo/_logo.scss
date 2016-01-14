@@ -1,0 +1,15 @@
+.#{$namespace}-logo {
+    text-align: center;
+
+    &__icon {
+        width: 40%;
+        margin-bottom: 10px;
+    }
+
+    &__tipo {
+        color: white;
+        font-weight: 300;
+        font-size: 30px;
+    }
+
+}
