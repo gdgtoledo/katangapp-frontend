@@ -1,0 +1,117 @@
+.#{$namespace}-slider {
+    color: white;
+
+    input[type=range] {
+        margin: 0 20px;
+
+        -webkit-appearance: none;
+        width: 30vw;
+        cursor: pointer;
+
+        &::-webkit-slider-runnable-track {
+            height: 1px;
+
+            background: white;
+
+            border: none;
+        }
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+
+            height: 16px;
+            width: 16px;
+
+            margin-top: -8px;
+            border: none;
+            border-radius: 50%;
+
+            background: $color-primary;
+        }
+
+        &::-moz-range-track {
+            height: 1px;
+
+            background: white;
+
+            border: none;
+        }
+
+        &::-moz-range-thumb {
+            height: 16px;
+            width: 16px;
+
+            background: $color-primary;
+
+            border: none;
+            border-radius: 50%;
+        }
+
+        &:-moz-focusring {
+            outline: 1px solid white;
+            outline-offset: -1px;
+        }
+
+        &::-ms-track {
+            height: 1px;
+
+            background: transparent;
+            color: transparent;
+
+            border-color: transparent;
+            border-width: 6px 0;
+        }
+
+        &::-ms-fill-lower {
+            background: #777;
+            border-radius: 10px;
+        }
+
+        &::-ms-fill-upper {
+            background: white;
+            border-radius: 10px;
+        }
+
+        ::-ms-thumb {
+            height: 16px;
+            width: 16px;
+
+            border: none;
+            border-radius: 50%;
+            background: $color-primary;
+        }
+
+        &::-ms-fill-lower {
+            background: #888;
+        }
+
+        &:focus {
+            outline: none;
+
+            &::-webkit-slider-runnable-track {
+                background: #ccc;
+            }
+
+            &::-ms-fill-upper {
+                background: #ccc;
+            }
+        }
+    }
+
+    output {
+        display: block;
+        margin-top: 4vh;
+
+        color: white;
+
+        font-size: rem(36px);
+        font-weight: lighter;
+        text-align: center;
+
+        transition: all 0.5s ease-out;
+    }
+
+    &__output-unit {
+        font-size: rem(20px);
+    }
+}
