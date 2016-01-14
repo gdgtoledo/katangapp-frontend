@@ -3,15 +3,15 @@ require('./app.scss');
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class App extends React.Component {
-  render() {
+var Home = require('../home/home');
+
+var App = React.createClass ({
+  render: function () {
     return (
-      <main>
-        Katangapp is now to start
-      </main>
+       	<Home />
     );
   }
-}
+});
 
 App.defaultProps = {
 };

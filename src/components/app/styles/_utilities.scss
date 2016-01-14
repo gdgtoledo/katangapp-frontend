@@ -1,0 +1,22 @@
+//
+// Functions
+//
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function rem($size, $base: $base---font-size) {
+
+    $value: null;
+
+    @if type-of($size) != number {
+        $value: $size;
+    } @else {
+        $value: strip-unit($size) / strip-unit($base) * 1rem;
+    }
+
+    @if ($value == 0rem) { $value: 0; }
+
+    @return $value;
+}
