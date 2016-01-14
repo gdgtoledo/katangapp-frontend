@@ -7,7 +7,7 @@ module.exports = {
   port: port,
   debug: true,
   output: {
-    path: path.join(__dirname, '/../dist/assets'),
+    path: path.join(__dirname, '/../dist/assets/app/'),
     filename: 'app.js',
     publicPath: publicPath
   },
@@ -30,8 +30,9 @@ module.exports = {
       components: srcPath + '/components/',
       sources: srcPath + '/sources/',
       stores: srcPath + '/stores/',
-      styles: srcPath + '/styles/',
       calls: srcPath + '/calls/',
+      images: srcPath + '/images/',
+      icons: srcPath + '/icons/',
       config: srcPath + '/config/' + process.env.REACT_WEBPACK_ENV
     }
   },
