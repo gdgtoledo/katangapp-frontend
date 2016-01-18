@@ -28,3 +28,6 @@ node_modules
 
 # Bower
 bower_components/
+
+#Mac trash
+.DS_Store
