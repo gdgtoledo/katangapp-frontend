@@ -4,7 +4,10 @@
   "version": "0.1.0",
   "description": "App to can view Toledo bus stops timing",
   "main": "",
-  "scripts": {},
+  "scripts": {
+  	"build": "webpack",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --inline --content-base build"
+  },
   "repository": "",
   "keywords": [],
   "author": "Craftsmanship Toledo",
