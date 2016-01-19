@@ -1,48 +1,43 @@
-'use strict';
-
 var path = require('path');
-var args = require('minimist')(process.argv.slice(2));
 
-// List of allowed environments
-var allowedEnvs = ['dev', 'dist', 'test'];
+var srcPath = path.join(__dirname, 'src');
 
-// Set the correct environment
-var env;
-if(args._.length > 0 && args._.indexOf('start') !== -1) {
-  env = 'test';
-} else if (args.env) {
-  env = args.env;
-} else {
-  env = 'dev';
-}
-process.env.REACT_WEBPACK_ENV = env;
-
-// Get available configurations
-var configs = {
-  base: require(path.join(__dirname, 'cfg/base')),
-  dev: require(path.join(__dirname, 'cfg/dev')),
-  dist: require(path.join(__dirname, 'cfg/dist')),
-  test: require(path.join(__dirname, 'cfg/test'))
+module.exports = {
+    entry: [
+      'webpack/hot/dev-server',
+      'webpack-dev-server/client?http://localhost:8080',
+      path.resolve(__dirname, 'src/components/app/app.js')
+    ],
+    resolve: {
+      extensions: ['', '.js', '.jsx']
+    },
+    output: {
+        path: path.resolve(__dirname, 'build'),
+        filename: 'bundle.js',
+    },
+    module: {
+      preLoaders: [{
+          test: /\.(js|jsx)$/,
+          include: srcPath,
+          loader: 'babel!eslint-loader'
+        }],
+      loaders: [
+        {
+          test: /\.css$/,
+          loader: 'style-loader!css-loader!postcss-loader'
+        },
+        {
+          test: /\.sass/,
+          loader: 'style-loader!css-loader!postcss-loader!sass-loader?outputStyle=expanded&indentedSyntax'
+        },
+        {
+          test: /\.scss/,
+          loader: 'style-loader!css-loader!postcss-loader!sass-loader?outputStyle=expanded'
+        },
+        {
+          test: /\.(png|jpg|gif|woff|woff2)$/,
+          loader: 'url-loader?limit=8192'
+        }
+      ]
+    },
 };
-
-/**
- * Get an allowed environment
- * @param  {String}  env
- * @return {String}
- */
-function getValidEnv(env) {
-  var isValid = env && env.length > 0 && allowedEnvs.indexOf(env) !== -1;
-  return isValid ? env : 'dev';
-}
-
-/**
- * Build the webpack configuration
- * @param  {String} env Environment to use
- * @return {Object} Webpack config
- */
-function buildConfig(env) {
-  var usedEnv = getValidEnv(env);
-  return configs[usedEnv];
-}
-
-module.exports = buildConfig(env);
