@@ -14,12 +14,10 @@ var Slider = React.createClass ({
   },
   showMeters: function (event) {
     this.state.styles.output.opacity = '1';
-    console.log('salida ON: ' + this.state.styles.output.opacity);
     this.render();
     event.preventDefault();
   },
   hideMeters: function (event) {
-    console.log('salida OFF: ' + this.state.styles.output.opacity);
     this.state.styles.output.opacity = '0.3';
     this.render();
     event.preventDefault();
@@ -27,8 +25,6 @@ var Slider = React.createClass ({
   getMeters: function (event) {
     var meters = ReactDOM.findDOMNode(this.refs.metersAround).value;
     this.setState({meters: meters});
-    //console.log('la clave introducida es: ' + meters );
-    //console.log('el state ahora es: ' + this.state.meters );
     this.showMeters(event);
     this.render();
     event.preventDefault();
