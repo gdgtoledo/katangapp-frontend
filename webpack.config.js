@@ -8,6 +8,9 @@ module.exports = {
       'webpack-dev-server/client?http://localhost:8080',
       path.resolve(__dirname, 'src/components/app/app.js')
     ],
+    resolve: {
+      extensions: ['', '.js', '.jsx']
+    },
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js',
