@@ -1,14 +1,14 @@
 # Katangapp
 
-Katangapp is opensource app to control and view Toledo bus stops timing.
+Katangapp is an opensource app to control and view Toledo's bus stops timing.
 
 ## Install
 
-1. To use Katangapp you need **clone** or **fork** this repo and install
+1. To use Katangapp you need to **clone** or to **fork** this repo and install
 
-2. You only need install [nodejs](https://nodejs.org/en/) `version > 4.0` and npm.
+2. You only need to install [nodejs](https://nodejs.org/en/) `version > 4.0` and npm.
 
-3. Then you only need:
+3. Then you only need to execute:
 
 	```
 	npm install
@@ -86,7 +86,7 @@ npm run copy
 ```
 
 ### Naming Components
-We have opted to follow [@floydophone](https://twitter.com/floydophone) convention of uppercase for component file naming e.g. [Component.js](https://github.com/petehunt/ReactHack/tree/master/src/components). I am open to suggestions if there is a general objection to this decision.
+We have opted to follow [@floydophone](https://twitter.com/floydophone) convention of uppercase for component file naming e.g. [Component.js](https://github.com/petehunt/ReactHack/tree/master/src/components). We are open to suggestions if there is a general objection to this decision.
 
 ### Modules
 Each component is a module and can be required using the [Webpack](http://webpack.github.io/) module system. [Webpack](http://webpack.github.io/) uses [Loaders](http://webpack.github.io/docs/loaders.html) which means you can also require CSS and a host of other file types. Read the [Webpack documentation](http://webpack.github.io/docs/home.html) to find out more.
