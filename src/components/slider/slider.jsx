@@ -45,7 +45,7 @@ var Slider = React.createClass ({
           onDragend={this.hideMeters}
           onChange={this.getMeters}/>
         <output
-          for="metersAround"
+          htmlFor="metersAround"
           ref="showMeters"
           style={this.state.styles.output}>
             {this.state.meters}
