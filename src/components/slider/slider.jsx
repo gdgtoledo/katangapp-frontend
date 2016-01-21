@@ -8,14 +8,14 @@ var Slider = React.createClass ({
     step: React.PropTypes.string,
     meters: React.PropTypes.string.isRequired
   },
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       min: '0',
       max: '1000',
       step: '25'
     }
   },
-  getInitialState: function() {
+  getInitialState: function () {
     return {
       meters: this.props.meters,
       active: false
