@@ -2,52 +2,54 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 var Slider = React.createClass ({
+  propTypes: {
+    min: React.PropTypes.string,
+    max: React.PropTypes.string,
+    step: React.PropTypes.string,
+    meters: React.PropTypes.string.isRequired
+  },
+  getDefaultProps: function() {
+    return {
+      min: '0',
+      max: '1000',
+      step: '25'
+    }
+  },
   getInitialState: function() {
     return {
-      meters: '12',
-      styles: {
-        output: {
-          opacity: '0.3'
-        }
-      }
+      meters: this.props.meters,
+      active: false
     }
   },
   showMeters: function (event) {
-    this.state.styles.output.opacity = '1';
-    this.render();
-    event.preventDefault();
+    console.log('drag in');
+    this.setState({active: true});
   },
   hideMeters: function (event) {
-    this.state.styles.output.opacity = '0.3';
-    this.render();
-    event.preventDefault();
+    this.setState({active: false});
   },
   getMeters: function (event) {
     var meters = ReactDOM.findDOMNode(this.refs.metersAround).value;
     this.setState({meters: meters});
-    this.showMeters(event);
-    this.render();
-    event.preventDefault();
   },
   render: function () {
     return (
-      <div id="slider" className="ktg-slider">
+      <div id="ktg-slider" className="ktg-slider">
         <input
           name="metersAround"
           ref="metersAround"
-          id="slide"
           type="range"
-          min="0"
-          max="1000"
-          step="25"
+          min={this.props.min}
+          max={this.props.max}
+          step={this.props.step}
           value={this.state.meters}
-          onDragstart={this.showMeters}
-          onDragend={this.hideMeters}
+          onFocus={this.showMeters}
+          onBlur={this.hideMeters}
           onChange={this.getMeters}/>
         <output
           for="metersAround"
           ref="showMeters"
-          style={this.state.styles.output}>
+          className={this.state.active ? 'is-active' : ''}>
             {this.state.meters}
             <span className="ktg-slider__output-unit">metros</span>
         </output>
