@@ -101,6 +101,7 @@
     output {
         display: block;
         margin-top: 4vh;
+        opacity: 0.3;
 
         color: white;
 
@@ -109,6 +110,11 @@
         text-align: center;
 
         transition: all 0.5s ease-out;
+
+        &.is-active {
+            opacity: 1;
+        }
+
     }
 
     &__output-unit {
