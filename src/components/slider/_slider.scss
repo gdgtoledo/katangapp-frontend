@@ -1,4 +1,6 @@
-.#{$namespace}-slider {
+#{$this}: #{$namespace}-slider;
+
+.#{$this} {
     color: white;
 
     input[type=range] {
@@ -98,7 +100,7 @@
         }
     }
 
-    output {
+    &__output {
         display: block;
         margin-top: 4vh;
         opacity: 0.3;
