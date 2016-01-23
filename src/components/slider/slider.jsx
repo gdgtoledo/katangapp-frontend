@@ -22,7 +22,6 @@ var Slider = React.createClass ({
     }
   },
   showMeters: function (event) {
-    console.log('drag in');
     this.setState({active: true});
   },
   hideMeters: function (event) {
