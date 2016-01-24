@@ -48,7 +48,7 @@ var Slider = React.createClass ({
         <output
           for="metersAround"
           ref="showMeters"
-          className={'ktg-slider__output ' + this.state.active ? 'is-active' : ''}>
+          className={this.state.active ? 'ktg-slider__output is-active' : 'ktg-slider__output'}>
             {this.state.meters}
             <span className="ktg-slider__output-unit">metros</span>
         </output>
