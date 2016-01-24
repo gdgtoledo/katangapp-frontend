@@ -13,7 +13,7 @@ var Home = React.createClass ({
           <LogoVerticalWhite />
     		</header>
         <form id="ktg-form-metersAround">
-      	 <Slider />
+      	 <Slider meters="50"/>
          <Geolocalizer />
         </form>
       </main>
