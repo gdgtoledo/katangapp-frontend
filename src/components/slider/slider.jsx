@@ -46,7 +46,7 @@ var Slider = React.createClass ({
           onBlur={this.hideMeters}
           onChange={this.getMeters}/>
         <output
-          for="metersAround"
+          htmlFor="metersAround"
           ref="showMeters"
           className={this.state.active ? 'ktg-slider__output is-active' : 'ktg-slider__output'}>
             {this.state.meters}
