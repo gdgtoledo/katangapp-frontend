@@ -2,6 +2,7 @@ $this: #{$namespace}-slider;
 
 .#{$this} {
     color: white;
+    text-align: center;
 
     input[type=range] {
         margin: 0 20px;
