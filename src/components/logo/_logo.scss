@@ -1,8 +1,12 @@
 .#{$namespace}-logo {
+    font-size: 0;
+    line-height: 0;
     text-align: center;
 
     &__icon {
-        width: 40%;
+        width: 156px;
+        height: 150px;
+        background-image: url('../../images/logo.png');
         margin-bottom: 10px;
     }
 
