@@ -1,13 +1,18 @@
 .#{$namespace}-logo {
-    font-size: 0;
-    line-height: 0;
     text-align: center;
+    margin: 0;
 
     &__icon {
-        width: 156px;
-        height: 150px;
+        display: block;
+        width: 122px;
+        height: 0;
+        padding-top: 163px;
+        overflow: hidden;
+
         background-image: url('../../images/logo.png');
-        margin-bottom: 10px;
+        background-repeat: no-repeat;
+
+        font-size: 0;
     }
 
     &__tipo {
