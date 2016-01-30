@@ -1,0 +1,14 @@
+.#{$namespace}-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__header {
+        margin-bottom: 8vh;
+    }
+
+    &__title {
+        font-size: 0;
+        line-height: 0;
+    }
+}

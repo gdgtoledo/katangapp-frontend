@@ -1,0 +1,28 @@
+.#{$namespace}-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__header {
+        margin-bottom: 8vh;
+    }
+
+    &__title {
+        font-size: 0;
+        line-height: 0;
+    }
+
+    ##{$namespace}-form-metersAround {
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+
+    .#{$namespace}-btn--geolocalizer {
+        margin-bottom: 8vh;
+    }
+
+    .#{$namespace}--slider {
+        margin-bottom: 3vh;
+    }
+}

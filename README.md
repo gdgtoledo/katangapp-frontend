@@ -1,2 +1,3 @@
-# katangapp-frontend
-App to can view Toledo bus stops timing
+# Katangapp
+
+Katangapp is opensource app to control and view Toledo bus stops timing.

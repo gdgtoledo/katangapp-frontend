@@ -1,0 +1,10 @@
+.#{$namespace}-btn--geolocalizer {
+    @extend .#{$namespace}-btn--circle;
+
+    &:before {
+        content: " ";
+        //background-image: url('../../icons/pin.svg');
+        background-size: 20px;
+        background-repeat: no-repeat;
+    }
+}
