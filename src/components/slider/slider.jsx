@@ -17,7 +17,6 @@ var Slider = React.createClass ({
   },
   getInitialState: function () {
     return {
-      meters: this.props.meters,
       active: false
     }
   },
@@ -27,9 +26,9 @@ var Slider = React.createClass ({
   hideMeters: function (event) {
     this.setState({active: false});
   },
-  getMeters: function (event) {
+  getMeters: function () {
     var meters = ReactDOM.findDOMNode(this.refs.metersAround).value;
-    this.setState({meters: meters});
+    this.props.updateMeters(meters);
   },
   render: function () {
     return (
@@ -41,7 +40,7 @@ var Slider = React.createClass ({
           min={this.props.min}
           max={this.props.max}
           step={this.props.step}
-          value={this.state.meters}
+          value={this.props.meters}
           onFocus={this.showMeters}
           onBlur={this.hideMeters}
           onChange={this.getMeters}/>
@@ -49,7 +48,7 @@ var Slider = React.createClass ({
           htmlFor="metersAround"
           ref="showMeters"
           className={this.state.active ? 'ktg-slider__output is-active' : 'ktg-slider__output'}>
-            {this.state.meters}
+            {this.props.meters}
             <span className="ktg-slider__output-unit">metros</span>
         </output>
 		  </div>
