@@ -1,5 +1,7 @@
 import React from 'react';
 
+var RouteResult = require('../route-result/route-result');
+
 var BusStopResult = React.createClass ({
   render: function () {
     return (
