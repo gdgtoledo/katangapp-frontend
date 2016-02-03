@@ -5,6 +5,14 @@ var Geolocalizer = require('../geolocalizer/geolocalizer');
 var Slider = require('../slider/slider');
 
 var Home = React.createClass ({
+  getInitialState: function () {
+    return {
+      meters: "50"
+    }
+  },
+  updateMeters: function (meters) {
+    this.setState({meters: meters});
+  },
   render: function () {
     return (
     	<main className="ktg-home">
@@ -12,7 +20,7 @@ var Home = React.createClass ({
         <LogoVerticalWhite />
     		</header>
         <form id="ktg-form-metersAround">
-      	 <Slider meters="50"/>
+      	 <Slider meters={this.state.meters} updateMeters={this.updateMeters}/>
          <Geolocalizer />
         </form>
       </main>
