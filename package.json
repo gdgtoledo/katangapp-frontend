@@ -5,7 +5,7 @@
   "description": "App to can view Toledo bus stops timing",
   "main": "",
   "scripts": {
-  	"build": "webpack",
+    "build": "webpack",
     "dev": "webpack-dev-server --devtool eval --progress --colors --hot --inline --content-base build"
   },
   "repository": "",
@@ -13,7 +13,9 @@
   "author": "Craftsmanship Toledo",
   "devDependencies": {
     "webpack": "^1.12.11",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "node-sass": "^3.4.2",
+    "breakpoint-sass": "^2.6.1"
   },
   "dependencies": {
     "babel-core": "^6.4.0",
@@ -26,7 +28,6 @@
     "eslint-loader": "^1.2.0",
     "eslint-plugin-react": "^3.15.0",
     "file-loader": "^0.8.5",
-    "node-sass": "^3.4.2",
     "postcss": "^5.0.14",
     "postcss-loader": "^0.8.0",
     "react": "^0.14.6",

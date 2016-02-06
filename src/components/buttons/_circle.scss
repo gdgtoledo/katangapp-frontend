@@ -12,6 +12,12 @@ $btn--circle--hover---background: $btn--primary--hover---background;
     border: none;
     cursor: pointer;
 
+    &--big {
+        line-height: 70px;
+        width: 70px;
+        height: 70px;
+    }
+
     &:hover {
         background: $btn--circle--hover---background;
     }

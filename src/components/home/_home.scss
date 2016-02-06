@@ -4,12 +4,34 @@
     align-items: center;
 
     &__header {
-        margin: 2vh 0 6vh 0;
+        margin: 1vh 0 12vh 0;
+
+        @include breakpoint($break-tablet) {
+            margin: 2vh 0 6vh 0;
+        }
     }
 
     &__title {
         font-size: 0;
         line-height: 0;
+    }
+
+    .#{$namespace}-logo {
+        animation: 1s ease-in-out 1.5s 1 forwards logo_animation;
+
+        @keyframes logo_animation {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.1);
+            }
+            100% {
+                opacity: 0.4;
+                transform: scale(0.8);
+            }
+        }
     }
 
     ##{$namespace}-form-metersAround {
@@ -18,11 +40,33 @@
         align-items: center
     }
 
-    .#{$namespace}-btn--geolocalizer {
-        margin-bottom: 8vh;
-    }
-
     .#{$namespace}--slider {
         margin-bottom: 3vh;
+    }
+
+    .#{$namespace}-btn--geolocalizer {
+
+        &--is-pulse {
+            animation: 1s ease-in-out 3.5s 2 forwards geolocalizer_pulse;
+
+            @keyframes geolocalizer_pulse {
+                0% {
+                    transform: scale(1);
+                }
+                25% {
+                    transform: scale(1.1);
+                }
+                50% {
+                    transform: scale(0.9);
+                }
+                75% {
+                    transform: scale(1.2);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+        }
+
     }
 }
