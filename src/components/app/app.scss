@@ -2,6 +2,8 @@
         '/styles/colors',
         '/styles/utilities';
 
+@import '../../../node_modules/breakpoint-sass/stylesheets/_breakpoint';
+
 @import '../logo/logo',
         '../buttons/btn',
         '../buttons/circle',
