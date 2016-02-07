@@ -1,6 +1,6 @@
 import React from 'react';
 
-var BusStopResult = require('./bus-stop-result/bus-stop-result');
+var BusStopsList = require('../components/bus-stops-list/bus-stops-list');
 
 var Results = React.createClass ({
   render: function () {
@@ -9,7 +9,7 @@ var Results = React.createClass ({
         <header className="ktg-results__header">
           <h1 className="ktg-results__title">Results</h1>
         </header>
-        <BusStopResult />
+        <BusStopsList />
       </articles>
     );
   }

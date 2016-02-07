@@ -4,15 +4,16 @@
 
 @import '../../../node_modules/breakpoint-sass/stylesheets/_breakpoint';
 
-@import '../logo/logo',
-        '../buttons/btn',
-        '../buttons/circle',
-        '../geolocalizer/geolocalizer',
-        '../slider/slider',
-        '../results/results',
-        '../results/bus-stop-result/bus-stop-result',
-        '../results/route-result/route-result',
-        '../home/home';
+@import '../components/logo/logo',
+        '../components/buttons/btn',
+        '../components/buttons/circle',
+        '../components/geolocalizer/geolocalizer',
+        '../components/slider/slider',
+        '../components/bus-stops-list/bus-stops-list',
+        '../components/bus-route/bus-route';
+
+@import '../home/home',
+        '../results/results';
 
 html {
     box-sizing: border-box;
