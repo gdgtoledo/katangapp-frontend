@@ -1,14 +1,14 @@
 import React from 'react';
 
-var RouteResult = require('../route-result/route-result');
+var BusRoute = require('../bus-route/bus-route');
 
-var BusStopResult = React.createClass ({
+var BusStopsList = React.createClass ({
   render: function () {
     return (
-    	<article>
-    		<header className="ktg-bus-stop-result__header">
-    			<h2 className="ktg-bus-stop-result__title">Bus Stop</h2>
-    		</header>
+      <article>
+      <header className="ktg-bus-stops-list__header">
+        <h2 className="ktg-bus-stops-list__title">Bus Stop</h2>
+      </header>
         <table id="route-results">
           <thead>
             <tr>
@@ -18,7 +18,7 @@ var BusStopResult = React.createClass ({
             </tr>
           </thead>
           <tbody>
-            <RouteResult />
+            <BusRoute />
           </tbody>
         </table>
       </article>
@@ -26,4 +26,4 @@ var BusStopResult = React.createClass ({
   }
 });
 
-module.exports = BusStopResult;
+module.exports = BusStopsList;

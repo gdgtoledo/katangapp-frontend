@@ -1,6 +1,6 @@
 import React from 'react';
 
-var RouteResult = React.createClass ({
+var BusRoute = React.createClass ({
   render: function () {
     return (
       <tr>
@@ -15,4 +15,4 @@ var RouteResult = React.createClass ({
   }
 });
 
-module.exports = RouteResult;
+module.exports = BusRoute;

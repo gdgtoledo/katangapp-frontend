@@ -1,7 +1,7 @@
 import fetch from 'isomorphic-fetch'
 
-const REQUEST_BUS_STOPS = 'REQUEST_BUS_STOPS'
-const RECEIVE_BUS_STOPS = 'RECEIVE_BUS_STOPS'
+export const REQUEST_BUS_STOPS = 'REQUEST_BUS_STOPS'
+export const RECEIVE_BUS_STOPS = 'RECEIVE_BUS_STOPS'
 
 function requestBusStops(meters, coors) {
   return {
