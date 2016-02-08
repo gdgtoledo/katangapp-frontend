@@ -4,10 +4,10 @@ var BusRoute = React.createClass ({
   render: function () {
     return (
       <tr>
-        <td className="route-id">
+        <td className="ktg-route-result__route-id">
           Route ID
         </td>
-        <td className="route-time">
+        <td className="ktg-route-result__route-time">
           10 min
         </td>
       </tr>
