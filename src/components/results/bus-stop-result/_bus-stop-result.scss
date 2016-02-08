@@ -1,13 +1,8 @@
-.#{$namespace}-bus-stop-result {
+.#{$namespace}-bus-stop-results {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    &__header {
-        margin-bottom: 8vh;
-    }
-
-    &__title {
-        line-height: 0;
+    &__routes {
     }
 }
