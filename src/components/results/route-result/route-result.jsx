@@ -5,7 +5,7 @@ var RouteResult = React.createClass ({
     return (
       <tr className="ktg-route-result">
         <td className="ktg-route-result__id">
-          Route ID
+          L61
         </td>
         <td className="ktg-route-result__time">
           10 min
