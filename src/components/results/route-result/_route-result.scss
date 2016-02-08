@@ -1,13 +1,16 @@
 .#{$namespace}-route-result {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    vertical-align: middle;
 
-    &__header {
-        margin-bottom: 8vh;
+    &__id {
+      background-color: #f3f3f3;
+      width: 25%;
     }
 
-    &__title {
-        line-height: 0;
+    &__time {
+      font-size: 1.5em;
+      width: 75%;
     }
 }
