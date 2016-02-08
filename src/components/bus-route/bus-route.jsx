@@ -5,7 +5,7 @@ var BusRoute = React.createClass ({
     return (
       <tr className="ktg-bus-route">
         <td className="ktg-bus-route__id">
-          Route ID
+          L61
         </td>
         <td className="ktg-bus-route__time">
           10 min
