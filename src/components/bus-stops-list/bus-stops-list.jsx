@@ -13,7 +13,7 @@ var BusStopsList = React.createClass ({
           <thead>
             <tr>
               <th colSpan="2">
-                Bus Stop Description
+                Route Description
               </th>
             </tr>
           </thead>
