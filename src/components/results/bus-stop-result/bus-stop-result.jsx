@@ -2,6 +2,8 @@ import React from 'react';
 
 var RouteResult = require('../route-result/route-result');
 
+var routeResults = [];
+
 var BusStopResult = React.createClass ({
   render: function () {
     return (
@@ -18,7 +20,9 @@ var BusStopResult = React.createClass ({
             </tr>
           </thead>
           <tbody>
-            <RouteResult />
+            {routeResults.map(function(routeResult, i){
+              return <RouteResult />;
+            })}
           </tbody>
         </table>
       </article>
