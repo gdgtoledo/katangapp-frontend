@@ -2,6 +2,8 @@ import React from 'react';
 
 var BusStopsList = require('../components/bus-stops-list/bus-stops-list');
 
+var busStopList = [];
+
 var Results = React.createClass ({
   render: function () {
     return (
@@ -9,7 +11,9 @@ var Results = React.createClass ({
         <header className="ktg-results__header">
           <h1 className="ktg-results__title">Results</h1>
         </header>
-        <BusStopsList />
+        {busStopList.map(function(busStop, i){
+          return <BusStopsList />;
+        })}
       </articles>
     );
   }
