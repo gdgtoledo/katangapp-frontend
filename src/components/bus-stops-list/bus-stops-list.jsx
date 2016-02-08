@@ -11,7 +11,7 @@ var BusStopsList = React.createClass ({
         <header className="ktg-bus-stops-list__header">
           <h2 className="ktg-bus-stops-list__title">Bus Stop</h2>
         </header>
-        <table id="route-results">
+        <table id="ktg-bus-stop-result-route-results">
           <thead>
             <tr>
               <th colSpan="2">
