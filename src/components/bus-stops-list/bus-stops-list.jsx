@@ -7,11 +7,11 @@ var busRoutes = [];
 var BusStopsList = React.createClass ({
   render: function () {
     return (
-      <article>
-        <header className="ktg-bus-stops-list__header">
-          <h2 className="ktg-bus-stops-list__title">Bus Stop</h2>
+      <article className="ktg-bus-stop-list">
+        <header className="ktg-bus-stop-list__header">
+          <h2 className="ktg-bus-stop-list__title">Bus Stop</h2>
         </header>
-        <table id="ktg-bus-stop-result-route-results">
+        <table className="ktg-bus-stop-list__routes">
           <thead>
             <tr>
               <th colSpan="2">
