@@ -4,6 +4,16 @@
     align-items: center;
     width: 100%;
 
+    &__bus-stop-description {
+      font-size: 2em;
+      flex-direction: column;
+    }
+
+    &__bus-stop-distance {
+      font-size: 0.7em;
+      flex-direction: column;
+    }
+
     &__routes {
       background-color: #ffffff;
       width: 60%;
