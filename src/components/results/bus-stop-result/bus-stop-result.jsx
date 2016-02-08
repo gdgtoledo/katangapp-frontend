@@ -15,7 +15,8 @@ var BusStopResult = React.createClass ({
           <thead>
             <tr>
               <th colSpan="2">
-                Route Description
+                <span className="ktg-bus-stop-results__bus-stop-description">Avda. de Barber</span>
+                <span className="ktg-bus-stop-result__bust-stop-distance">300 meters</span>
               </th>
             </tr>
           </thead>
