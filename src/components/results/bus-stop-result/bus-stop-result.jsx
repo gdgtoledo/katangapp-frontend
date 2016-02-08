@@ -21,7 +21,7 @@ var BusStopResult = React.createClass ({
           </thead>
           <tbody>
             {routeResults.map(function(routeResult, i){
-              return <RouteResult />;
+              return <RouteResult key={i} />;
             })}
           </tbody>
         </table>

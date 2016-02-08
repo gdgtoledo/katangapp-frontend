@@ -12,7 +12,7 @@ var Results = React.createClass ({
           <h1 className="ktg-results__title">Results</h1>
         </header>
         {busStopResults.map(function(busStopResult, i){
-          return <BusStopResult />;
+          return <BusStopResult key={i} />;
         })}
       </articles>
     );
