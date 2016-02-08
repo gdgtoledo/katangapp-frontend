@@ -21,7 +21,7 @@ var BusStopsList = React.createClass ({
           </thead>
           <tbody>
             {busRoutes.map(function(busRoute, i){
-              return <BusRoute />;
+              return <BusRoute key={i} />;
             })}
           </tbody>
         </table>
