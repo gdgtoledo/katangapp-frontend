@@ -1,0 +1,16 @@
+.#{$namespace}-route-result {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    vertical-align: middle;
+
+    &__id {
+      background-color: #f3f3f3;
+      width: 25%;
+    }
+
+    &__time {
+      font-size: 1.5em;
+      width: 75%;
+    }
+}
