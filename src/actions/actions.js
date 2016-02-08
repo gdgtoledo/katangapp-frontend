@@ -1,16 +1,28 @@
 import fetch from 'isomorphic-fetch'
 
-export const REQUEST_BUS_STOPS = 'REQUEST_BUS_STOPS'
-export const RECEIVE_BUS_STOPS = 'RECEIVE_BUS_STOPS'
+//
+//  action types
+//
 
-function requestBusStops(meters, coors) {
+export const REQUEST_BUS_STOPS_AROUND_ME = 'REQUEST_BUS_STOPS_AROUND_ME'
+export const RECEIVE_BUS_STOPS_AROUND_ME = 'RECEIVE_BUS_STOPS_AROUND_ME'
+
+//
+//  action creators
+//
+
+export function requestBusStopsAroundMe(meters, coors) {
   return {
-    type: REQUEST_POSTS
+    type: REQUEST_BUS_STOPS_AROUND_ME,
+    meters,
+    coors
   }
 }
 
-function receiveBusStops(received) {
+export function receiveBusStopsAroundMe(BusStopsAroundMe) {
   return {
-    type: RECEIVE_POSTS
+    type: RECEIVE_BUS_STOPS_AROUND_ME,
+    BusStopsAroundMe
   }
 }
+ 5*
