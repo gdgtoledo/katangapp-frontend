@@ -4,13 +4,13 @@
 
 @import '../../../node_modules/breakpoint-sass/stylesheets/_breakpoint';
 
-@import '../components/logo/logo',
-        '../components/buttons/btn',
-        '../components/buttons/circle',
-        '../components/geolocalizer/geolocalizer',
-        '../components/slider/slider',
-        '../components/bus-stops-list/bus-stops-list',
-        '../components/bus-route/bus-route';
+@import '../../components/logo/logo',
+        '../../components/buttons/btn',
+        '../../components/buttons/circle',
+        '../../components/geolocalizer/geolocalizer',
+        '../../components/slider/slider',
+        '../../components/bus-stops-list/bus-stops-list',
+        '../../components/bus-route/bus-route';
 
 @import '../home/home',
         '../results/results';

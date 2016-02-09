@@ -1,8 +1,8 @@
 import React from 'react';
 
-var LogoVerticalWhite = require('../logo/logo');
-var Geolocalizer = require('../geolocalizer/geolocalizer');
-var Slider = require('../slider/slider');
+var LogoVerticalWhite = require('../../components/logo/logo');
+var Geolocalizer = require('../../components/geolocalizer/geolocalizer');
+var Slider = require('../../components/slider/slider');
 
 var Home = React.createClass ({
   getInitialState: function () {
