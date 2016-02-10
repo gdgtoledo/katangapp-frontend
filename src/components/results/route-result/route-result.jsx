@@ -3,11 +3,11 @@ import React from 'react';
 var RouteResult = React.createClass ({
   render: function () {
     return (
-      <tr>
-        <td className="route-id">
-          Route ID
+      <tr className="ktg-route-result">
+        <td className="ktg-route-result__id">
+          L61
         </td>
-        <td className="route-time">
+        <td className="ktg-route-result__time">
           10 min
         </td>
       </tr>
