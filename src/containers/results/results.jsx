@@ -1,6 +1,6 @@
 import React from 'react';
 
-var BusStopsList = require('../components/bus-stops-list/bus-stops-list');
+var BusStop = require('../components/bus-stop/bus-stop');
 
 var busStopList = [];
 
@@ -12,7 +12,7 @@ var Results = React.createClass ({
           <h1 className="ktg-bus-stops-results__title">Results</h1>
         </header>
         {busStopList.map(function(busStop, i){
-          return <BusStopsList key={i} />;
+          return <BusStop key={i} />;
         })}
       </articles>
     );

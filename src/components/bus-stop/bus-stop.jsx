@@ -4,14 +4,14 @@ var BusRoute = require('../bus-route/bus-route');
 
 var busRoutes = [];
 
-var BusStopsList = React.createClass ({
+var BusStop = React.createClass ({
   render: function () {
     return (
-      <article className="ktg-bus-stop-list">
-        <header className="ktg-bus-stop-list__header">
-          <h2 className="ktg-bus-stop-list__title">Bus Stop</h2>
+      <article className="ktg-bus-stop">
+        <header className="ktg-bus-stop__header">
+          <h2 className="ktg-bus-stop__title">Bus Stop</h2>
         </header>
-        <table className="ktg-bus-stop-list__routes">
+        <table className="ktg-bus-stop__routes">
           <thead>
             <tr>
               <th colSpan="2">
@@ -31,4 +31,4 @@ var BusStopsList = React.createClass ({
   }
 });
 
-module.exports = BusStopsList;
+module.exports = BusStop;
