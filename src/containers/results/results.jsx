@@ -2,7 +2,7 @@ import React from 'react';
 
 var BusStop = require('../../components/bus-stop/bus-stop');
 
-var busStopList = [];
+var busStopList = [new BusStop, new BusStop];
 
 var Results = React.createClass ({
   render: function () {
