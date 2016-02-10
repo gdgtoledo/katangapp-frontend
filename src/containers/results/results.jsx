@@ -1,6 +1,6 @@
 import React from 'react';
 
-var BusStop = require('../components/bus-stop/bus-stop');
+var BusStop = require('../../components/bus-stop/bus-stop');
 
 var busStopList = [];
 
