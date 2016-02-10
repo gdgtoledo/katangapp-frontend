@@ -2,7 +2,7 @@ import React from 'react';
 
 var BusRoute = require('../bus-route/bus-route');
 
-var busRoutes = [];
+var busRoutes = [new BusRoute, new BusRoute];
 
 var BusStop = React.createClass ({
   render: function () {
