@@ -1,13 +1,20 @@
 .#{$namespace}-bus-route {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    text-align: center;
 
-    &__header {
-        margin-bottom: 8vh;
+    td {
+      padding: 0.5em;
     }
 
-    &__title {
-        line-height: 0;
+    &__id {
+      background-color: #f3f3f3;
+      font-size: 2em;
+      width: 25%;
+    }
+
+    &__time {
+      font-size: 1.5em;
+      width: 75%;
     }
 }
