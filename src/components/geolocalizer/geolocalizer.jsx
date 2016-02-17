@@ -16,15 +16,15 @@ var Geolocalizer = React.createClass ({
   			console.log('sorry you have and error with ' + error);
   		}.bind(this);
   		if (navigator.geolocation) {
-		  navigator.geolocation.getCurrentPosition(success, error);
-		} else {
-		  error('geolocalization is not supported by browser');
-		}
+		    navigator.geolocation.getCurrentPosition(success, error);
+		  } else {
+		    error('geolocalization is not supported by browser');
+		  }
   	},
   render: function () {
     return (
-      	<button type='button' className="ktg-btn--geolocalizer" onClick={this.geolocalizeMe}>
-		</button>
+      <button type='button' className='ktg-btn--geolocalizer' onClick={this.geolocalizeMe}>
+		  </button>
     );
   }
 });
