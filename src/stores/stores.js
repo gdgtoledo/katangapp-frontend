@@ -1,5 +1,5 @@
 import { createStore } from 'redux'
-import { geolocalize } from '../reducers/reducers.js'
+import { katangapp } from '../reducers/reducers.js'
 
-let store = createStore(geolocalize)
+export store = createStore(katangapp)
 
