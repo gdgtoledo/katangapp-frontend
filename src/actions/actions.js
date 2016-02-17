@@ -17,7 +17,7 @@ export loadingState = false
 export function requestBusStopsAroundMe(meters, coors) {
   return {
     type: REQUEST_BUS_STOPS_AROUND_ME,
-    text: 'get all the routes and bus stops around user geolocalizacion',
+    text: 'get all the routes and bus stops around user geolocalization',
     meters: meters,
     latitude: coors.laitude,
     longitude: coors.longitude
