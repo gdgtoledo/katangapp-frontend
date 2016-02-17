@@ -13,7 +13,3 @@ var App = React.createClass ({
   }
 });
 
-App.defaultProps = {
-};
-
-ReactDOM.render(<App />, document.getElementById('app'));
