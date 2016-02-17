@@ -1,11 +1,14 @@
-import fetch from 'isomorphic-fetch'
-
 //
 //  action types
 //
 
 export const REQUEST_BUS_STOPS_AROUND_ME = 'REQUEST_BUS_STOPS_AROUND_ME'
-export const RECEIVE_BUS_STOPS_AROUND_ME = 'RECEIVE_BUS_STOPS_AROUND_ME'
+
+//
+// other constants
+//
+
+export loadingState = false
 
 //
 //  action creators
@@ -14,15 +17,9 @@ export const RECEIVE_BUS_STOPS_AROUND_ME = 'RECEIVE_BUS_STOPS_AROUND_ME'
 export function requestBusStopsAroundMe(meters, coors) {
   return {
     type: REQUEST_BUS_STOPS_AROUND_ME,
-    meters,
-    coors
+    text: 'get all the routes and bus stops around user geolocalizacion',
+    meters: meters,
+    latitude: coors.laitude,
+    longitude: coors.longitude
   }
 }
-
-export function receiveBusStopsAroundMe(BusStopsAroundMe) {
-  return {
-    type: RECEIVE_BUS_STOPS_AROUND_ME,
-    BusStopsAroundMe
-  }
-}
- 5*
