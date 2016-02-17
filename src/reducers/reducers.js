@@ -35,7 +35,7 @@ function requestAroundMe(state, action, meters, coors) {
 //  reducers case by action
 //
 
-export function geolocalize(state = initialState, action) {
+function geolocalize(state = initialState, action) {
   switch (action.type) {
     case REQUEST_BUS_STOPS_AROUND_ME:
       return requestAroundMe()
@@ -43,3 +43,13 @@ export function geolocalize(state = initialState, action) {
       return state
   }
 }
+
+//
+//  Combine reducers
+//
+
+const katangapp = combineReducers({
+  geolocalize
+})
+
+export default katangapp
