@@ -1,5 +1,5 @@
 import React from 'react';
-import BusStopsList from '../bus-stops-list/bus-stops-list';
+//import BusStop from '../bus-stop/bus-stop';
 
 export default class Results extends React.Component {
   constructor(props) {
@@ -11,7 +11,7 @@ export default class Results extends React.Component {
         <header className="ktg-results__header">
           <h1 className="ktg-results__title">Results</h1>
         </header>
-        <BusStopsList />
+        //<BusStop />
       </articles>
     );
   }
