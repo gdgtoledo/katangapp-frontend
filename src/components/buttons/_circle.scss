@@ -2,7 +2,7 @@ $btn--circle---background: $btn--primary---background;
 $btn--circle---color: $color-secondary;
 $btn--circle--hover---background: $btn--primary--hover---background;
 
-.#{$namespace}-btn--circle {
+.#{$ns}-btn--circle {
     background: $btn--circle---background;
     color: $btn--circle---color;
     line-height: 50px;
