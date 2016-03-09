@@ -1,4 +1,4 @@
-.#{$namespace}-logo {
+.#{$ns}-logo {
     text-align: center;
     margin: 0;
 
@@ -10,7 +10,7 @@
         overflow: hidden;
         opacity: 1;
 
-        background-image: url('../../images/logo.png');
+        background-image: url('../../src/images/logo.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
