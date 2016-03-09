@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { LogoVerticalWhite } from '../logo/logo.jsx';
-import { Geolocalizer } from '../geolocalizer/geolocalizer.jsx';
-import { Slider } from '../slider/slider.jsx';
+import LogoVerticalWhite from '../logo/logo.jsx';
+import Geolocalizer from '../geolocalizer/geolocalizer.jsx';
+import Slider from '../slider/slider.jsx';
 
 //import { requestBusStopsAroundMe } from '../../actions/actions.js';
 
