@@ -1,7 +1,10 @@
 import React from 'react';
 
-var BusRoute = React.createClass ({
-  render: function () {
+export default class BusRoute extends React.Component {
+  constructor(props) {
+      super(props);
+  }
+  render() {
     return (
       <tr className="ktg-bus-route">
         <td className="ktg-bus-route__id">
@@ -13,6 +16,4 @@ var BusRoute = React.createClass ({
       </tr>
     );
   }
-});
-
-module.exports = BusRoute;
+}
