@@ -1,4 +1,4 @@
-.#{$namespace}-home {
+.#{$ns}-home {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,35 +17,36 @@
         line-height: 0;
     }
 
-    .#{$namespace}-logo {
+    .#{$ns}-logo {
         animation: 1s ease-in-out 1.5s 1 forwards logo_animation;
 
         @keyframes logo_animation {
             0% {
                 opacity: 1;
             }
-            50% {
-                opacity: 0.8;
+            35% {
+                opacity: 0.4;
                 transform: scale(1.1);
             }
             100% {
-                opacity: 0.4;
+                opacity: 1;
                 transform: scale(0.8);
             }
         }
+
     }
 
-    ##{$namespace}-form-metersAround {
+    ##{$ns}-form-metersAround {
         display: flex;
         flex-direction: column;
         align-items: center
     }
 
-    .#{$namespace}--slider {
+    .#{$ns}--slider {
         margin-bottom: 3vh;
     }
 
-    .#{$namespace}-btn--geolocalizer {
+    .#{$ns}-btn--geolocalizer {
 
         &--is-pulse {
             animation: 1s ease-in-out 3.5s 2 forwards geolocalizer_pulse;
