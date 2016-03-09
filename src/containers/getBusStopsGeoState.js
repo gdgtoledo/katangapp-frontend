@@ -2,13 +2,13 @@ import { connect } from 'react-redux'
 
 import { getBusStopsAroundMe } from '../actions/actions.js'
 //import { getBusStops } from '../reducers/reducers.js'
-import { Home } from '../components/home/home.jsx'
+import Home from '../components/home/home.jsx'
 
 const mapStateToProps = ( state ) => {
   return {
     busStopsAroundMe: {
-      metters: state.aroundMe.meters,
-      coors: state.aroundMe.coors
+      meters: state.busStopsAroundMe.meters,
+      coors: state.busStopsAroundMe.coors
     }
   }
 }
