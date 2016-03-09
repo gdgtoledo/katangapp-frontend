@@ -1,22 +1,19 @@
 import React from 'react';
+import BusStopsList from '../bus-stops-list/bus-stops-list';
 
-var BusStop = require('../../components/bus-stop/bus-stop');
-
-var busStopList = [new BusStop, new BusStop];
-
-var Results = React.createClass ({
-  render: function () {
+export default class Results extends React.Component {
+  constructor(props) {
+      super(props);
+  }
+  render() {
     return (
-      <articles className="ktg-bus-stops-results">
-        <header className="ktg-bus-stops-results__header">
-          <h1 className="ktg-bus-stops-results__title">Results</h1>
+      <articles>
+        <header className="ktg-results__header">
+          <h1 className="ktg-results__title">Results</h1>
         </header>
-        {busStopList.map(function(busStop, i){
-          return <BusStop key={i} />;
-        })}
+        <BusStopsList />
       </articles>
     );
   }
-});
+}
 
-module.exports = Results;
