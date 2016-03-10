@@ -11,11 +11,11 @@ import { routerReducer, syncHistoryWithStore } from 'react-router-redux'
 
 import * as reducers from '../reducers/reducers.js'
 
-import { GetBusStopsGeoState } from '../containers/getBusStopsGeoState.js';
+import GetBusStopsGeoState from '../containers/getBusStopsGeoState.js';
 
 //import { Home } from '../components/home/home.jsx'
-import { Loading } from '../components/loading/loading.jsx'
-import { Results } from '../components/results/results.jsx'
+import Loading from '../components/loading/loading.jsx'
+import Results from '../components/results/results.jsx'
 
 const katangapp = combineReducers({
   ...reducers,
