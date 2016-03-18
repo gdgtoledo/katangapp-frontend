@@ -27,6 +27,7 @@
   "globals": {
     "require": true,
     "console": true,
-    "dispatch": true
+    "dispatch": true,
+    "store": true
   }
 }
