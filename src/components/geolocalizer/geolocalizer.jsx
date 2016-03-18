@@ -7,22 +7,16 @@ export default class Geolocalizer extends React.Component {
   }
 
   static defaultProps = {
-    setCoorsAroundMe: () => true
-  };
-
-  state = {
-    latitude: '0',
-    longitude: '0'
+    setCoors: () => true
   };
 
   static propTypes = {
-    setCoorsAroundMe: React.PropTypes.func
+    setCoors: React.PropTypes.func
   };
 
   geolocalizeMe = () => {
     let success = ( position )  => {
-      this.setState( { latitude: position.coords.latitude } );
-      this.setState( { longitude: position.coords.longitude } );
+      this.props.setCoors( position.coors );
     };
     let error = ( err ) => {
       throw 'sorry you have and error with ' + err;
@@ -32,7 +26,6 @@ export default class Geolocalizer extends React.Component {
     } else {
       throw 'geolocalization is not supported by browser';
     }
-    this.props.setCoorsAroundMe( this.state.latitude, this.state.longitude );
   };
 
   render() {

@@ -34,7 +34,7 @@ export default class Slider extends React.Component {
     this.setState( { active: false } );
   };
 
-  getMeters = () => {
+  updateMeters = () => {
     let meters = ReactDOM.findDOMNode( this.refs.metersAround ).value;
     this.props.setMeters( meters );
   };
@@ -52,7 +52,7 @@ export default class Slider extends React.Component {
           value={this.props.meters}
           onFocus={this.showMeters}
           onBlur={this.hideMeters}
-          onChange={this.getMeters}/>
+          onChange={this.updateMeters}/>
         <output
           htmlFor='metersAround'
           ref='showMeters'
