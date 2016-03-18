@@ -31,17 +31,22 @@ function requestBusStopsAroundMe( coors, meters ) {
 //  reducers case by action
 //
 
-export function busStopsAroundMe( state=initialState, action ) {
+const busStopsAroundMe = ( state=initialState, action ) => {
   switch ( action.type ) {
     case GET_BUS_STOPS_AROUND_ME:
-      return  action.busStops;
-    case SET_METERS_AROUND_ME:
-      return action.meters
-    case SET_COORS_AROUND_ME:
       let busStops = requestBusStopsAroundMe( action.coors, action.meters );
       return busStops
+    case SET_METERS_AROUND_ME:
+      state.busStopsAroundMe.meters = action.meters;
+      return state;
+    case SET_COORS_AROUND_ME:
+      state.busStopsAroundMe.coors = action.coors;
+      return  state;
     default:
+      console.log( state );
       return state;
   }
 }
+
+export default busStopsAroundMe;
 

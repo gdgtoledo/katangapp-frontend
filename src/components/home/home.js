@@ -22,5 +22,4 @@ Home.propTypes = {
   getBusStopsAroundMe: React.PropTypes.func.isRequired
 }
 
-
 export default Home
