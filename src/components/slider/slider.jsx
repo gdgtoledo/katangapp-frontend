@@ -18,7 +18,7 @@ export default class Slider extends React.Component {
     min: React.PropTypes.string,
     max: React.PropTypes.string,
     step: React.PropTypes.string,
-    meters: React.PropTypes.string.isRequired,
+    meters: React.PropTypes.number.isRequired,
     setMeters: React.PropTypes.func
   };
 
@@ -36,6 +36,7 @@ export default class Slider extends React.Component {
 
   updateMeters = () => {
     let meters = ReactDOM.findDOMNode( this.refs.metersAround ).value;
+    meters = parseInt( meters, 10 );
     this.props.setMeters( meters );
   };
 
