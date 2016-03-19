@@ -3,24 +3,26 @@ import './app.scss';
 import React from 'react'  // eslint-disable-line no-unused-vars
 import ReactDOM from 'react-dom'
 
-import { createStore, combineReducers } from 'redux'
+// import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
 import { Router, Route, browserHistory } from 'react-router'
-import { routerReducer, syncHistoryWithStore } from 'react-router-redux'
+//import { routerReducer, syncHistoryWithStore } from 'react-router-redux'
+import { syncHistoryWithStore } from 'react-router-redux'
 
-import * as reducers from '../reducers/reducers.js'
+//import * as reducers from '../reducers/reducers'
+import store from '../stores/store'
 
-import GetBusStopsGeoState from '../containers/getBusStopsGeoState.js'
+import GetBusStopsGeoState from '../containers/getBusStopsGeoState'
 
 import Loading from '../components/loading/loading.jsx'
 import Results from '../components/results/results.jsx'
 
-const katangapp = combineReducers({
-  ...reducers,
-  routing: routerReducer
-})
+// const katangapp = combineReducers({
+//   ...reducers,
+//   routing: routerReducer
+// })
 
-const store = createStore(katangapp)
+// const store = createStore(katangapp)
 
 const history = syncHistoryWithStore( browserHistory, store )
 

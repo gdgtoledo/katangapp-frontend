@@ -1,4 +1,4 @@
-import { initialState } from '../stores/stores.js'
+import initialState from '../stores/initialState'
 import { routeActions } from 'react-router-redux'
 import fetch from 'isomorphic-fetch'
 import { GET_BUS_STOPS_AROUND_ME, SET_METERS_AROUND_ME, SET_COORS_AROUND_ME } from '../actions/actions.js'
@@ -32,16 +32,26 @@ function requestBusStopsAroundMe( coors, meters ) {
 //
 
 const busStopsAroundMe = ( state=initialState, action ) => {
+  let nextState
   switch ( action.type ) {
     case GET_BUS_STOPS_AROUND_ME:
       let busStops = requestBusStopsAroundMe( action.coors, action.meters );
       return busStops
     case SET_METERS_AROUND_ME:
-      return Object.assign( state, { meters: action.meters } );
+      nextState = Object.assign( {}, state, { meters: action.meters } );
+      console.log( 'SET METERS REDUCER' )
+      console.log( nextState )
+      return nextState
     case SET_COORS_AROUND_ME:
-      return  Object.assign( state, { coors: action.coors } );
+      nextState = Object.assign( {}, state, { coors: action.coors } )
+      console.log( 'SET METERS REDUCER' )
+      console.log( nextState )
+      return nextState
     default:
-      return state;
+      nextState = Object.assign( {}, state )
+      console.log( 'INITIAL STATE' )
+      console.log( nextState )
+      return nextState
   }
 }
 

@@ -5,15 +5,17 @@ import { connect } from 'react-redux'
 import Home from '../components/home/home.js'
 
 const mapStateToProps = ( state ) => {
+  console.log('MAP TO PROP');
+  console.log(state);
   return {
-    meters: state.default.busStopsAroundMe.meters
+    meters: state.default.meters
   }
 }
 
 const mapDispatchToProps = ( dispatch ) => {
   return {
     getBusStopsAroundMe: ( coors ) => {
-      var aroundMe = store.getState();
+
       dispatch( { type: 'SET_COORS_AROUND_ME', coors: coors } );
       dispatch( { type: 'GET_BUS_STOPS_AROUND_ME', coors: coors, meters: aroundMe.meters } )
     },
