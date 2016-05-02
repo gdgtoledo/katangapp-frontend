@@ -7,21 +7,25 @@ export default class Geolocalizer extends React.Component {
   }
 
   static defaultProps = {
-    setCoors: () => true
+    setCoords: () => true,
+    setLoading: () => true
   };
 
   static propTypes = {
-    setCoors: React.PropTypes.func
+    setCoords: React.PropTypes.func,
+    setLoading: React.PropTypes.func
   };
 
   geolocalizeMe = () => {
     let success = ( position )  => {
-      this.props.setCoors( position.coors );
+      this.props.setCoords( { latitude: position.coords.latitude, longitude: position.coords.longitude } );
+      console.log('tengo las coordenadas');
     };
     let error = ( err ) => {
       throw 'sorry you have and error with ' + err;
     };
     if ( navigator.geolocation ) {
+      this.props.setLoading(true);
       navigator.geolocation.getCurrentPosition( success, error );
     } else {
       throw 'geolocalization is not supported by browser';
@@ -30,7 +34,7 @@ export default class Geolocalizer extends React.Component {
 
   render() {
     return (
-      <button type='button' className='ktg-btn--geolocalizer' onClick={this.geolocalizeMe}>
+      <button type='button' className='ktg-geolocalizer' onClick={this.geolocalizeMe}>
       </button>
     );
   }

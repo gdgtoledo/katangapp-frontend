@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 
 var srcPath = path.join(__dirname, 'src');
 
@@ -13,7 +14,7 @@ module.exports = {
   },
   output: {
       path: path.resolve(__dirname, 'build'),
-      filename: 'bundle.js',
+      filename: 'bundle.js'
   },
   module: {
     preLoaders: [{
@@ -40,4 +41,10 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      'Promise': 'es6-promise',
+      'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
+    })
+  ]
 };

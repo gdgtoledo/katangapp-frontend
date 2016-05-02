@@ -1,11 +1,12 @@
 const initialState = {
   meters: 150,
-  coors: {
+  coords: {
     latitude: 10,
     longitude: 10
   },
-  busStops: {
-    error: {}
+  busStops: {},
+  errors:{
+    getBusStopsAroundMe: []
   }
 }
 
