@@ -28,6 +28,8 @@
   "globals": {
     "require": true,
     "console": true,
-    "store": true
+    "webpack": true,
+    "__dirname": true,
+    "module": true
   }
 }
