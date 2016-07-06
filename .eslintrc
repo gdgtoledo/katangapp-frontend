@@ -1,6 +1,35 @@
 {
+  "parser": "babel-eslint",
+  "rules": {
+    "strict": 0,
+    "no-console":0
+  },
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "extends": "eslint:recommended",
   "ecmaFeatures": {
     "jsx": true,
-    "modules": true
+    "arrowFunctions": true,
+    "blockBindings": true,
+    "classes": true,
+    "destructuring": true,
+    "modules": true,
+    "objectLiteralComputedProperties": true,
+    "objectLiteralShorthandMethods": true,
+    "objectLiteralShorthandProperties": true,
+    "templateStrings": true,
+    "experimentalObjectRestSpread": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "globals": {
+    "require": true,
+    "console": true,
+    "webpack": true,
+    "__dirname": true,
+    "module": true
   }
 }

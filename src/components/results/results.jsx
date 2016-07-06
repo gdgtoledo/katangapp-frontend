@@ -1,18 +1,26 @@
 import React from 'react';
 
-var BusStopResult = require('./bus-stop-result/bus-stop-result');
+import BusRoutes from '../bus-routes/bus-routes';
 
-var Results = React.createClass ({
-  render: function () {
-    return (
-      <articles>
-        <header className="ktg-results__header">
-          <h1 className="ktg-results__title">Results</h1>
-        </header>
-        <BusStopResult />
-      </articles>
-    );
-  }
-});
+export default class Results extends React.Component {
 
-module.exports = Results;
+    constructor( props ) {
+      super( props );
+    }
+
+    static propTypes = {
+        results: React.PropTypes.isRequired
+    };
+
+    render() {
+        return (
+            <main className='ktg-container--app'>
+                <header className="ktg-results__header">
+                    <h1 className="ktg-results__title">Results</h1>
+                </header>
+                <BusRoutes busStopsRoutes={this.props.results}/>
+            </main>
+        );
+    }
+
+}
