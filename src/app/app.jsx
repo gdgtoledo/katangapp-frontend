@@ -10,24 +10,23 @@ import { syncHistoryWithStore } from 'react-router-redux'
 import store from '../stores/store'
 
 import GetBusStopsGeoState from '../containers/getBusStopsGeoState'
-
-import Results from '../components/results/results.jsx'
+import RenderBusStopsResults from '../containers/renderBusStopsResults'
 
 const history = syncHistoryWithStore( browserHistory, store )
 
 export default class App extends React.Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <div className='ktg-container'>
-          <Router history={history}>
-            <Route path='/' component={GetBusStopsGeoState}/>
-            <Route path="/results" component={Results}/>
-          </Router>
-        </div>
-      </Provider>
-   );
-  }
+    render() {
+        return (
+            <Provider store={store}>
+                <div className='ktg-container'>
+                    <Router history={history}>
+                    <Route path='/' component={GetBusStopsGeoState}/>
+                    <Route path="/results" component={RenderBusStopsResults}/>
+                    </Router>
+                </div>
+            </Provider>
+        );
+    }
 }
 
 ReactDOM.render( <App />, document.getElementById( 'app' ) );
