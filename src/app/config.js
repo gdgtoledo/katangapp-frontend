@@ -3,7 +3,7 @@ const config = {
     protocol: 'https://',
     domain: 'secret-depths-4660.herokuapp.com',
     endpoints: {
-      'busStops': 'paradas'
+      'busStops': 'main'
     }
   }
 };
