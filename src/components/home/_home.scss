@@ -1,13 +1,18 @@
-.#{$namespace}-home {
+.#{$ns}-home {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 80%;
 
     &__header {
         margin: 1vh 0 12vh 0;
 
         @include breakpoint($break-tablet) {
             margin: 2vh 0 6vh 0;
+        }
+
+        &--is-loading {
+            display: none;
         }
     }
 
@@ -16,35 +21,40 @@
         line-height: 0;
     }
 
-    .#{$namespace}-logo {
+    .#{$ns}-logo {
         animation: 1s ease-in-out 1.5s 1 forwards logo_animation;
 
         @keyframes logo_animation {
             0% {
                 opacity: 1;
             }
-            50% {
-                opacity: 0.8;
+            35% {
+                opacity: 0.4;
                 transform: scale(1.1);
             }
             100% {
-                opacity: 0.4;
+                opacity: 1;
                 transform: scale(0.8);
             }
         }
+
     }
 
-    ##{$namespace}-form-metersAround {
+    .#{$ns}-home__metersAround {
         display: flex;
         flex-direction: column;
-        align-items: center
+        align-items: center;
+
+        &--is-loading {
+            display: none;
+        }
     }
 
-    .#{$namespace}--slider {
+    .#{$ns}-slider {
         margin-bottom: 3vh;
     }
 
-    .#{$namespace}-btn--geolocalizer {
+    .#{$ns}-geolocalizer {
 
         &--is-pulse {
             animation: 1s ease-in-out 3.5s 2 forwards geolocalizer_pulse;
@@ -68,5 +78,19 @@
             }
         }
 
+    }
+
+    .#{$ns}-loading {
+        opacity: 0;
+        height: 0px;
+
+        animation: opacity 3s slidein;
+
+        &--is-loading {
+            opacity: 1;
+            height: auto;
+            animation: opacity 3s slidein;
+
+        }
     }
 }

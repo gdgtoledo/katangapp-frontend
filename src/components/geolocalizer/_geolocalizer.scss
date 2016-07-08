@@ -1,13 +1,13 @@
-.#{$namespace}-btn--geolocalizer {
-    @extend .#{$namespace}-btn--circle;
-    @extend .#{$namespace}-btn--circle--big;
+.#{$ns}-geolocalizer {
+    @extend .#{$ns}-btn--circle;
+    @extend .#{$ns}-btn--circle--big;
 
     &:before {
         content: " ";
         display: block;
         padding-bottom: 55px;
 
-        background-image: url('../../icons/pin.png');
+        background-image: url('../../src/icons/pin.png');
         background-size: 55%;
         background-repeat: no-repeat;
         background-position: center center;
