@@ -10,9 +10,10 @@
         '../components/loading/loading',
         '../components/geolocalizer/geolocalizer',
         '../components/slider/slider',
-        '../components/bus-route/bus-route',
         '../components/home/home',
-        '../components/results/results';
+        '../components/results/results',
+        '../components/bus-stops/bus-stops',
+        '../components/bus-stop/bus-stop';
 
 html {
     box-sizing: border-box;
@@ -30,16 +31,17 @@ body {
 }
 
 .#{$ns} {
+    width: 100vw;
+    height: 100vh;
+}
+
+.#{$ns}-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     padding: 3vh 3vw;
-
-    background-image: url('../images/home.png');
-    background-size: cover;
-    background-repeat: no-repeat;
 }
