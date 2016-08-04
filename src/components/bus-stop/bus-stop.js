@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
 import BusRoute from '../bus-route/bus-route.js';
 
-const BusStop = ( { key, description, meters, routes} ) => (
-    <article className="ktg-bus-stop" key={key}>
+const BusStop = ( { idbs, description, meters, routes} ) => (
+    <article className="ktg-bus-stop" key={idbs}>
         <table className="ktg-bus-stop__table">
             <thead>
                 <tr>
