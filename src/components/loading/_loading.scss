@@ -5,8 +5,16 @@ $loading---duration: 1.4s;
 
 .#{$this} {
 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     &__spiner {
         animation: rotator $loading---duration linear infinite;
+
+
     }
 
     &__path {
@@ -17,6 +25,12 @@ $loading---duration: 1.4s;
             loading-animate-dash $loading---duration ease-in-out infinite,
             loading-animate-colors ($loading---duration*4) ease-in-out infinite;
     }
+
+    &:before {
+        content: "Buscando paradas...";
+        position: absolute;
+    }
+
 }
 
 @keyframes loading-animate-rotator {
