@@ -1,58 +1,69 @@
-import { connect } from           'react-redux'
-import { browserHistory } from    'react-router'
-import Promise from               'promise-polyfill'
+import { connect } from             'react-redux'
+import Promise from                 'promise-polyfill'
 
-import getBusStopsAroundMe from   '../services/busStops.js'
-import Home from                  '../components/home/home.jsx'
-import store from                 '../stores/store'
+import fetchBusStopsAroundMe from   '../services/busStops.js'
+import goToResults from             '../router/router.js'
+import Home from                    '../components/home/home.jsx'
+import store from                   '../stores/store'
 
-const goToResults = ( dispatch ) => {
-    let busStopsResults = store.getState().default
-    if ( busStopsResults.errors.length > 0 ) {
-        dispatch( browserHistory.push( '/errors' ) )
-    } else {
-        dispatch( browserHistory.push( '/results' ) )
-    }
+const getBusStopsAroundMeAndGoToResults = ( dispatch, position ) => {
+    return fetchBusStopsAroundMe( position )
+        .then( response => {
+            return response.json();
+        } )
+        .then( busStops => {
+            dispatch( { type: 'GET_BUS_STOPS_AROUND_ME_SUCCESS', busStopsAroundMe: busStops } )
+        } )
+        .then ( () => {
+            goToResults( dispatch )
+            dispatch( { type: 'SET_LOADING', state: false } );
+        } )
+        .catch( error => {
+            //dispatch( { type: 'GET_BUS_STOPS_AROUND_ME_ERROR', error: error } )
+            throw error
+        } )
 }
 
 const setCoordsInStore = ( dispatch, coords ) => {
     return new Promise ( ( resolve ) => {
         let unsuscribe = store.subscribe( () => {
-            resolve( { coords: store.getState().default.coords, meters: store.getState().default.meters } );
-            unsuscribe();
-        })
+            resolve( { coords: store.getState().positionAroundMe.coords, meters: store.getState().positionAroundMe.meters } )
+            unsuscribe()
+        } )
         dispatch( { type: 'SET_COORDS_AROUND_ME', coords: coords } )
-    });
+    } )
 }
 
-const setCoordsAndGetBusStops = ( coords ) => {
+const setCoordsAndGetBusStopsAndGoToResults = ( coords ) => {
     return dispatch => {
-        return setCoordsInStore( dispatch, coords ).then(
-            position => {
-                dispatch( getBusStopsAroundMe( { coords: position.coords, meters: position.meters } ) )
-                let unsuscribe = store.suscribe( () => {
-                    goToResults( dispatch );
-                    unsuscribe();
-                })
-            }
-        )
+        return setCoordsInStore( dispatch, coords )
+            .then( position => {
+                getBusStopsAroundMeAndGoToResults( dispatch, { coords: position.coords, meters: position.meters } )
+            } )
+            .catch( error => {
+                throw error
+            } )
     }
 }
 
 const mapStateToProps = ( state ) => {
     return {
-        meters: state.default.meters,
-        coords: state.default.coords
+        meters: state.positionAroundMe.meters,
+        coords: state.positionAroundMe.coords,
+        loading: state.loading.state
     }
 }
 
 const mapDispatchToProps = ( dispatch ) => {
     return {
+        setLoading: (isLoading) => {
+            dispatch( { type: 'SET_LOADING', state: isLoading } );
+        },
         setMetersAroundMe: ( meters ) => {
             dispatch( { type: 'SET_METERS_AROUND_ME', meters: meters } );
         },
-        getBusStopsAroundMeAndGoToResults: ( coords ) => {
-            dispatch( setCoordsAndGetBusStops( coords ) )
+        getBusStopsAroundMe: ( coords ) => {
+            dispatch( setCoordsAndGetBusStopsAndGoToResults( coords ) )
         }
     }
 }
