@@ -4,10 +4,11 @@
     align-items: center;
 
     &__header {
-        margin-bottom: 8vh;
+        margin: 0;
     }
 
     &__title {
         line-height: 0;
+        font-size: 0px;
     }
 }
