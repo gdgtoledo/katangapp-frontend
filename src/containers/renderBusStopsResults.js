@@ -1,10 +1,9 @@
 import { connect } from     'react-redux'
-
-import Results from         '../components/results/results.jsx'
+import Results from         '../components/results/results'
 
 const mapStateToProps = ( state ) => {
     return {
-        results: state.default.busStops
+        results: state.positionAroundMe.busStops
     }
 }
 
