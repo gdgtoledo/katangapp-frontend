@@ -2,9 +2,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+
+    background-color: $color-quaternary;
 
     &__header {
-        margin: 1vh 0 12vh 0;
+        width: 30vw;
+        margin: 4vh 0 15vh 0;
+
+        text-align: left;
 
         @include breakpoint($break-tablet) {
             margin: 2vh 0 6vh 0;
@@ -39,9 +45,10 @@
 
     }
 
-    .#{$ns}-home__metersAround {
+    .#{$ns}-home__meters-around {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
 
         &--is-loading {
@@ -50,7 +57,7 @@
     }
 
     .#{$ns}-slider {
-        margin-bottom: 3vh;
+        margin-bottom: 8vh;
     }
 
     .#{$ns}-geolocalizer {

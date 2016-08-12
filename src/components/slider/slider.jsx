@@ -47,6 +47,7 @@ export default class Slider extends React.Component {
           name='metersAround'
           ref='metersAround'
           type='range'
+          className={this.state.active ? 'ktg-slider__input ktg-slider__input--is-active' : 'ktg-slider__input'}
           min={this.props.min}
           max={this.props.max}
           step={this.props.step}
@@ -66,4 +67,3 @@ export default class Slider extends React.Component {
   }
 
 }
-

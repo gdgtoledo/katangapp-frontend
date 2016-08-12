@@ -40,4 +40,3 @@ export default class Geolocalizer extends React.Component {
   }
 
 }
-
