@@ -19,7 +19,7 @@ import React, { PropTypes } from 'react'
 //import LogoVerticalWhite from '../logo/logo.jsx'
 import Geolocalizer from '../geolocalizer/geolocalizer.jsx'
 import Slider from '../slider/slider.jsx'
-import Loading from '../Loading/loading.jsx'
+import Loading from '../Loading/loading'
 
 const Home = ( { meters, coords, loading, setLoading, setMetersAroundMe, getBusStopsAroundMe} ) => (
     <main className='ktg-home'>

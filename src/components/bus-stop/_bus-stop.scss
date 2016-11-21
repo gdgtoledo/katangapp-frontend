@@ -14,10 +14,43 @@
  * limitations under the License.
  */
 
-.#{$ns}-bus-stop {
+$bus-stop---border-color: $color-grey-light-30;
+$bus-stop---border: 1px solid $bus-stop---border-color;
+$bus-stop__distance---color: $color-grey-light-15;
+$bus-stop__distance--strong---color: $color-secondary;
 
-    &__table {
-        border: 1px solid #EAEAEA;
+.#{$ns}-bus-stop {
+    margin-bottom: 50px;
+    border: $bus-stop---border;
+
+    &__header {
+        padding: 20px;
+    }
+
+        width: 100%;
+        border-spacing: 0px;
+    }
+
+    &__description {
+        margin: 0;
+
+        text-align: left;
+        font-weight: 100;
+        font-size: rem(40px)
+    }
+
+    &__distance {
+        margin: 10px 0 0 0;
+
+        text-align: left;
+        font-weight: 100;
+        font-size: rem(12px);
+        color: $bus-stop__distance---color;
+
+        &--strong {
+            font-weight: 500;
+            color: $bus-stop__distance--strong---color;
+        }
     }
 
 }
