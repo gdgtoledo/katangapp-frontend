@@ -1,0 +1,84 @@
+$bus-route---background-color: $color-grey-light-40;
+$bus-route---color: $color-grey-dark-25;
+$bus-route---border-color: $color-grey-light-35;
+$bus-route---border-bottom: 1px solid $bus-route---border-color;
+
+$bus-route--comes-tomorrow---color: $color-aux-primary;
+$bus-route--comes-today-but-wait-sit---color: $color-grey-dark-15;
+$bus-route--comes-today---color: $color-grey-dark-20;
+$bus-route--comes-now---color: $color-grey-dark-25;
+$bus-route--comes-right-now---color: $color-aux-secondary;
+
+.#{$ns}-bus-route {
+    border-bottom: $bus-route---border-bottom;
+
+    text-align: center;
+
+    &__name {
+        width: 10%;
+        padding: 20px;
+
+        background-color: $bus-route---background-color;
+        color: $bus-route---color;
+        font-size: rem(20px);
+    }
+
+    &__time {
+        width: 90%;
+        padding: 20px;
+
+        &.comes-tomorrow {
+            color: $bus-route--comes-tomorrow---color;
+            font-weight:400;
+
+            svg {
+                vertical-align: middle;
+                margin-right: 5px;
+            }
+        }
+
+        &.comes-today-but-wait-sit {
+            color: $bus-route--comes-today-but-wait-sit---color;
+            font-weight: 300;
+            font-size: rem(24px);
+        }
+
+        &.comes-today {
+            color: $bus-route--comes-today---color;
+            font-weight: 400;
+            font-size: rem(26px);
+        }
+
+        &.comes-now {
+            color: $bus-route--comes-now---color;
+            font-weight: 500;
+            font-size: rem(28px);
+        }
+
+        &.comes-right-now {
+            color: $bus-route--comes-right-now---color;
+            font-weight: 600;
+            font-size: rem(30px);
+
+            animation: bus-route-intermitent-green 1s infinite;
+        }
+    }
+
+    &__quantity-of-time {
+        vertical-align: middle;
+    }
+
+    &__unit-time {
+        font-size: rem(12px);
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+@keyframes bus-route-intermitent-green {
+     0% { color: $bus-route--comes-right-now---color; }
+     50% { color: darken($bus-route--comes-right-now---color, 5); }
+     100% { color: $bus-route--comes-right-now---color; }
+}

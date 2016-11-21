@@ -1,0 +1,14 @@
+.#{$ns}-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__header {
+        margin: 0;
+    }
+
+    &__title {
+        line-height: 0;
+        font-size: 0px;
+    }
+}
