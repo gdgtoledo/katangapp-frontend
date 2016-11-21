@@ -36,7 +36,7 @@ const positionAroundMe = ( state = initialPositionAroundMe, action ) => {
             nextState = Object.assign( {}, state, { busStops: action.busStopsAroundMe.paradas, errors: [] } )
             return nextState
         case GET_BUS_STOPS_AROUND_ME_ERROR:
-            nextState = Object.assign( {}, state, { busStops: {}, errors: []  } )
+            nextState = Object.assign( {}, state, { busStops: [], errors: []  } )
             return nextState
         default:
             nextState = Object.assign( {}, state )
