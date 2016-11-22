@@ -25,8 +25,8 @@ import { syncHistoryWithStore } from 'react-router-redux'
 
 import store from '../stores/store'
 
-import GetBusStopsGeoState from '../containers/getBusStopsGeoState'
-import RenderBusStopsResults from '../containers/renderBusStopsResults'
+import GetBusStopsGeoState from './containers/getBusStopsGeoState'
+import RenderBusStopsResults from './containers/renderBusStopsResults'
 
 const history = syncHistoryWithStore( browserHistory, store )
 

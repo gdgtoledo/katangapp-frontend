@@ -1,0 +1,20 @@
+.#{$ns}-logo {
+    text-align: center;
+    margin: 0;
+
+    &__icon {
+        display: block;
+        width: 100px;
+        height: 0;
+        padding-top: 134px;
+        overflow: hidden;
+        opacity: 1;
+
+        background-image: url('../../src/assets/images/logo.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        font-size: 0;
+    }
+}

@@ -20,16 +20,17 @@
 
 @import '../../node_modules/breakpoint-sass/stylesheets/_breakpoint';
 
-@import '../components/logo/logo',
-        '../components/buttons/btn',
-        '../components/buttons/circle',
-        '../components/loading/loading',
-        '../components/geolocalizer/geolocalizer',
-        '../components/slider/slider',
-        '../components/home/home',
-        '../components/results/results',
-        '../components/bus-stops/bus-stops',
-        '../components/bus-stop/bus-stop';
+@import './components/icons/katanga',
+        './components/buttons/btn',
+        './components/buttons/circle',
+        './components/loading/loading',
+        './components/geolocalizer/geolocalizer',
+        './components/slider/slider',
+        './components/home/home',
+        './components/results/results',
+        './components/bus-stop/bus-stop',
+        './components/bus-stops/bus-stops',
+        './components/bus-route/bus-route';
 
 html {
     box-sizing: border-box;
@@ -52,6 +53,10 @@ body {
 }
 
 .#{$ns}-container {
+    @include breakpoint($break-mobile) {
+        padding: 3vh 3vw;
+    }
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,5 +64,5 @@ body {
 
     width: 100%;
     height: 100%;
-    padding: 3vh 3vw;
+    padding: 0;
 }
