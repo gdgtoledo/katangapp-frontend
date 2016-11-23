@@ -4,7 +4,7 @@ import Geolocalizer from '../geolocalizer/geolocalizer.jsx'
 import Slider from '../slider/slider.jsx'
 import Loading from '../Loading/loading'
 
-const Home = ( { meters, coords, loading, setLoading, setMetersAroundMe, getBusStopsAroundMe} ) => (
+const Home = ( { meters, coords, loading, setLoading, setMetersAroundMe, getBusStopsAroundMe } ) => (
     <main className='ktg-home'>
         <header className={loading ? 'ktg-home__header ktg-home__header--is-loading' : 'ktg-home__header'}>
             <h1 className="ktg-home__title">Pagina de inicio de katanga</h1>
