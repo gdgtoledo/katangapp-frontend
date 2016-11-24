@@ -18,13 +18,23 @@ import { browserHistory } from  'react-router'
 
 import store from   '../stores/store'
 
-const goToResults = ( dispatch ) => {
+export const goToResults = ( dispatch ) => {
     let currentState = store.getState()
-    if ( currentState.positionAroundMe.errors.length > 0 && currentState.positionAroundMe.busStops.length > 0 ) {
+    if ( currentState.positionAroundMe.busStops.length > 0 ) {
+        dispatch( browserHistory.push( '/results' ) )
+    }
+    if ( currentState.positionAroundMe.errors.length > 0 ) {
         dispatch( browserHistory.push( '/errors' ) )
     } else {
-        dispatch( browserHistory.push( '/results' ) )
+        dispatch( browserHistory.push( '/home' ) )
     }
 }
 
-export default goToResults
+export const goToHome = ( dispatch ) => {
+    let currentState = store.getState()
+    if ( currentState.positionAroundMe.errors.length > 0 ) {
+        dispatch( browserHistory.push( '/errors' ) )
+    } else {
+        dispatch( browserHistory.push( '/home' ) )
+    }
+}
