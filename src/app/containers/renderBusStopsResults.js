@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-import { connect } from     'react-redux'
-import Results from         '../components/results/results'
+import { connect } from 'react-redux'
+
+import Results from '../components/results/results'
 
 const mapStateToProps = ( state ) => {
     return {
