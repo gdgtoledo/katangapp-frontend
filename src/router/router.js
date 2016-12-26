@@ -31,10 +31,5 @@ export const goToResults = ( dispatch ) => {
 }
 
 export const goToHome = ( dispatch ) => {
-    let currentState = store.getState()
-    if ( currentState.positionAroundMe.errors.length > 0 ) {
-        dispatch( browserHistory.push( '/errors' ) )
-    } else {
-        dispatch( browserHistory.push( '/home' ) )
-    }
+    dispatch( browserHistory.push( '/home' ) )
 }
