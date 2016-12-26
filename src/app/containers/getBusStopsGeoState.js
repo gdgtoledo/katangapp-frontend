@@ -18,8 +18,8 @@ import { connect } from             'react-redux'
 import Promise from                 'promise-polyfill'
 
 import appi from                    '../../services/appi'
-import goToResults from             '../../router/router'
-import Home from                    '../components/home/home.jsx'
+import { goToResults }  from        '../../router/router'
+import Home from                    '../components/home/home'
 import store from                   '../../stores/store'
 
 const getBusStopsAroundMeAndGoToResults = ( dispatch, position ) => {
