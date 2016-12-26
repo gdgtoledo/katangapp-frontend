@@ -4,17 +4,20 @@ $loading---offset: 187;
 $loading---duration: 1.4s;
 
 .#{$this} {
+    position: relative;
+    opacity: 0;
+    height: 0px;
 
-   position: relative;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+    animation: opacity 3s slidein;
+
+    &--is-loading {
+        opacity: 1;
+        height: auto;
+        animation: opacity 3s slidein;
+   }
 
    &__spiner {
        animation: rotator $loading---duration linear infinite;
-
-
    }
 
    &__path {
