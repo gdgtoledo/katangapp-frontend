@@ -15,12 +15,7 @@
  */
 
 .#{$ns}-home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    background-color: $color-quaternary;
+    @extend .#{$ns}-screen-container;
 
     &__header {
         width: 30vw;
@@ -40,25 +35,6 @@
     &__title {
         font-size: 0;
         line-height: 0;
-    }
-
-    .#{$ns}-logo {
-        animation: 1s ease-in-out 1.5s 1 forwards logo_animation;
-
-        @keyframes logo_animation {
-            0% {
-                opacity: 1;
-            }
-            35% {
-                opacity: 0.4;
-                transform: scale(1.1);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(0.8);
-            }
-        }
-
     }
 
     .#{$ns}-home__meters-around {
@@ -99,20 +75,12 @@
                 }
             }
         }
-
     }
 
     .#{$ns}-loading {
-        opacity: 0;
-        height: 0px;
-
-        animation: opacity 3s slidein;
-
-        &--is-loading {
-            opacity: 1;
-            height: auto;
-            animation: opacity 3s slidein;
-
-        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
