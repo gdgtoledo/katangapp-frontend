@@ -16,11 +16,27 @@
 
 import React from 'react'
 
-import colors from '../../styles/colors'
+import colors from  '../../styles/colors'
 import Katanga from '../icons/katanga'
 
-const Intro = () => (
-    <Katanga circleFillColor={colors.primary} circleBorderColor={colors.secondary} busAndTextColor={colors.secondary}/>
-)
+export default class Intro extends React.Component {
 
-export default Intro≤
+    constructor( props ) {
+        super( props );
+    }
+
+    render() {
+        return (
+            <main className='ktg-intro'>
+                <Katanga circleFillColor={colors.primary} 
+                        circleBorderColor={colors.secondary} 
+                        busAndTextColor={colors.secondary}/>
+            </main>
+        );
+    }
+
+    componentDidMount() {
+        this.props.whenIntroIsFinished();
+    }
+
+}
