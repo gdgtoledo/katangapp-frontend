@@ -16,7 +16,7 @@
 
 import './app.scss';
 
-import React from 'react'  // eslint-disable-line no-unused-vars
+import React from 'react'
 import ReactDOM from 'react-dom'
 
 import { Provider } from 'react-redux'
@@ -25,6 +25,7 @@ import { syncHistoryWithStore } from 'react-router-redux'
 
 import store from '../stores/store'
 
+import IntroToKatanga from './containers/introToKatanga'
 import GetBusStopsGeoState from './containers/getBusStopsGeoState'
 import RenderBusStopsResults from './containers/renderBusStopsResults'
 
@@ -36,7 +37,8 @@ export default class App extends React.Component {
             <Provider store={store}>
                 <div className='ktg-container'>
                     <Router history={history}>
-                    <Route path='/' component={GetBusStopsGeoState}/>
+                    <Route path='/' component={IntroToKatanga}/>
+                    <Route path='/home' component={GetBusStopsGeoState}/>
                     <Route path="/results" component={RenderBusStopsResults}/>
                     </Router>
                 </div>

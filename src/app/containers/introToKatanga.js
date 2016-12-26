@@ -14,15 +14,24 @@
  * limitations under the License.
  */
 
-.#{$ns}-results {
-    @extend .#{$ns}-screen-container;
+import { connect } from 'react-redux'
 
-    &__header {
-        margin: 0;
-    }
+import Intro from           '../components/intro/intro'
+import { goToHome } from    '../../router/router'
 
-    &__title {
-        line-height: 0;
-        font-size: 0px;
+const mapDispatchToProps = ( dispatch ) => {
+    return {
+        whenIntroIsFinished: () => {
+            setTimeout(function() {
+               goToHome( dispatch )
+            }, 2000)
+        }
     }
 }
+
+const IntroToKatanga = connect(
+    null,
+    mapDispatchToProps
+)( Intro )
+
+export default IntroToKatanga

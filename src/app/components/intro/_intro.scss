@@ -14,15 +14,12 @@
  * limitations under the License.
  */
 
-.#{$ns}-results {
-    @extend .#{$ns}-screen-container;
+ .#{$ns}-intro {
 
-    &__header {
-        margin: 0;
-    }
+     @extend .#{$ns}-screen-container;
+     @extend .#{$ns}-screen-container--intro;
 
-    &__title {
-        line-height: 0;
-        font-size: 0px;
-    }
-}
+     .#{$ns}-logo-katanga {
+         width: 35vh;
+     }
+ }

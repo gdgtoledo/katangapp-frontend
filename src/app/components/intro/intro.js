@@ -14,15 +14,29 @@
  * limitations under the License.
  */
 
-.#{$ns}-results {
-    @extend .#{$ns}-screen-container;
+import React from 'react'
 
-    &__header {
-        margin: 0;
+import colors from  '../../styles/colors'
+import Katanga from '../icons/katanga'
+
+export default class Intro extends React.Component {
+
+    constructor( props ) {
+        super( props );
     }
 
-    &__title {
-        line-height: 0;
-        font-size: 0px;
+    render() {
+        return (
+            <main className='ktg-intro'>
+                <Katanga circleFillColor={colors.primary} 
+                        circleBorderColor={colors.secondary} 
+                        busAndTextColor={colors.secondary}/>
+            </main>
+        );
     }
+
+    componentDidMount() {
+        this.props.whenIntroIsFinished();
+    }
+
 }
