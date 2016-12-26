@@ -16,17 +16,21 @@
 
 import { connect } from 'react-redux'
 
-import Intro from '../components/intro/intro'
+import Intro from           '../components/intro/intro'
+import { goToHome } from    '../../router/router'
 
 const mapDispatchToProps = ( dispatch ) => {
     return {
-        whenDomIsReady: () => {
-            
+        whenIntroIsFinished: () => {
+            setTimeout(function() {
+               goToHome( dispatch )
+            }, 2000)
         }
     }
 }
 
 const IntroToKatanga = connect(
+    null,
     mapDispatchToProps
 )( Intro )
 
