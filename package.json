@@ -1,14 +1,15 @@
 {
   "name": "katangapp-front",
-  "private": true,
+  "private": false,
   "version": "0.1.0",
   "description": "this App can show you Toledo bus stops timing to all routes",
   "main": "./src/app/app.js",
+  "license": "ISC",
   "scripts": {
     "build": "webpack",
     "dev": "webpack-dev-server --devtool eval --progress --colors --hot --inline --content-base build"
   },
-  "repository": "",
+  "repository": "https://github.com/craftsmanship-toledo/katangapp-frontend",
   "keywords": [],
   "author": "Craftsmanship Toledo",
   "devDependencies": {
@@ -48,6 +49,5 @@
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "whatwg-fetch": "^0.11.0"
-  },
-  "license": "ISC"
+  }
 }
