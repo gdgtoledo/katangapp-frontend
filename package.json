@@ -1,13 +1,13 @@
 {
   "name": "katangapp-front",
-  "private": false,
   "version": "0.1.0",
   "description": "this App can show you Toledo bus stops timing to all routes",
   "main": "./src/app/app.js",
   "license": "ISC",
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --inline --content-base build"
+    "lint": "eslint . --fix --ignore-path .eslintignore",
+    "build": "NODE_ENV='production' webpack",
+    "start": "node server.js"
   },
   "repository": "https://github.com/craftsmanship-toledo/katangapp-frontend",
   "keywords": [],
@@ -17,6 +17,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "autoprefixer": "^6.3.7",
     "babel-core": "^6.4.0",
     "babel-eslint": "^6.1.0",
     "babel-loader": "^6.2.1",
@@ -24,12 +25,14 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.5.0",
     "breakpoint-sass": "^2.6.1",
+    "csswring": "^5.1.0",
     "css-loader": "^0.23.1",
     "es6-promise": "^3.0.2",
     "eslint": "^3.0.1",
     "eslint-loader": "^1.4.1",
     "eslint-plugin-react": "^5.2.2",
     "exports-loader": "^0.6.3",
+    "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "imports-loader": "^0.6.5",
     "node-sass": "^3.4.2",
@@ -48,6 +51,8 @@
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.11",
+    "webpack-core": "^0.6.8",
+    "webpack-shell-plugin": "^0.4.2",
     "whatwg-fetch": "^0.11.0"
   }
 }
