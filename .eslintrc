@@ -35,6 +35,7 @@
     "console": true,
     "webpack": true,
     "__dirname": true,
-    "module": true
+    "module": true,
+    "process"
   }
 }
