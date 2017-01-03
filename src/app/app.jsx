@@ -37,9 +37,9 @@ export default class App extends React.Component {
             <Provider store={store}>
                 <div className='ktg-container'>
                     <Router history={history}>
-                    <Route path='/' component={IntroToKatanga}/>
-                    <Route path='/home' component={GetBusStopsGeoState}/>
-                    <Route path="/results" component={RenderBusStopsResults}/>
+                        <Route path='/' component={IntroToKatanga}/>
+                        <Route path='/home' component={GetBusStopsGeoState}/>
+                        <Route path="/results" component={RenderBusStopsResults}/>
                     </Router>
                 </div>
             </Provider>
