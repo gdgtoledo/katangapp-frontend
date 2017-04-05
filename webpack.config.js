@@ -13,113 +13,66 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Webpack = require('webpack');
 
-var autoprefixer = require('autoprefixer'),
-    csswring = require('csswring'),
-    ExtractTextPlugin = require('extract-text-webpack-plugin'),
-    webpack = require('webpack'),
-    WebpackShellPlugin = require('webpack-shell-plugin');
+const APP_NAME = 'katanga'
+const SRC_PATH = './src';
+const OUTPUT_PATH = `${__dirname}/dist`;
 
-var PRODUCTION = process.env.NODE_ENV === 'production';
+module.exports = env => {
 
-var srcPath = './src/',
-    outputPath = './dist/',
-    publicPath = '';
+  const config = {
+    entry: [ `${SRC_PATH}/app/app.jsx` ],
+    module: {
+      rules: [
+        {
+          exclude:  /node_modules/,
+          loaders: [
+            'babel-loader?sourceMap'
+          ],
+          test: /\.(js|jsx)$/
+        },
+        {
+          loader: ExtractTextPlugin.extract([
+            'css-loader',
+            'sass-loader'
+          ]),
+          test: /\.scss$/
+        },
+        {
+          test: /\.(png|jpg|gif|woff|woff2)$/,
+          loader: 'url-loader?limit=8192'
+        },
+      ]
+    },
+    output: {
+        filename: `${APP_NAME}.js`,
+        path: OUTPUT_PATH
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+          inject: 'body',
+          template: `${SRC_PATH}/index.html`
+        }),
+        new ExtractTextPlugin(`${APP_NAME}.css`)
+    ],
+    node: {
+      fs: "empty"
+    }
+  };
 
-var files = {
-    app: '[name].js',
-    styles: '[name].css'
+  if (env && env.dev) {
+    config.entry.unshift('webpack-dev-server/client?http://localhost:8080/');
+    config.plugins.unshift(new Webpack.HotModuleReplacementPlugin());
+    config.devtool = 'source-map';
+    config.devServer = {
+      contentBase: './',
+      hot: true
+    };
+  }
+
+  return config;
+
 };
-
-var onBuildStart = [
-  'mkdir -p ' + outputPath,
-  'cp ' + srcPath + 'index.html ' + outputPath
-];
-
-if (PRODUCTION) {
-  files.app = '[name].[chunkhash].js';
-  files.styles = '[name].[hash].css';
-  //onBuildStart.push('mkdir -p ' + outputPath + 'assets/');
-  //onBuildStart.push('cp -rf ' + srcPath + 'assets/ ' + outputPath + 'assets/');
-}
-
-var config= {
-  context: __dirname,
-  entry: {
-    app: __dirname + '/src/app/app.jsx',
-    styles: __dirname + '/src/app/app.scss'
-  },
-  resolve: {
-    extensions: ['', '.js', '.jsx', 'html', 'css']
-  },
-  output: {
-      path: __dirname + '/dist',
-      filename: files.app,
-      publicPath: publicPath
-  },
-  module: {
-    preLoaders: [{
-        test: /\.(js|jsx)$/,
-        include: srcPath,
-        loader: 'babel!eslint-loader'
-      }],
-    loaders: [
-      {
-        test: /\.html$/,
-        loader: 'html',
-        exclude: [/node_modules/, /index\.html/]
-      },
-      {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader!postcss-loader'
-      },
-      {
-        test: /\.sass/,
-        loader: 'style-loader!css-loader!postcss-loader!sass-loader?outputStyle=expanded&indentedSyntax'
-      },
-      // {
-      //   test: /\.scss/,
-      //   loader: 'style-loader!css-loader!postcss-loader!sass-loader?outputStyle=expanded'
-      // },
-      {
-          test: /\.scss$/,
-          loader: ExtractTextPlugin.extract('css?sourceMap!postcss-loader?sourceMap!sass?sourceMap')
-      },
-      {
-        test: /\.(png|jpg|gif|woff|woff2)$/,
-        loader: 'url-loader?limit=8192'
-      }
-    ]
-  },
-  plugins: [
-    new webpack.ProvidePlugin({
-      'Promise': 'es6-promise',
-      'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
-    }),
-    new WebpackShellPlugin({
-      onBuildStart: onBuildStart,
-      verbose: true
-    }),
-    new ExtractTextPlugin(files.styles)
-  ],
-  sassLoader: {
-        includePaths: [
-            './node_modules/breakpoint-sass/stylesheets/'
-        ]
-  },
-  postcss: function () {
-        var plugins = [
-            autoprefixer({browsers: ['last 2 Safari versions', 'last 2 versions']}),
-            csswring
-        ];
-        return plugins;
-  },
-  devtool: 'source-map'
-};
-
-if (PRODUCTION) {
-    config.plugins.push(new webpack.optimize.UglifyJsPlugin());
-    config.plugins.push(new webpack.optimize.OccurrenceOrderPlugin());
-}
-
-module.exports = config;
