@@ -1,0 +1,9 @@
+{
+	"id": "katanga",
+	"description": "this App can show you Toledo bus stops timing to all routes",
+	"type": "wedeploy/hosting",
+	"homeContainer": "front",
+	"hooks": {
+        "build": "npm i && npm run build"
+    }
+}
