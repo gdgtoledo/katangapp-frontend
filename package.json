@@ -6,8 +6,8 @@
   "main": "app/app.jsx",
   "scripts": {
     "lint": "eslint ./src/** --fix --ignore-path .gitignore",
-    "build": "webpack",
-    "start": "webpack-dev-server --env.dev"
+    "build": "./node_modules/.bin/webpack --config ./webpack.config.js",
+    "start": "./node_modules/.bin/webpack-dev-server --env.dev --config ./webpack.config.js"
   },
   "repository": "https://github.com/craftsmanship-toledo/katangapp-frontend",
   "keywords": [],
