@@ -18,7 +18,7 @@ import React, { PropTypes } from 'react'
 
 import Geolocalizer from '../geolocalizer/geolocalizer.jsx'
 import Slider from '../slider/slider.jsx'
-import Loading from '../Loading/loading'
+import Loading from '../loading/loading'
 
 const Home = ( { meters, coords, loading, setLoading, setMetersAroundMe, getBusStopsAroundMe } ) => (
     <main className='ktg-home'>
