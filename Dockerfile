@@ -1,14 +1,14 @@
 FROM node:7-alpine
-MAINTAINER Manuel de la Peña <manuel.delapenya@liferay.com>
+MAINTAINER Manuel de la Peña <katangapp@gmail.com>
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+RUN mkdir -p /usr/src/app/katanga
+WORKDIR /usr/src/app/katanga
 
-COPY package.json /usr/src/app/
+COPY . /usr/src/app/katanga
+
+RUN sed -i.bak 's/--port 8080/--host 0.0.0.0 --port 8080/' package.json
 RUN yarn install
-
-COPY . /usr/src/app/
 
 EXPOSE 8080
 
-CMD ["npm", "start"]
+CMD npm start
