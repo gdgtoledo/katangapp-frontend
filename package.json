@@ -1,6 +1,6 @@
 {
   "name": "katangapp-front",
-  "version": "0.1.0",
+  "version": "1.0.0-rc.1",
   "description": "this App can show you Toledo bus stops timing to all routes",
   "license": "Apache 2",
   "main": "app/app.jsx",
