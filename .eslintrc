@@ -36,6 +36,6 @@
     "webpack": true,
     "__dirname": true,
     "module": true,
-    "process"
+    "process": true
   }
 }
