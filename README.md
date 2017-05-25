@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/craftsmanship-toledo/katangapp-frontend.svg?branch=dev)](https://travis-ci.org/craftsmanship-toledo/katangapp-frontend)
+
 # Katanga
 
 Katanga es una aplicación opensource  para ver los tiempos de los autobuses de Toledo en cada parada.
