@@ -1,13 +1,6 @@
-FROM node:7-alpine
+FROM nginx:1.13.0-alpine
 MAINTAINER Manuel de la Peña <katangapp@gmail.com>
 
-RUN mkdir -p /usr/src/app/katanga
-WORKDIR /usr/src/app/katanga
+WORKDIR /usr/share/nginx/html
 
-COPY . /usr/src/app/katanga
-
-RUN yarn install
-
-EXPOSE 8080
-
-CMD npm start
+COPY dist/ /usr/share/nginx/html
