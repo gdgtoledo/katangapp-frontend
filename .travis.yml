@@ -1,0 +1,13 @@
+sudo: required
+
+services:
+  - docker
+
+install:
+  - npm run build
+
+script:
+  - npm run build-docker
+
+after_success:
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ] && [ "$TRAVIS_BRANCH" = "dev" ]; then npm run publish-docker; fi'
