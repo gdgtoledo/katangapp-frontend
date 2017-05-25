@@ -15,7 +15,7 @@
     "build": "npm install && ./node_modules/.bin/webpack --config ./webpack.config.js",
     "build-docker": "npm run build && docker build -t $npm_package_config_docker_user/$npm_package_config_docker_image:$npm_package_version .",
     "publish-docker": "docker push $npm_package_config_docker_user/$npm_package_config_docker_image:$npm_package_version",
-    "start": "./node_modules/.bin/webpack-dev-server --host 0.0.0.0 --env.dev --config ./webpack.config.js"
+    "start": "./node_modules/.bin/webpack-dev-server --env.dev --config ./webpack.config.js"
   },
   "repository": "https://github.com/craftsmanship-toledo/katangapp-frontend",
   "keywords": [],
