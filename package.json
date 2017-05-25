@@ -13,7 +13,7 @@
   "scripts": {
     "lint": "eslint ./src/**/*.js --fix --ignore-path .gitignore",
     "build": "npm install && ./node_modules/.bin/webpack --config ./webpack.config.js",
-    "build-docker": "npm run build && docker build -t $npm_package_config_docker_user/$npm_package_config_docker_image:$npm_package_version .",
+    "build-docker": "docker build -t $npm_package_config_docker_user/$npm_package_config_docker_image:$npm_package_version .",
     "publish-docker": "docker push $npm_package_config_docker_user/$npm_package_config_docker_image:$npm_package_version",
     "start": "./node_modules/.bin/webpack-dev-server --env.dev --config ./webpack.config.js"
   },
