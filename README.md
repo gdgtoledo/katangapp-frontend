@@ -51,6 +51,16 @@ npm start
 npm run build
 ```
 
+Este comando ejecutará un `npm install` así como invocará a `WebPack`.
+
+Si además queremos construir una imagen de Docker, podremos ejecutar:
+
+```shell
+npm run build-docker
+```
+
+Este comando construirá una imagen bajo el repositorio `craftsmanshiptoledo/katanga-front`, con la versión indicada en el `package.json`, por ejemplo: `craftsmanshiptoledo/katanga-front:1.0.0-rc.1`.
+
 ### No nos mires, únete
 
 Puedes unirte de muchas formas, no solo haciendo commits, puedes preguntar al equipo acerca de estas tareas, abrir un issue en el proyecto, mejorar nuestro código y hacernos peticiones para la inclusión de estas mejoras etc.
