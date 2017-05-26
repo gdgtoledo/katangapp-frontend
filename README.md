@@ -71,9 +71,9 @@ Si te animas a hacer commits puedes ver su formato y sus convenciones [aquí](ht
 
 | Pic                                      |         User          |                  Github                  |                 Twitter                  |                   Web                    |
 | ---------------------------------------- | :-------------------: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: |
-| ![Javi](https://avatars3.githubusercontent.com/u/1202463?v=3&s=200) | Javier López de Ancos | [javierlopezdeancos](https://github.com/javierlopezdeancos) | [@javierland](https://twitter.com/javierland) | [javierlopez](http://public.javierlopezdeancos.wedeploy.io/) |
-| ![manuel](https://avatars2.githubusercontent.com/u/951580?v=3&s=200) |   Manuel de la Peña   | [mdelapenya](https://github.com/mdelapenya) | [@mdelapenya](https://twitter.com/mdelapenya) |                                          |
-| ![Felix](https://avatars0.githubusercontent.com/u/4701534?v=3&s=200) |     Felix Ortega      | [felixortegam](https://github.com/felixortegam) | [@felixortegam](https://twitter.com/felixortegam) |                                          |
+| ![Javi](https://avatars3.githubusercontent.com/u/1202463?v=3&s=100) | Javier López de Ancos | [javierlopezdeancos](https://github.com/javierlopezdeancos) | [@javierland](https://twitter.com/javierland) | [javierlopez](http://public.javierlopezdeancos.wedeploy.io/) |
+| ![manuel](https://avatars2.githubusercontent.com/u/951580?v=3&s=100) |   Manuel de la Peña   | [mdelapenya](https://github.com/mdelapenya) | [@mdelapenya](https://twitter.com/mdelapenya) |                                          |
+| ![Felix](https://avatars0.githubusercontent.com/u/4701534?v=3&s=100) |     Felix Ortega      | [felixortegam](https://github.com/felixortegam) | [@felixortegam](https://twitter.com/felixortegam) |                                          |
 
 
 
