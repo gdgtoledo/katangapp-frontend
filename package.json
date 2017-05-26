@@ -21,6 +21,7 @@
   "keywords": [],
   "author": "Craftsmanship Toledo",
   "devDependencies": {
+    "copy-webpack-plugin": "^4.0.1",
     "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {

@@ -15,6 +15,7 @@
  */
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const Webpack = require('webpack');
 
 const APP_NAME = 'katanga'
@@ -56,7 +57,10 @@ module.exports = env => {
           inject: 'body',
           template: `${SRC_PATH}/index.html`
         }),
-        new ExtractTextPlugin(`${APP_NAME}.css`)
+        new ExtractTextPlugin(`${APP_NAME}.css`),
+        new CopyWebpackPlugin([
+          { from: `${SRC_PATH}/manifest.json`, to: 'manifest.json' }
+        ])
     ],
     node: {
       fs: "empty"
