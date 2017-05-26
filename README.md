@@ -8,21 +8,27 @@ Katanga es una aplicación opensource  para ver los tiempos de los autobuses de 
 
 Puedes ver [la historia](http://www.latribunadetoledo.es/noticia.cfm/Local/20100523/katangas/circulan/facebook/C12146B3-B5AA-5333-3B488A78CFC4076A) de porqué en Toledo se llamaban katangas a los autobuses urbanos
 
-## Instalación 
+## Instalación
 
-Clona este repositorio
+Baja la última [release](https://github.com/craftsmanship-toledo/katangapp-frontend/releases), o si tienes Docker en tu máquina, ejecuta el siguiente comando:
 
 ```shell
-git clone git@github.com:craftsmanship-toledo/katangapp-frontend.git
+docker run -d -p 7777:80 craftsmanshiptoledo/katanga-frontend:1.0.0-rc.1
 ```
 
-o baja la última [release](https://github.com/craftsmanship-toledo/katangapp-frontend/releases)
+Que levantará un contenedor con un servidor web Nginx con la aplicación de Katanga instalada, de modo que si abres un navegador en el puerto 7777 (http://localhost:7777) verás la aplicación funcionando.
 
 ## Uso
 
 Puedes usar [Katanga](http://katanga.wedeploy.io/) Desktop que está hospedada en wedeploy.
 
 ## Desarrollo
+
+Clona este repositorio
+
+```shell
+git clone git@github.com:craftsmanship-toledo/katangapp-frontend.git
+```
 
 ### Dependencias
 
