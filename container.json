@@ -1,8 +1,5 @@
 {
-	"id": "front",
+	"id": "public",
 	"description": "this App can show you Toledo bus stops timing to all routes",
-	"type": "wedeploy/hosting",
-	"hooks": {
-        "build": "npm i && npm run build"
-    }
+	"type": "wedeploy/hosting"
 }
