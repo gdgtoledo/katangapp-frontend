@@ -1,18 +1,27 @@
 {
   "name": "katangapp-front",
-  "version": "0.1.0",
+  "version": "1.0.0-rc.1",
+  "config": {
+    "docker": {
+      "user": "craftsmanshiptoledo",
+      "image": "katanga-frontend"
+    }
+  },
   "description": "this App can show you Toledo bus stops timing to all routes",
   "license": "Apache 2",
   "main": "app/app.jsx",
   "scripts": {
-    "lint": "eslint ./src/** --fix --ignore-path .gitignore",
-    "build": "webpack",
-    "start": "webpack-dev-server --env.dev"
+    "lint": "eslint ./src/**/*.js --fix --ignore-path .gitignore",
+    "build": "npm install && ./node_modules/.bin/webpack --config ./webpack.config.js",
+    "build-docker": "docker build -t $npm_package_config_docker_user/$npm_package_config_docker_image:$npm_package_version .",
+    "publish-docker": "docker push $npm_package_config_docker_user/$npm_package_config_docker_image:$npm_package_version",
+    "start": "./node_modules/.bin/webpack-dev-server --env.dev --config ./webpack.config.js"
   },
   "repository": "https://github.com/craftsmanship-toledo/katangapp-frontend",
   "keywords": [],
   "author": "Craftsmanship Toledo",
   "devDependencies": {
+    "copy-webpack-plugin": "^4.0.1",
     "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
@@ -30,7 +39,7 @@
     "eslint-plugin-react": "^5.2.2",
     "extract-text-webpack-plugin": "^2.0.0",
     "html-webpack-plugin": "^2.28.0",
-    "node-sass": "^3.4.2",
+    "node-sass": "^4.0.0",
     "promise-polyfill": "^5.2.1",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",

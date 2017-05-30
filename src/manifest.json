@@ -1,0 +1,66 @@
+{
+  "name": "katanga",
+  "author": "@craftsmanship-toledo",
+  "short_name": "craftsmanship-toledo",
+  "developer": {
+    "name": "Craftsmanship Toledo",
+    "url": "https://github.com/craftsmanship-toledo"
+  },
+  "icons": [
+    {
+      "src": "assets/icons/chrome-icon-2x.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/chrome-icon-3x.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/chrome-icon-4x.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/android-icon-36x36.png",
+      "sizes": "36x36",
+      "type": "image\/png",
+      "density": "0.75"
+    },
+    {
+      "src": "assets/icons/android-icon-48x48.png",
+      "sizes": "48x48",
+      "type": "image\/png",
+      "density": "1.0"
+    },
+    {
+      "src": "assets/icons/android-icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image\/png",
+      "density": "1.5"
+    },
+    {
+      "src": "assets/icons/android-icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image\/png",
+      "density": "2.0"
+    },
+    {
+      "src": "assets/icons/android-icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image\/png",
+      "density": "3.0"
+    },
+    {
+      "src": "assets/icons/android-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image\/png",
+      "density": "4.0"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#ffda04",
+  "theme_color": "#ffffff",
+  "display": "standalone"
+}

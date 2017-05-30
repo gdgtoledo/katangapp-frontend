@@ -1,0 +1,9 @@
+.gitinore
+container.json
+Dockerfile
+
+.git/
+_error/
+build/
+node_modules/
+src/
