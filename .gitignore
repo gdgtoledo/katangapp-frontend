@@ -3,4 +3,5 @@ node_modules
 *.orig
 build
 dist
+public
 npm-debug.log
