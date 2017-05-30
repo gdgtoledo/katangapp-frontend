@@ -20,7 +20,7 @@ const Webpack = require('webpack');
 
 const APP_NAME = 'katanga'
 const SRC_PATH = './src';
-const OUTPUT_PATH = `${__dirname}/dist`;
+const OUTPUT_PATH = `${__dirname}/katanga-wedeploy/public`;
 
 module.exports = env => {
 
