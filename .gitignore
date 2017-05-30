@@ -5,3 +5,5 @@ build
 dist
 public
 npm-debug.log
+
+project.json
