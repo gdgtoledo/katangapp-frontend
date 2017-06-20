@@ -15,8 +15,7 @@ npm run build
 # Generating WeDeploy's project.json file
 cat << EOF > katanga-wedeploy/project.json
 {
-	"id": "katanga",
-	"homeContainer": "public"
+	"id": "katanga"
 }
 EOF
 
@@ -25,7 +24,8 @@ cat << EOF > katanga-wedeploy/public/container.json
 {
 	"id": "public",
 	"description": "this App can show you Toledo bus stops timing to all routes",
-	"type": "wedeploy/hosting"
+	"type": "swcraftersclm/katanga-frontend:1.0.0-rc.1",
+	"port": "80"
 }
 EOF
 
