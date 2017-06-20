@@ -1,7 +1,7 @@
 {
-  "name": "katanga",
+  "name": "Katanga",
   "author": "@craftsmanship-toledo",
-  "short_name": "craftsmanship-toledo",
+  "short_name": "Katanga",
   "developer": {
     "name": "Craftsmanship Toledo",
     "url": "https://github.com/craftsmanship-toledo"
@@ -59,7 +59,7 @@
       "density": "4.0"
     }
   ],
-  "start_url": "index.html",
+  "start_url": "/",
   "background_color": "#ffda04",
   "theme_color": "#ffffff",
   "display": "standalone"
