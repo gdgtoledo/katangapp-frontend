@@ -13,14 +13,14 @@ fi
 npm run build
 
 # Generating WeDeploy's project.json file
-cat << EOF > katanga-wedeploy/project.json
+cat << EOF > $DIRECTORY/project.json
 {
 	"id": "katanga"
 }
 EOF
 
 # Generating WeDeploy's container.json file
-cat << EOF > katanga-wedeploy/public/container.json
+cat << EOF > $DIRECTORY/public/container.json
 {
 	"id": "public",
 	"description": "this App can show you Toledo bus stops timing to all routes",
