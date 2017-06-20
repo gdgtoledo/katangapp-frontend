@@ -7,7 +7,7 @@ if [ -d "${DIRECTORY}" ]; then
     git reset --hard && git clean -fdx && git checkout master && git pull origin master
     cd -
 else
-    git clone git@github.com:craftsmanship-toledo/katanga-wedeploy.git
+    git clone git@github.com:swcraftersclm/katanga-wedeploy.git
 fi
 
 npm run build
