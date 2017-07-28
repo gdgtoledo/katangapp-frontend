@@ -1,19 +1,13 @@
-$this: #{$ns}-loading;
-
 $loading---offset: 187;
 $loading---duration: 1.4s;
 
-.#{$this} {
+.#{$ns}-loading {
     position: relative;
-    opacity: 0;
-    height: 0px;
-
-    animation: opacity 3s slidein;
+    display: none;
 
     &--is-loading {
+        display: block;
         opacity: 1;
-        height: auto;
-        animation: opacity 3s slidein;
    }
 
    &__spiner {
@@ -32,6 +26,8 @@ $loading---duration: 1.4s;
    &:before {
        content: "Buscando paradas...";
        position: absolute;
+       top: 45%;
+       left: 15%;
    }
 
 }
