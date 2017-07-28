@@ -15,7 +15,7 @@
  */
 
 const initialLoading = {
-    state: false
-}
+  state: false,
+};
 
 export default initialLoading
