@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-import { browserHistory } from  'react-router'
+import { browserHistory } from 'react-router'
 
-import store from   '../stores/store'
-
-export const goToResults = ( dispatch ) => {
-    let currentState = store.getState()
-    if ( currentState.positionAroundMe.busStops.length > 0 ) {
-        dispatch( browserHistory.push( '/results' ) )
-    }
-    if ( currentState.positionAroundMe.errors.length > 0 ) {
-        dispatch( browserHistory.push( '/errors' ) )
-    } else {
-        dispatch( browserHistory.push( '/home' ) )
-    }
-}
+import store from '../stores/store'
 
 export const goToHome = ( dispatch ) => {
-    dispatch( browserHistory.push( '/home' ) )
-}
+  dispatch( browserHistory.push( '/' ) );
+};
+
+export const goToResults = ( dispatch ) => {
+  let currentState = store.getState();
+  if ( currentState.positionAroundMe.busStops.length > 0 ) {
+    dispatch( browserHistory.push( '/results' ) );
+  }
+  if ( currentState.positionAroundMe.errors.length > 0 ) {
+    dispatch( browserHistory.push( '/errors' ) );
+  } else {
+    dispatch( browserHistory.push( '/' ) );
+  }
+};
