@@ -59,6 +59,7 @@ module.exports = env => {
         }),
         new ExtractTextPlugin(`${APP_NAME}.css`),
         new CopyWebpackPlugin([
+          { from: `${SRC_PATH}/404.html`, to: '404.html' },
           { from: `${SRC_PATH}/manifest.json`, to: 'manifest.json' },
           { from: `${SRC_PATH}/assets/icons`, to: 'assets/icons' }
         ])
