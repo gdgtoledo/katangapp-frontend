@@ -14,31 +14,51 @@
  * limitations under the License.
  */
 
-import React, { PropTypes } from 'react'
+import React, {PropTypes} from 'react'
 
-import Geolocalizer from '../geolocalizer/geolocalizer.jsx'
-import Slider from '../slider/slider.jsx'
+import Intro from '../intro/intro'
+import Search from '../search/search'
 import Loading from '../loading/loading'
 
-const Home = ( { meters, coords, loading, setLoading, setMetersAroundMe, getBusStopsAroundMe } ) => (
-    <main className='ktg-home'>
-        <header className={loading ? 'ktg-home__header ktg-home__header--is-loading' : 'ktg-home__header'}>
-            <h1 className="ktg-home__title">Pagina de inicio de katanga</h1>
-        </header>
-        <form id='ktg-home_meters-around' className={loading ? 'ktg-home__meters-around ktg-home__meters-around--is-loading' : 'ktg-home__meters-around'}>
-            <Slider meters={meters} setMeters={setMetersAroundMe} />
-            <Geolocalizer coords={coords} setCoords={getBusStopsAroundMe} setLoading={setLoading}/>
-        </form>
-        <Loading isLoading={loading}/>
-    </main>
-)
+const Home = React.createClass({
+
+  componentDidMount: function() {
+    this.props.showIntroAndSetToShowed();
+  },
+
+  render: function() {
+    return (
+
+      <div className="ktg-home">
+
+        <Intro
+          colorPrimary={this.props.colorPrimary}
+          colorSecondary={this.props.colorSecondary}
+          isIntroShowed={this.props.isIntroShowed}/>
+
+        <Search
+          shouldBeHidden = {this.props.shouldBeSearchHidden}
+          meters = {this.props.meters}
+          coords = {this.props.coords}
+          setMetersAroundMe = {this.props.setMetersAroundMe}
+          getBusStopsAroundMe = {this.props.getBusStopsAroundMe}
+          setLoading = {this.props.setLoading} />
+
+        <Loading isLoading={this.props.loading} />
+
+      </div>
+
+    );
+  }
+
+});
 
 Home.propTypes = {
-    meters: PropTypes.number.isRequired,
-    loading: PropTypes.bool.isRequired,
-    setMetersAroundMe: PropTypes.func.isRequired,
-    getBusStopsAroundMe: PropTypes.func.isRequired,
-    setLoading: PropTypes.func
-}
+  meters: PropTypes.number.isRequired,
+  loading: PropTypes.bool.isRequired,
+  setMetersAroundMe: PropTypes.func.isRequired,
+  getBusStopsAroundMe: PropTypes.func.isRequired,
+  setLoading: PropTypes.func
+};
 
 export default Home

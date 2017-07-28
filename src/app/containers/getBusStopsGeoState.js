@@ -14,79 +14,93 @@
  * limitations under the License.
  */
 
-import { connect } from             'react-redux'
-import Promise from                 'promise-polyfill'
+import { connect } from 'react-redux'
+import Promise from 'promise-polyfill'
 
-import appi from                    '../../services/appi'
-import { goToResults }  from        '../../router/router'
-import Home from                    '../components/home/home'
-import store from                   '../../stores/store'
+import appi from '../../services/appi'
+import { goToResults } from '../../router/router'
+import Home from '../components/home/home'
+import store from '../../stores/store'
+import colors from '../styles/colors'
 
 const getBusStopsAroundMeAndGoToResults = ( dispatch, position ) => {
-    return appi.busStops.aroundme.fetch( position )
-        .then( response => {
-            return response.json();
-        } )
-        .then( busStops => {
-            dispatch( { type: 'GET_BUS_STOPS_AROUND_ME_SUCCESS', busStopsAroundMe: busStops } )
-        } )
-        .then ( () => {
-            goToResults( dispatch )
-            dispatch( { type: 'SET_LOADING', state: false } );
-        } )
-        .catch( error => {
-            //dispatch( { type: 'GET_BUS_STOPS_AROUND_ME_ERROR', error: error } )
-            throw error
-        } )
-}
+  return appi.busStops.aroundme.fetch( position )
+    .then( response => {
+      return response.json();
+    } )
+    .then( busStops => {
+      dispatch( { type: 'GET_BUS_STOPS_AROUND_ME_SUCCESS', busStopsAroundMe: busStops } )
+    } )
+    .then ( () => {
+      goToResults( dispatch );
+      dispatch( { type: 'SET_LOADING', state: false } );
+    } )
+    .catch( error => {
+      // TODO: Manage error and show in error page
+      // dispatch( { type: 'GET_BUS_STOPS_AROUND_ME_ERROR', error: error } )
+      throw error
+    } )
+};
 
 const setCoordsInStore = ( dispatch, coords ) => {
-    return new Promise ( ( resolve ) => {
-        let unsuscribe = store.subscribe( () => {
-            resolve( { coords: store.getState().positionAroundMe.coords, meters: store.getState().positionAroundMe.meters } )
-            unsuscribe()
-        } )
-        dispatch( { type: 'SET_COORDS_AROUND_ME', coords: coords } )
-    } )
-}
+  return new Promise ( ( resolve ) => {
+    let unSuscribe = store.subscribe( () => {
+      resolve( { coords: store.getState().positionAroundMe.coords, meters: store.getState().positionAroundMe.meters } );
+      unSuscribe();
+    } );
+    dispatch( { type: 'SET_COORDS_AROUND_ME', coords: coords } )
+  } )
+};
 
 const setCoordsGetBusStopsAndGoToResults = ( coords ) => {
-    return dispatch => {
-        return setCoordsInStore( dispatch, coords )
-            .then( position => {
-                getBusStopsAroundMeAndGoToResults( dispatch, { coords: position.coords, meters: position.meters } )
-            } )
-            .catch( error => {
-                throw error
-            } )
+  return dispatch => {
+    return setCoordsInStore( dispatch, coords )
+      .then( position => {
+        getBusStopsAroundMeAndGoToResults( dispatch, { coords: position.coords, meters: position.meters } )
+      } )
+      .catch( error => {
+        throw error
+      } )
     }
-}
+};
 
 const mapStateToProps = ( state ) => {
     return {
-        meters: state.positionAroundMe.meters,
-        coords: state.positionAroundMe.coords,
-        loading: state.loading.state
+      meters: state.positionAroundMe.meters,
+      coords: state.positionAroundMe.coords,
+      loading: state.loading.state,
+      isIntroShowed: state.intro.state,
+      shouldBeSearchHidden: state.loading.state || !state.intro.state,
+      colorPrimary: colors.primary,
+      colorSecondary: colors.secondary,
     }
-}
+};
 
 const mapDispatchToProps = ( dispatch ) => {
-    return {
-        setLoading: (isLoading) => {
-            dispatch( { type: 'SET_LOADING', state: isLoading } );
-        },
-        setMetersAroundMe: ( meters ) => {
-            dispatch( { type: 'SET_METERS_AROUND_ME', meters: meters } );
-        },
-        getBusStopsAroundMe: ( coords ) => {
-            dispatch( setCoordsGetBusStopsAndGoToResults( coords ) )
-        }
+  return {
+    setLoading: (isLoading) => {
+      dispatch( { type: 'SET_LOADING', state: isLoading } );
+    },
+    setMetersAroundMe: ( meters ) => {
+      dispatch( { type: 'SET_METERS_AROUND_ME', meters: meters } );
+    },
+    getBusStopsAroundMe: ( coords ) => {
+      dispatch( setCoordsGetBusStopsAndGoToResults( coords ) )
+    },
+    showIntroAndSetToShowed: () => {
+      const introIsNotShowed = !store.getState().intro.state;
+      if (introIsNotShowed) {
+        setTimeout(function() {
+          dispatch( { type: 'SET_INTRO_SHOWED', state: true } );
+        }, 2000)
+      }
     }
-}
+  }
+};
 
 const GetBusStopsGeoState = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)( Home )
+  mapStateToProps,
+  mapDispatchToProps
+)( Home );
 
 export default GetBusStopsGeoState

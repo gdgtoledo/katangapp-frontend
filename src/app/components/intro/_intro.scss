@@ -15,9 +15,13 @@
  */
 
  .#{$ns}-intro {
+     @extend .#{$ns}-intro-container;
 
-     @extend .#{$ns}-screen-container;
-     @extend .#{$ns}-screen-container--intro;
+     display: flex;
+
+     &--is-showed {
+         display: none;
+     }
 
      .#{$ns}-logo-katanga {
          width: 35vh;

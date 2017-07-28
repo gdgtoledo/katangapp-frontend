@@ -21,15 +21,12 @@ import {
 } from '../actions/actions.js'
 
 const loading = ( state = initialLoading, action ) => {
-    let nextState
-    switch ( action.type ) {
-        case SET_LOADING:
-            nextState = Object.assign( {}, state, { state: action.state } );
-            return nextState
-        default:
-            nextState = Object.assign( {}, state )
-            return nextState
-    }
-}
+  switch ( action.type ) {
+    case SET_LOADING:
+      return Object.assign( {}, state, { state: action.state } );
+    default:
+      return Object.assign( {}, state );
+  }
+};
 
 export default loading

@@ -14,22 +14,8 @@
  * limitations under the License.
  */
 
-import { browserHistory } from 'react-router'
-
-import store from '../stores/store'
-
-export const goToHome = ( dispatch ) => {
-  dispatch( browserHistory.push( '/' ) );
+const initialIntro = {
+  state: false
 };
 
-export const goToResults = ( dispatch ) => {
-  let currentState = store.getState();
-  if ( currentState.positionAroundMe.busStops.length > 0 ) {
-    dispatch( browserHistory.push( '/results' ) );
-  }
-  if ( currentState.positionAroundMe.errors.length > 0 ) {
-    dispatch( browserHistory.push( '/errors' ) );
-  } else {
-    dispatch( browserHistory.push( '/' ) );
-  }
-};
+export default initialIntro

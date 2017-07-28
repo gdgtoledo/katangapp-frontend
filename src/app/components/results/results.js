@@ -9,7 +9,7 @@ const Results = ( { results } ) => (
         </header>
         <BusStops className="ktg-results__content" busStops={results} />
     </main>
-)
+);
 
 Results.propTypes = {
     results: PropTypes.arrayOf(
@@ -19,6 +19,6 @@ Results.propTypes = {
             tiempos: PropTypes.array.isRequired
         } ).isRequired
     ).isRequired
-}
+};
 
 export default Results

@@ -14,24 +14,19 @@
  * limitations under the License.
  */
 
-import { connect } from 'react-redux'
+import initialIntro from '../stores/initialIntro'
 
-import Intro from           '../components/intro/intro'
-import { goToHome } from    '../../router/router'
+import {
+  SET_INTRO_SHOWED
+} from '../actions/actions.js'
 
-const mapDispatchToProps = ( dispatch ) => {
-    return {
-        whenIntroIsFinished: () => {
-            setTimeout(function() {
-               goToHome( dispatch )
-            }, 2000)
-        }
-    }
-}
+const intro = ( state = initialIntro, action ) => {
+  switch ( action.type ) {
+    case SET_INTRO_SHOWED:
+      return Object.assign( {}, state, { state: action.state } );
+    default:
+      return Object.assign( {}, state );
+  }
+};
 
-const IntroToKatanga = connect(
-    null,
-    mapDispatchToProps
-)( Intro )
-
-export default IntroToKatanga
+export default intro
