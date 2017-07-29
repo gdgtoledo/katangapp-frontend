@@ -26,6 +26,12 @@ $break-wide:        1600px !default;
 
 $noquery:           'no-media-query' !default;
 
+// Fonts
+
+$font--light---font-weight:   100;
+$font--normal---font-weight:  400;
+$font--bold---font-weight:    600;
+
 // Layers
 
 $layer-under-all:   -99 !default;
