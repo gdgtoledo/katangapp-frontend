@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/craftsmanship-toledo/katangapp-frontend.svg?branch=dev)](https://travis-ci.org/craftsmanship-toledo/katangapp-frontend)
 
+[![Chat with us in gitter](https://badges.gitter.im/craftsmanshipToledo/katanga/craftsmanshipToledo.svg)]("https://gitter.im/craftsmanshipToledo/katanga")
+
 # Katanga
 
 Katanga es una aplicación opensource  para ver los tiempos de los autobuses de Toledo en cada parada.
@@ -63,7 +65,7 @@ Este comando construirá una imagen bajo el repositorio `craftsmanshiptoledo/kat
 
 ### No nos mires, únete
 
-Únete a nuestro chat room en [gitter](https://gitter.im/craftsmanshipToledo/katanga?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+Únete a nuestro chat room en [![Chat with us in gitter](https://badges.gitter.im/craftsmanshipToledo/katanga/craftsmanshipToledo.svg)]("https://gitter.im/craftsmanshipToledo/katanga")
 
 Puedes unirte de muchas formas, no solo haciendo commits, puedes preguntar al equipo acerca de estas tareas, abrir un issue en el proyecto, mejorar nuestro código y hacernos peticiones para la inclusión de estas mejoras etc.
 
