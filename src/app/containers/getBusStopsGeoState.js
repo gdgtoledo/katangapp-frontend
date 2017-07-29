@@ -18,10 +18,11 @@ import { connect } from 'react-redux'
 import Promise from 'promise-polyfill'
 
 import appi from '../../services/appi'
-import { goToResults } from '../../router/router'
+import { goToResults, goToError } from '../../router/router'
 import Home from '../components/home/home'
 import store from '../../stores/store'
 import colors from '../styles/colors'
+import ERRORS from '../../constants/errors'
 
 const getBusStopsAroundMeAndGoToResults = ( dispatch, position ) => {
   return appi.busStops.aroundme.fetch( position )
@@ -29,16 +30,21 @@ const getBusStopsAroundMeAndGoToResults = ( dispatch, position ) => {
       return response.json();
     } )
     .then( busStops => {
-      dispatch( { type: 'GET_BUS_STOPS_AROUND_ME_SUCCESS', busStopsAroundMe: busStops } )
-    } )
-    .then ( () => {
-      goToResults( dispatch );
-      dispatch( { type: 'SET_LOADING', state: false } );
+      const isBusStopsEmpty = busStops.length === 0;
+      if ( isBusStopsEmpty ) {
+        dispatch( { type: 'SET_ERROR', message: ERRORS['METERS_AROUND_ME_SELECTION_NOT_HAVE_BUS_STOPS'] } );
+        goToError( dispatch );
+        dispatch( { type: 'SET_LOADING', state: false } );
+      } else {
+        dispatch( { type: 'GET_BUS_STOPS_AROUND_ME_SUCCESS', busStopsAroundMe: busStops } );
+        goToResults( dispatch );
+        dispatch( { type: 'SET_LOADING', state: false } );
+      }
     } )
     .catch( error => {
-      // TODO: Manage error and show in error page
-      // dispatch( { type: 'GET_BUS_STOPS_AROUND_ME_ERROR', error: error } )
-      throw error
+      dispatch( { type: 'SET_ERROR', message: error.message } );
+      goToError( dispatch );
+      dispatch( { type: 'SET_LOADING', state: false } );
     } )
 };
 
