@@ -29,10 +29,10 @@ export const SET_ERROR                          = 'SET_ERROR';
 //  actions creators
 //
 
-export const setError = ( error ) => {
+export const setError = ( message ) => {
   return {
     type: SET_INTRO_SHOWED,
-    error: error,
+    message: message,
   };
 };
 
