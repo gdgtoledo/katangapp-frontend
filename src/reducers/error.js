@@ -14,26 +14,19 @@
  * limitations under the License.
  */
 
-import { createStore, applyMiddleware, combineReducers } from 'redux'
-import thunk from 'redux-thunk'
-import { routerReducer } from 'react-router-redux'
+import initialError from '../stores/initialError'
 
-import error from '../reducers/error'
-import intro from '../reducers/intro'
-import loading from '../reducers/loading'
-import positionAroundMe from '../reducers/positionAroundMe'
+import {
+  SET_ERROR,
+} from '../actions/actions.js'
 
-const reducers = combineReducers({
-  error,
-  loading,
-  intro,
-  positionAroundMe,
-  routing: routerReducer,
-});
+const error = ( state = initialError, action ) => {
+  switch ( action.type ) {
+    case SET_ERROR:
+      return Object.assign( {}, state, { message: action.message } );
+    default:
+      return Object.assign( {}, state );
+  }
+};
 
-const store = createStore(
-  reducers,
-  applyMiddleware(thunk)
-);
-
-export default store
+export default error
