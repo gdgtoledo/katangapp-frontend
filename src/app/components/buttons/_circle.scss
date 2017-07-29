@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-$btn--circle---background: $btn--primary---background;
+$btn--circle---background: $color-primary;;
 $btn--circle---color: $color-secondary;
-$btn--circle--hover---background: $btn--primary--hover---background;
+$btn--circle--hover---background: $color-tertiary;
 
 .#{$ns}-btn--circle {
     background: $btn--circle---background;
