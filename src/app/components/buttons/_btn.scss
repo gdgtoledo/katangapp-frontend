@@ -14,5 +14,32 @@
  * limitations under the License.
  */
 
-$btn--primary---background: $color-primary;
-$btn--primary--hover---background: $color-tertiary;
+$btn--primary---background:             $color-primary;
+$btn--primary---color:                  $color-secondary;
+$btn--primary--outline---border-color:  $color-primary;
+$btn--primary--outline---color:         $btn--primary--outline---border-color;
+
+$btn--tertiary--outline---background:   $color-primary;
+$btn--tertiary--outline---color:        $color-secondary;
+$btn--tertiary--outline---border-color: $color-secondary;
+
+.#{$ns}-btn {
+    padding: 20px 40px;
+
+    color: $btn--primary---color;
+    background: $btn--primary---background;
+
+    text-decoration: none;
+
+    &--outline {
+        color: $btn--primary--outline---border-color;
+        background: none;
+        border: 1px solid $btn--primary--outline---border-color;
+    }
+
+    &--tertiary--outline {
+        color: $btn--tertiary--outline---border-color;
+        background: $btn--tertiary--outline---background;
+        border: 1px solid $btn--tertiary--outline---border-color;
+    }
+}
