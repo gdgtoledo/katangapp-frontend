@@ -23,6 +23,9 @@ $btn--tertiary--outline---background:   $color-primary;
 $btn--tertiary--outline---color:        $color-secondary;
 $btn--tertiary--outline---border-color: $color-secondary;
 
+$btn--tertiary--outline---font-weight:  $font--bold---font-weight;
+$btn--tertiary--outline---font-size:    15px;
+
 .#{$ns}-btn {
     padding: 20px 40px;
 
@@ -38,8 +41,10 @@ $btn--tertiary--outline---border-color: $color-secondary;
     }
 
     &--tertiary--outline {
+        font-weight: $btn--tertiary--outline---font-weight;
+        font-size: $btn--tertiary--outline---font-size;
         color: $btn--tertiary--outline---border-color;
         background: $btn--tertiary--outline---background;
-        border: 1px solid $btn--tertiary--outline---border-color;
+        border: 2px solid $btn--tertiary--outline---border-color;
     }
 }
