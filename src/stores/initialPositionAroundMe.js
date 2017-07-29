@@ -20,8 +20,7 @@ const initialPositionAroundMe = {
         latitude: 10,
         longitude: 10
     },
-    busStops: [],
-    errors: []
-}
+    busStops: []
+};
 
 export default initialPositionAroundMe
