@@ -46,5 +46,9 @@ $btn--tertiary--outline---font-size:    15px;
         color: $btn--tertiary--outline---border-color;
         background: $btn--tertiary--outline---background;
         border: 2px solid $btn--tertiary--outline---border-color;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }

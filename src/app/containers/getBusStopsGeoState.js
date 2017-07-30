@@ -33,18 +33,18 @@ const getBusStopsAroundMeAndGoToResults = ( dispatch, position ) => {
       const isBusStopsEmpty = busStops.length === 0;
       if ( isBusStopsEmpty ) {
         dispatch( { type: 'SET_ERROR', message: ERRORS['METERS_AROUND_ME_SELECTION_NOT_HAVE_BUS_STOPS'] } );
-        goToError( dispatch );
         dispatch( { type: 'SET_LOADING', state: false } );
+        goToError( dispatch );
       } else {
         dispatch( { type: 'GET_BUS_STOPS_AROUND_ME_SUCCESS', busStopsAroundMe: busStops } );
-        goToResults( dispatch );
         dispatch( { type: 'SET_LOADING', state: false } );
+        goToResults( dispatch );
       }
     } )
     .catch( error => {
       dispatch( { type: 'SET_ERROR', message: error.message } );
-      goToError( dispatch );
       dispatch( { type: 'SET_LOADING', state: false } );
+      goToError( dispatch );
     } )
 };
 
