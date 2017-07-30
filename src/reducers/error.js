@@ -18,14 +18,14 @@ import initialError from '../stores/initialError'
 
 import {
   SET_ERROR,
-} from '../actions/actions.js'
+} from '../actions/errors.js'
 
-const error = ( error = initialError, action ) => {
+const error = ( state = initialError, action ) => {
   switch ( action.type ) {
     case SET_ERROR:
-      return Object.assign( {}, error, { message: action.message } );
+      return Object.assign( {}, state, { message: action.message } );
     default:
-      return Object.assign( {}, error );
+      return Object.assign( {}, state );
   }
 };
 

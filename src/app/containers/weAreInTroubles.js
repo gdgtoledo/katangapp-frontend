@@ -16,16 +16,13 @@
 
 import { connect } from 'react-redux'
 
-import { goToHome } from '../../router/router'
+import { goToHome } from '../../actions/goTo'
 import Error from '../components/error/error'
 import ERRORS from '../../constants/errors'
 
 const mapStateToProps = ( state ) => {
   return {
-    error: {
-      title: ERRORS['WE_ARE_IN_TROUBLES'],
-      message: state.error.message,
-    },
+    error: state.error.message,
     labelActionButton: ERRORS['COME_BACK_TO_HOME'],
   };
 };
