@@ -17,17 +17,19 @@
 import { connect } from 'react-redux'
 
 import {
-  setError,
   setLoading,
   setIntroShowed,
   setMetersAroundMe,
   setCoordsAroundMe,
   setBusStopsAroundMe,
-} from '../../actions/actions';
+} from '../../actions/getBusStops'
 import {
   goToError,
   goToResults
-} from '../../router/router'
+} from '../../actions/goTo'
+import {
+  setError,
+} from '../../actions/errors'
 import * as appiBusStops from '../../appi/busStops'
 import Home from '../components/home/home'
 import colors from '../styles/colors'
@@ -41,6 +43,14 @@ const showIntroAndSetToShowed = () => {
         dispatch(setIntroShowed(true));
       }, 2000);
     }
+  };
+};
+
+const setErrorWhenUserHaveProblemsWithGeolocation = ( error = ERRORS['GEOLOCATION_HAS_ERRORS'] ) => {
+  return ( dispatch ) => {
+    dispatch(setError(error));
+    dispatch(setLoading(false));
+    dispatch(goToError());
   };
 };
 
@@ -111,6 +121,9 @@ const mapDispatchToProps = ( dispatch ) => {
     },
     showIntroAndSetToShowed: () => {
       dispatch(showIntroAndSetToShowed());
+    },
+    setErrorWhenUserHaveProblemsWithGeolocation: () => {
+      dispatch(setErrorWhenUserHaveProblemsWithGeolocation());
     }
   }
 };

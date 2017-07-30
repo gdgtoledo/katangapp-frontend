@@ -24,12 +24,14 @@ export default class Geolocalizer extends React.Component {
 
   static defaultProps = {
     setCoords: () => true,
-    setLoading: () => true
+    setLoading: () => true,
+    onError: () => true,
   };
 
   static propTypes = {
     setCoords: React.PropTypes.func,
-    setLoading: React.PropTypes.func
+    setLoading: React.PropTypes.func,
+    onError: React.PropTypes.func
   };
 
   geolocalizeMe = () => {
@@ -38,13 +40,13 @@ export default class Geolocalizer extends React.Component {
       console.log('get coords html 5 api is success');
     };
     let error = ( err ) => {
-      throw 'sorry you have and error with ' + err;
+      this.props.onError(err);
     };
     if ( navigator.geolocation ) {
       this.props.setLoading(true);
       navigator.geolocation.getCurrentPosition( success, error );
     } else {
-      throw 'geolocalization is not supported by browser';
+      this.props.onError();
     }
   };
 

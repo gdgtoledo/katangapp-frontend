@@ -42,6 +42,7 @@ const Home = React.createClass({
           coords = {this.props.coords}
           setMetersAroundMe = {this.props.setMetersAroundMe}
           getBusStopsAroundMe = {this.props.getBusStopsAroundMeAndGoToResults}
+          onProblemsWithGeolocation = {this.props.setErrorWhenUserHaveProblemsWithGeolocation}
           setLoading = {this.props.setLoading} />
 
         <Loading isLoading={this.props.loading} />
@@ -58,7 +59,8 @@ Home.propTypes = {
   loading: PropTypes.bool.isRequired,
   setMetersAroundMe: PropTypes.func.isRequired,
   getBusStopsAroundMeAndGoToResults: PropTypes.func.isRequired,
-  setLoading: PropTypes.func
+  onProblemsWithGeolocation: PropTypes.func,
+  setLoading: PropTypes.func,
 };
 
 export default Home
