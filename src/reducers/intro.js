@@ -18,7 +18,7 @@ import initialIntro from '../stores/initialIntro'
 
 import {
   SET_INTRO_SHOWED
-} from '../actions/actions.js'
+} from '../actions/getBusStops.js'
 
 const intro = ( state = initialIntro, action ) => {
   switch ( action.type ) {

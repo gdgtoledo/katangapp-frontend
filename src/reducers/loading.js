@@ -18,7 +18,7 @@ import initialLoading from '../stores/initialLoading'
 
 import {
     SET_LOADING
-} from '../actions/actions.js'
+} from '../actions/getBusStops.js'
 
 const loading = ( state = initialLoading, action ) => {
   switch ( action.type ) {

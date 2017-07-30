@@ -20,7 +20,7 @@ import {
     SET_COORDS_AROUND_ME,
     SET_METERS_AROUND_ME,
     GET_BUS_STOPS_AROUND_ME_SUCCESS,
-} from '../actions/actions.js'
+} from '../actions/getBusStops.js'
 
 const positionAroundMe = ( state = initialPositionAroundMe, action ) => {
     switch ( action.type ) {
