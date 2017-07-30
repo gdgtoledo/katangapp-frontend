@@ -33,7 +33,7 @@ const mapStateToProps = ( state ) => {
 const mapDispatchToProps = ( dispatch ) => {
   return {
     onClickActionButton: () => {
-      goToHome(dispatch);
+      dispatch( goToHome() );
     },
   };
 };

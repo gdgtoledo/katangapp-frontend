@@ -28,6 +28,8 @@ $error__message---font-weight:      100;
 
     &__apologies,
     &__message {
+        width: 90vw;
+        text-align: center;
         margin-top: $error__type---margin-bottom;
         font-weight: $error__message---font-weight;
     }

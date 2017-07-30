@@ -18,7 +18,7 @@
 //  actions types
 //
 
-export const GET_BUS_STOPS_AROUND_ME_SUCCESS    = 'GET_BUS_STOPS_AROUND_ME_SUCCESS';
+export const SET_BUS_STOPS_AROUND_ME            = 'SET_BUS_STOPS_AROUND_ME';
 export const SET_METERS_AROUND_ME               = 'SET_METERS_AROUND_ME';
 export const SET_COORDS_AROUND_ME               = 'SET_COORDS_AROUND_ME';
 export const SET_LOADING                        = 'SET_LOADING';
@@ -31,7 +31,7 @@ export const SET_ERROR                          = 'SET_ERROR';
 
 export const setError = ( message ) => {
   return {
-    type: SET_INTRO_SHOWED,
+    type: SET_ERROR,
     message: message,
   };
 };
@@ -64,13 +64,10 @@ export const setCoordsAroundMe = ( coords ) => {
   };
 };
 
-//
-//  actions api
-//
-
-export const getBusStopsSucces = ( response ) => {
+export const setBusStopsAroundMe = ( response ) => {
   return {
-    type: GET_BUS_STOPS_AROUND_ME_SUCCESS,
+    type: SET_BUS_STOPS_AROUND_ME,
     busStopsAroundMe: response,
   };
 };
+

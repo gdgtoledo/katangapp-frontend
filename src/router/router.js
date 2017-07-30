@@ -16,14 +16,20 @@
 
 import { browserHistory } from 'react-router'
 
-export const goToHome = ( dispatch ) => {
-  dispatch( browserHistory.push( '/' ) );
+export const goToHome = () => {
+  return dispatch => {
+      dispatch(browserHistory.push('/'))
+  };
 };
 
-export const goToResults = ( dispatch ) => {
-    dispatch( browserHistory.push( '/results' ) );
+export const goToResults = () => {
+  return dispatch => {
+    dispatch(browserHistory.push('/results'));
+  };
 };
 
-export const goToError = ( dispatch ) => {
-  dispatch( browserHistory.push( '/error' ) );
+export const goToError = () => {
+  return dispatch => {
+    dispatch( browserHistory.push( '/error' ) );
+  };
 };

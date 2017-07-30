@@ -20,12 +20,13 @@ import {
   SET_ERROR,
 } from '../actions/actions.js'
 
-const error = ( state = initialError, action ) => {
+const error = ( error = initialError, action ) => {
   switch ( action.type ) {
     case SET_ERROR:
-      return Object.assign( {}, state, { message: action.message } );
+      console.log('ERROR STATE', error);
+      return Object.assign( {}, error, { message: action.message } );
     default:
-      return Object.assign( {}, state );
+      return Object.assign( {}, error );
   }
 };
 

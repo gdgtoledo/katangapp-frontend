@@ -41,7 +41,7 @@ const Home = React.createClass({
           meters = {this.props.meters}
           coords = {this.props.coords}
           setMetersAroundMe = {this.props.setMetersAroundMe}
-          getBusStopsAroundMe = {this.props.getBusStopsAroundMe}
+          getBusStopsAroundMe = {this.props.getBusStopsAroundMeAndGoToResults}
           setLoading = {this.props.setLoading} />
 
         <Loading isLoading={this.props.loading} />
@@ -57,7 +57,7 @@ Home.propTypes = {
   meters: PropTypes.number.isRequired,
   loading: PropTypes.bool.isRequired,
   setMetersAroundMe: PropTypes.func.isRequired,
-  getBusStopsAroundMe: PropTypes.func.isRequired,
+  getBusStopsAroundMeAndGoToResults: PropTypes.func.isRequired,
   setLoading: PropTypes.func
 };
 
