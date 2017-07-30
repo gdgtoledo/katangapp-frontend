@@ -23,18 +23,10 @@ export const SET_METERS_AROUND_ME               = 'SET_METERS_AROUND_ME';
 export const SET_COORDS_AROUND_ME               = 'SET_COORDS_AROUND_ME';
 export const SET_LOADING                        = 'SET_LOADING';
 export const SET_INTRO_SHOWED                   = 'SET_INTRO_SHOWED';
-export const SET_ERROR                          = 'SET_ERROR';
 
 //
 //  actions creators
 //
-
-export const setError = ( message ) => {
-  return {
-    type: SET_ERROR,
-    message: message,
-  };
-};
 
 export const setIntroShowed = ( state ) => {
   return {
