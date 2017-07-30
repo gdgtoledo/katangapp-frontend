@@ -14,16 +14,17 @@
  * limitations under the License.
  */
 
-export const METERS_AROUND_ME_SELECTION_NOT_HAVE_BUS_STOPS = 'Los metros que has seleccionado para encontrar paradas ' +
-  'alrededor de tí no son suficientes y no hemos encontrado ninguna disponible en estos metros';
-export const WE_ARE_IN_TROUBLES = 'Ha ocurrido un problema';
-export const COME_BACK_TO_HOME = 'Volver a Katanga';
+import React, { PropTypes } from 'react'
 
+const ButtonTertiaryOutline = ( { label, onClick } ) => (
+    <button className="ktg-btn ktg-btn--tertiary--outline" onClick={onClick}>
+      {label}
+    </button>
+);
 
-const ERRORS = {
-  ['METERS_AROUND_ME_SELECTION_NOT_HAVE_BUS_STOPS']: METERS_AROUND_ME_SELECTION_NOT_HAVE_BUS_STOPS,
-  ['WE_ARE_IN_TROUBLES']: WE_ARE_IN_TROUBLES,
-  ['COME_BACK_TO_HOME']: COME_BACK_TO_HOME,
+ButtonTertiaryOutline.propTypes = {
+  label: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
 };
 
-export default ERRORS
+export default ButtonTertiaryOutline

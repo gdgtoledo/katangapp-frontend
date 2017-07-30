@@ -27,6 +27,7 @@ import store from '../stores/store'
 
 import GetBusStopsGeoState from './containers/getBusStopsGeoState'
 import RenderBusStopsResults from './containers/renderBusStopsResults'
+import WeAreInTroubles from './containers/weAreInTroubles'
 
 const history = syncHistoryWithStore( browserHistory, store )
 
@@ -38,6 +39,7 @@ export default class App extends React.Component {
                     <Router history={history}>
                         <Route path='/' component={GetBusStopsGeoState}/>
                         <Route path="/results" component={RenderBusStopsResults}/>
+                        <Route path="/error" component={WeAreInTroubles}/>
                     </Router>
                 </div>
             </Provider>
