@@ -72,7 +72,6 @@ const getBusStopsAroundMeAndGoToResults = ( coords ) => {
       .then ( busStopsAroundMe => {
           const areBusStopsEmpty = busStopsAroundMe.paradas.length === 0;
           if ( areBusStopsEmpty ) {
-            console.log(ERRORS['METERS_AROUND_ME_SELECTION_NOT_HAVE_BUS_STOPS']);
             dispatch(setError(ERRORS['METERS_AROUND_ME_SELECTION_NOT_HAVE_BUS_STOPS']));
             dispatch(setLoading(false));
             dispatch(goToError());

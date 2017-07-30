@@ -23,7 +23,6 @@ import {
 const error = ( error = initialError, action ) => {
   switch ( action.type ) {
     case SET_ERROR:
-      console.log('ERROR STATE', error);
       return Object.assign( {}, error, { message: action.message } );
     default:
       return Object.assign( {}, error );
