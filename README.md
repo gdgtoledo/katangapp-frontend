@@ -63,6 +63,8 @@ Este comando construirá una imagen bajo el repositorio `craftsmanshiptoledo/kat
 
 ### No nos mires, únete
 
+Únete a nuestro chat room en [gitter](https://gitter.im/craftsmanshipToledo/katanga?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+
 Puedes unirte de muchas formas, no solo haciendo commits, puedes preguntar al equipo acerca de estas tareas, abrir un issue en el proyecto, mejorar nuestro código y hacernos peticiones para la inclusión de estas mejoras etc.
 
 Si te animas a hacer commits puedes ver su formato y sus convenciones [aquí](https://github.com/craftsmanship-toledo/katangapp-frontend/wiki/Formato-de-commits).
