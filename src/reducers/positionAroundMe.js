@@ -19,7 +19,7 @@ import initialPositionAroundMe from '../stores/initialPositionAroundMe'
 import {
     SET_COORDS_AROUND_ME,
     SET_METERS_AROUND_ME,
-    GET_BUS_STOPS_AROUND_ME_SUCCESS,
+    SET_BUS_STOPS_AROUND_ME,
 } from '../actions/getBusStops.js'
 
 const positionAroundMe = ( state = initialPositionAroundMe, action ) => {
@@ -28,7 +28,7 @@ const positionAroundMe = ( state = initialPositionAroundMe, action ) => {
             return Object.assign( {}, state, { meters: action.meters } );
         case SET_COORDS_AROUND_ME:
             return Object.assign( {}, state, { coords: action.coords } );
-        case GET_BUS_STOPS_AROUND_ME_SUCCESS:
+        case SET_BUS_STOPS_AROUND_ME:
             return Object.assign( {}, state, { busStops: action.busStopsAroundMe.paradas, errors: [] } );
         default:
             return Object.assign( {}, state );

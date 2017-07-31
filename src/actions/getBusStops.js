@@ -56,10 +56,10 @@ export const setCoordsAroundMe = ( coords ) => {
   };
 };
 
-export const setBusStopsAroundMe = ( response ) => {
+export const setBusStopsAroundMe = ( busStops ) => {
   return {
     type: SET_BUS_STOPS_AROUND_ME,
-    busStopsAroundMe: response,
+    busStopsAroundMe: busStops,
   };
 };
 
