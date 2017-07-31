@@ -61,7 +61,7 @@ Si además queremos construir una imagen de Docker, podremos ejecutar:
 npm run build-docker
 ```
 
-Este comando construirá una imagen bajo el repositorio `swcraftersclm/katanga-front`, con la versión indicada en el `package.json`, por ejemplo: `craftsmanshiptoledo/katanga-front:1.0.0-rc.1`.
+Este comando construirá una imagen bajo el repositorio `swcraftersclm/katanga-front`, con la versión indicada en el `package.json`, por ejemplo: `swcraftersclm/katanga-front:1.0.0-rc.1`.
 
 ### No nos mires, únete
 
