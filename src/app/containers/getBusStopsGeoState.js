@@ -56,11 +56,11 @@ const setErrorWhenUserHaveProblemsWithGeolocation = ( error = ERRORS['GEOLOCATIO
 
 const setCoordsAroundMeAndReturnPosition = ( coords ) => {
   return ( dispatch, getState ) => {
-      setCoordsAroundMe(coords);
-      return {
-        coords: getState().positionAroundMe.coords,
-        meters: getState().positionAroundMe.meters,
-      };
+    dispatch(setCoordsAroundMe(coords));
+    return {
+      coords: getState().positionAroundMe.coords,
+      meters: getState().positionAroundMe.meters,
+    };
   };
 };
 

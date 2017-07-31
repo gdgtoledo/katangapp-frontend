@@ -37,7 +37,6 @@ export default class Geolocalizer extends React.Component {
   geolocalizeMe = () => {
     let success = ( position )  => {
       this.props.setCoords( { latitude: position.coords.latitude, longitude: position.coords.longitude } );
-      console.log('get coords html 5 api is success');
     };
     let error = ( err ) => {
       this.props.onError(err);
