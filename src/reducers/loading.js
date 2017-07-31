@@ -14,19 +14,17 @@
  * limitations under the License.
  */
 
-import initialLoading from '../stores/initialLoading'
+import initialLoading from '../stores/initialLoading';
 
-import {
-    SET_LOADING
-} from '../actions/getBusStops.js'
+import { SET_LOADING } from '../actions/getBusStops.js';
 
-const loading = ( state = initialLoading, action ) => {
-  switch ( action.type ) {
+const loading = (state = initialLoading, action) => {
+  switch (action.type) {
     case SET_LOADING:
-      return Object.assign( {}, state, { state: action.state } );
+      return Object.assign({}, state, { state: action.state });
     default:
-      return Object.assign( {}, state );
+      return Object.assign({}, state);
   }
 };
 
-export default loading
+export default loading;

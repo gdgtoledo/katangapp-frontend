@@ -15,7 +15,7 @@
  */
 
 const initialIntro = {
-  state: false
+  state: false,
 };
 
-export default initialIntro
+export default initialIntro;

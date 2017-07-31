@@ -14,35 +14,40 @@
  * limitations under the License.
  */
 
-import React from 'react'
+import React from 'react';
 
-import Geolocalizer from '../geolocalizer/geolocalizer.jsx'
-import Slider from '../slider/slider.jsx'
+import Geolocalizer from '../geolocalizer/geolocalizer.jsx';
+import Slider from '../slider/slider.jsx';
 
-const Search = ( { shouldBeHidden, meters, coords, setMetersAroundMe, getBusStopsAroundMe, onProblemsWithGeolocation, setLoading } ) => (
-
+const Search = ({
+  shouldBeHidden,
+  meters,
+  coords,
+  setMetersAroundMe,
+  getBusStopsAroundMe,
+  onProblemsWithGeolocation,
+  setLoading,
+}) =>
   <main className={shouldBeHidden ? 'ktg-search ktg-search--is-hidden' : 'ktg-search'}>
-
-    <header className='ktg-search__header'>
+    <header className="ktg-search__header">
       <h1 className="ktg-search__title">Pagina de inicio de katanga</h1>
     </header>
 
-    <form id='ktg-search_meters-around' className={shouldBeHidden ? 'ktg-search__meters-around ktg-search__meters-around--is-loading' : 'ktg-search__meters-around'}>
-
-      <Slider
-        meters={meters}
-        setMeters={setMetersAroundMe} />
+    <form
+      id="ktg-search_meters-around"
+      className={
+        shouldBeHidden ? 'ktg-search__meters-around ktg-search__meters-around--is-loading' : 'ktg-search__meters-around'
+      }
+    >
+      <Slider meters={meters} setMeters={setMetersAroundMe} />
 
       <Geolocalizer
         coords={coords}
         setCoords={getBusStopsAroundMe}
         onError={onProblemsWithGeolocation}
-        setLoading={setLoading} />
-
+        setLoading={setLoading}
+      />
     </form>
+  </main>;
 
-  </main>
-
-);
-
-export default Search
+export default Search;

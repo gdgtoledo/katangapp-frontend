@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
 import {
   setLoading,
@@ -22,40 +22,35 @@ import {
   setMetersAroundMe,
   setCoordsAroundMe,
   setBusStopsAroundMe,
-} from '../../actions/getBusStops'
-import {
-  goToError,
-  goToResults
-} from '../../actions/goTo'
-import {
-  setError,
-} from '../../actions/errors'
-import * as appiBusStops from '../../appi/busStops'
-import Home from '../components/home/home'
-import colors from '../styles/colors'
-import ERRORS from '../../constants/errors'
+} from '../../actions/getBusStops';
+import { goToError, goToResults } from '../../actions/goTo';
+import { setError } from '../../actions/errors';
+import * as appiBusStops from '../../appi/busStops';
+import Home from '../components/home/home';
+import colors from '../styles/colors';
+import ERRORS from '../../constants/errors';
 
 const showIntroAndSetToShowed = () => {
-  return ( dispatch, getState ) => {
+  return (dispatch, getState) => {
     const introIsNotShowed = !getState().intro.state;
     if (introIsNotShowed) {
-      setTimeout(function () {
+      setTimeout(function() {
         dispatch(setIntroShowed(true));
       }, 2000);
     }
   };
 };
 
-const setErrorWhenUserHaveProblemsWithGeolocation = ( error = ERRORS['GEOLOCATION_HAS_ERRORS'] ) => {
-  return ( dispatch ) => {
+const setErrorWhenUserHaveProblemsWithGeolocation = (error = ERRORS['GEOLOCATION_HAS_ERRORS']) => {
+  return dispatch => {
     dispatch(setError(error));
     dispatch(setLoading(false));
     dispatch(goToError());
   };
 };
 
-const setCoordsAroundMeAndReturnPosition = ( coords ) => {
-  return ( dispatch, getState ) => {
+const setCoordsAroundMeAndReturnPosition = coords => {
+  return (dispatch, getState) => {
     dispatch(setCoordsAroundMe(coords));
     return {
       coords: getState().positionAroundMe.coords,
@@ -64,12 +59,10 @@ const setCoordsAroundMeAndReturnPosition = ( coords ) => {
   };
 };
 
-const getBusStopsAroundMeAndGoToResults = ( coords ) => {
-
+const getBusStopsAroundMeAndGoToResults = coords => {
   return dispatch => {
-
     const position = dispatch(setCoordsAroundMeAndReturnPosition(coords));
-    const fetchBusStopsAroundMe = ( position ) => appiBusStops.fetchAroundMe(position);
+    const fetchBusStopsAroundMe = position => appiBusStops.fetchAroundMe(position);
 
     return fetchBusStopsAroundMe(position)
       .then(
@@ -78,45 +71,44 @@ const getBusStopsAroundMeAndGoToResults = ( coords ) => {
           dispatch(setError(error.message));
           dispatch(setLoading(false));
           dispatch(goToError());
-        })
-      .then ( busStopsAroundMe => {
-          const areBusStopsEmpty = busStopsAroundMe.paradas.length === 0;
-          if ( areBusStopsEmpty ) {
-            dispatch(setError(ERRORS['METERS_AROUND_ME_SELECTION_NOT_HAVE_BUS_STOPS']));
-            dispatch(setLoading(false));
-            dispatch(goToError());
-          } else {
-            dispatch(setBusStopsAroundMe(busStopsAroundMe));
-            dispatch(setLoading(false));
-            dispatch(goToResults());
-          }
+        },
+      )
+      .then(busStopsAroundMe => {
+        const areBusStopsEmpty = busStopsAroundMe.paradas.length === 0;
+        if (areBusStopsEmpty) {
+          dispatch(setError(ERRORS['METERS_AROUND_ME_SELECTION_NOT_HAVE_BUS_STOPS']));
+          dispatch(setLoading(false));
+          dispatch(goToError());
+        } else {
+          dispatch(setBusStopsAroundMe(busStopsAroundMe));
+          dispatch(setLoading(false));
+          dispatch(goToResults());
+        }
       });
-
   };
-
 };
 
-const mapStateToProps = ( state ) => {
-    return {
-      meters: state.positionAroundMe.meters,
-      coords: state.positionAroundMe.coords,
-      loading: state.loading.state,
-      isIntroShowed: state.intro.state,
-      shouldBeSearchHidden: state.loading.state || !state.intro.state,
-      colorPrimary: colors.primary,
-      colorSecondary: colors.secondary,
-    }
-};
-
-const mapDispatchToProps = ( dispatch ) => {
+const mapStateToProps = state => {
   return {
-    setLoading: ( isLoading ) => {
+    meters: state.positionAroundMe.meters,
+    coords: state.positionAroundMe.coords,
+    loading: state.loading.state,
+    isIntroShowed: state.intro.state,
+    shouldBeSearchHidden: state.loading.state || !state.intro.state,
+    colorPrimary: colors.primary,
+    colorSecondary: colors.secondary,
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    setLoading: isLoading => {
       dispatch(setLoading(isLoading));
     },
-    setMetersAroundMe: ( meters ) => {
+    setMetersAroundMe: meters => {
       dispatch(setMetersAroundMe(meters));
     },
-    getBusStopsAroundMeAndGoToResults: ( coords ) => {
+    getBusStopsAroundMeAndGoToResults: coords => {
       dispatch(getBusStopsAroundMeAndGoToResults(coords));
     },
     showIntroAndSetToShowed: () => {
@@ -124,13 +116,10 @@ const mapDispatchToProps = ( dispatch ) => {
     },
     setErrorWhenUserHaveProblemsWithGeolocation: () => {
       dispatch(setErrorWhenUserHaveProblemsWithGeolocation());
-    }
-  }
+    },
+  };
 };
 
-const GetBusStopsGeoState = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)( Home );
+const GetBusStopsGeoState = connect(mapStateToProps, mapDispatchToProps)(Home);
 
-export default GetBusStopsGeoState
+export default GetBusStopsGeoState;

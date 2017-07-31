@@ -18,4 +18,4 @@ const initialLoading = {
   state: false,
 };
 
-export default initialLoading
+export default initialLoading;

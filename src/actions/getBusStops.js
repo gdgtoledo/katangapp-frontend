@@ -18,48 +18,47 @@
 //  actions types
 //
 
-export const SET_BUS_STOPS_AROUND_ME            = 'SET_BUS_STOPS_AROUND_ME';
-export const SET_METERS_AROUND_ME               = 'SET_METERS_AROUND_ME';
-export const SET_COORDS_AROUND_ME               = 'SET_COORDS_AROUND_ME';
-export const SET_LOADING                        = 'SET_LOADING';
-export const SET_INTRO_SHOWED                   = 'SET_INTRO_SHOWED';
+export const SET_BUS_STOPS_AROUND_ME = 'SET_BUS_STOPS_AROUND_ME';
+export const SET_METERS_AROUND_ME = 'SET_METERS_AROUND_ME';
+export const SET_COORDS_AROUND_ME = 'SET_COORDS_AROUND_ME';
+export const SET_LOADING = 'SET_LOADING';
+export const SET_INTRO_SHOWED = 'SET_INTRO_SHOWED';
 
 //
 //  actions creators
 //
 
-export const setIntroShowed = ( state ) => {
+export const setIntroShowed = state => {
   return {
     type: SET_INTRO_SHOWED,
     state: state,
   };
 };
 
-export const setLoading = ( state ) => {
+export const setLoading = state => {
   return {
     type: SET_LOADING,
     state: state,
   };
 };
 
-export const setMetersAroundMe = ( meters ) => {
+export const setMetersAroundMe = meters => {
   return {
     type: SET_METERS_AROUND_ME,
     meters: meters,
   };
 };
 
-export const setCoordsAroundMe = ( coords ) => {
+export const setCoordsAroundMe = coords => {
   return {
     type: SET_COORDS_AROUND_ME,
     coords: coords,
   };
 };
 
-export const setBusStopsAroundMe = ( busStops ) => {
+export const setBusStopsAroundMe = busStops => {
   return {
     type: SET_BUS_STOPS_AROUND_ME,
     busStopsAroundMe: busStops,
   };
 };
-

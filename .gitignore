@@ -3,4 +3,6 @@ node_modules
 *.orig
 build
 dist
+package-lock.json
 npm-debug.log
+yarn-error.log

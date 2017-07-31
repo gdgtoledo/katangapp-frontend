@@ -18,11 +18,13 @@ export const COME_BACK_TO_HOME = 'Volver a Katanga';
 
 export const WE_ARE_IN_TROUBLES = 'Ha ocurrido un problema';
 
-export const METERS_AROUND_ME_SELECTION_NOT_HAVE_BUS_STOPS = `${WE_ARE_IN_TROUBLES}, ` +
+export const METERS_AROUND_ME_SELECTION_NOT_HAVE_BUS_STOPS =
+  `${WE_ARE_IN_TROUBLES}, ` +
   'los metros que has seleccionado para encontrar paradas ' +
   'alrededor de tí no son suficientes y no hemos encontrado ninguna disponible en estos metros.';
 
-export const GEOLOCALIZATION_HAS_ERRORS = `${WE_ARE_IN_TROUBLES}, ` +
+export const GEOLOCALIZATION_HAS_ERRORS =
+  `${WE_ARE_IN_TROUBLES}, ` +
   'Tu geolocalización no está soportada por esta ' +
   'navegación o no la has activado correctamente.';
 
@@ -32,4 +34,4 @@ const ERRORS = {
   ['GEOLOCATION_HAS_ERRORS']: GEOLOCALIZATION_HAS_ERRORS,
 };
 
-export default ERRORS
+export default ERRORS;

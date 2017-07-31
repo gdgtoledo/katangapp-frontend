@@ -14,13 +14,12 @@
  * limitations under the License.
  */
 
-import config from  '../app/config.js'
+import config from '../app/config.js';
 
-export const fetchAroundMe = ( position ) => {
+export const fetchAroundMe = position => {
+  const endPoint =
+    `${config.api.protocol}${config.api.domain}/${config.api.endpoints.busStops}?lt=` +
+    `${position.coords.latitude}&ln=${position.coords.longitude}&r=${position.meters}`;
 
-    const endPoint = `${config.api.protocol}${config.api.domain}/${config.api.endpoints.busStops}?lt=` +
-                     `${position.coords.latitude}&ln=${position.coords.longitude}&r=${position.meters}`;
-
-    return fetch( endPoint, { mode: 'cors' } );
-
+  return fetch(endPoint, { mode: 'cors' });
 };

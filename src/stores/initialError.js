@@ -15,7 +15,7 @@
  */
 
 const initialError = {
-  message: "",
+  message: '',
 };
 
-export default initialError
+export default initialError;

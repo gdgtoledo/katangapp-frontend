@@ -14,44 +14,40 @@
  * limitations under the License.
  */
 
-import React, {PropTypes} from 'react'
+import React, { PropTypes } from 'react';
 
-import Intro from '../intro/intro'
-import Search from '../search/search'
-import Loading from '../loading/loading'
+import Intro from '../intro/intro';
+import Search from '../search/search';
+import Loading from '../loading/loading';
 
 const Home = React.createClass({
-
   componentDidMount: function() {
     this.props.showIntroAndSetToShowed();
   },
 
   render: function() {
     return (
-
       <div className="ktg-home">
-
         <Intro
           colorPrimary={this.props.colorPrimary}
           colorSecondary={this.props.colorSecondary}
-          isIntroShowed={this.props.isIntroShowed}/>
+          isIntroShowed={this.props.isIntroShowed}
+        />
 
         <Search
-          shouldBeHidden = {this.props.shouldBeSearchHidden}
-          meters = {this.props.meters}
-          coords = {this.props.coords}
-          setMetersAroundMe = {this.props.setMetersAroundMe}
-          getBusStopsAroundMe = {this.props.getBusStopsAroundMeAndGoToResults}
-          onProblemsWithGeolocation = {this.props.setErrorWhenUserHaveProblemsWithGeolocation}
-          setLoading = {this.props.setLoading} />
+          shouldBeHidden={this.props.shouldBeSearchHidden}
+          meters={this.props.meters}
+          coords={this.props.coords}
+          setMetersAroundMe={this.props.setMetersAroundMe}
+          getBusStopsAroundMe={this.props.getBusStopsAroundMeAndGoToResults}
+          onProblemsWithGeolocation={this.props.setErrorWhenUserHaveProblemsWithGeolocation}
+          setLoading={this.props.setLoading}
+        />
 
         <Loading isLoading={this.props.loading} />
-
       </div>
-
     );
-  }
-
+  },
 });
 
 Home.propTypes = {
@@ -63,4 +59,4 @@ Home.propTypes = {
   setLoading: PropTypes.func,
 };
 
-export default Home
+export default Home;
