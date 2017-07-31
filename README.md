@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/craftsmanship-toledo/katangapp-frontend.svg?branch=dev)](https://travis-ci.org/craftsmanship-toledo/katangapp-frontend)[![Chat with us in gitter](https://gitter.im/craftsmanshipToledo/katanga)]("https://badges.gitter.im/craftsmanshipToledo/katanga/craftsmanshipToledo.svg")
+[![Build Status](https://travis-ci.org/craftsmanship-toledo/katangapp-frontend.svg?branch=dev)](https://travis-ci.org/craftsmanship-toledo/katangapp-frontend)[![Chat with us in gitter](https://badges.gitter.im/craftsmanshipToledo/katanga/craftsmanshipToledo.svg)]("https://gitter.im/craftsmanshipToledo/katanga")
 
 # Katanga
 
