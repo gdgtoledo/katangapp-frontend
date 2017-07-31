@@ -63,7 +63,7 @@ Este comando construirá una imagen bajo el repositorio `swcraftersclm/katanga-f
 
 ### No nos mires, únete
 
-Únete a nuestro chat room en [![Chat with us in gitter](https://badges.gitter.im/craftsmanshipToledo/katanga/craftsmanshipToledo.svg)]("https://gitter.im/craftsmanshipToledo/katanga")
+Únete a nuestro chat room en [![Chat with us in gitter](https://badges.gitter.im/craftsmanshipToledo/katanga/craftsmanshipToledo.svg)](https://gitter.im/craftsmanshipToledo/katanga)
 
 Puedes unirte de muchas formas, no solo haciendo commits, puedes preguntar al equipo acerca de estas tareas, abrir un issue en el proyecto, mejorar nuestro código y hacernos peticiones para la inclusión de estas mejoras etc.
 
