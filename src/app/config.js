@@ -19,9 +19,9 @@ const config = {
     protocol: 'https://',
     domain: 'secret-depths-4660.herokuapp.com',
     endpoints: {
-      'busStops': 'main'
-    }
-  }
+      busStops: 'main',
+    },
+  },
 };
 
-export default config
+export default config;

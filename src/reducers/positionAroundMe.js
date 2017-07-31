@@ -14,25 +14,24 @@
  * limitations under the License.
  */
 
-import initialPositionAroundMe from '../stores/initialPositionAroundMe'
+import initialPositionAroundMe from '../stores/initialPositionAroundMe';
 
-import {
-    SET_COORDS_AROUND_ME,
-    SET_METERS_AROUND_ME,
-    SET_BUS_STOPS_AROUND_ME,
-} from '../actions/getBusStops.js'
+import { SET_COORDS_AROUND_ME, SET_METERS_AROUND_ME, SET_BUS_STOPS_AROUND_ME } from '../actions/getBusStops.js';
 
-const positionAroundMe = ( state = initialPositionAroundMe, action ) => {
-    switch ( action.type ) {
-        case SET_METERS_AROUND_ME:
-            return Object.assign( {}, state, { meters: action.meters } );
-        case SET_COORDS_AROUND_ME:
-            return Object.assign( {}, state, { coords: action.coords } );
-        case SET_BUS_STOPS_AROUND_ME:
-            return Object.assign( {}, state, { busStops: action.busStopsAroundMe.paradas, errors: [] } );
-        default:
-            return Object.assign( {}, state );
-    }
+const positionAroundMe = (state = initialPositionAroundMe, action) => {
+  switch (action.type) {
+    case SET_METERS_AROUND_ME:
+      return Object.assign({}, state, { meters: action.meters });
+    case SET_COORDS_AROUND_ME:
+      return Object.assign({}, state, { coords: action.coords });
+    case SET_BUS_STOPS_AROUND_ME:
+      return Object.assign({}, state, {
+        busStops: action.busStopsAroundMe.paradas,
+        errors: [],
+      });
+    default:
+      return Object.assign({}, state);
+  }
 };
 
-export default positionAroundMe
+export default positionAroundMe;

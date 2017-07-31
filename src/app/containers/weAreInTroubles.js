@@ -14,30 +14,27 @@
  * limitations under the License.
  */
 
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
-import { goToHome } from '../../actions/goTo'
-import Error from '../components/error/error'
-import ERRORS from '../../constants/errors'
+import { goToHome } from '../../actions/goTo';
+import Error from '../components/error/error';
+import ERRORS from '../../constants/errors';
 
-const mapStateToProps = ( state ) => {
+const mapStateToProps = state => {
   return {
     error: state.error.message,
     labelActionButton: ERRORS['COME_BACK_TO_HOME'],
   };
 };
 
-const mapDispatchToProps = ( dispatch ) => {
+const mapDispatchToProps = dispatch => {
   return {
     onClickActionButton: () => {
-      dispatch( goToHome() );
+      dispatch(goToHome());
     },
   };
 };
 
-const WeAreInTroubles = connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)( Error );
+const WeAreInTroubles = connect(mapStateToProps, mapDispatchToProps)(Error);
 
-export default WeAreInTroubles
+export default WeAreInTroubles;

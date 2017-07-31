@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-import { browserHistory } from 'react-router'
+import { browserHistory } from 'react-router';
 
 export const goToHome = () => {
   return dispatch => {
-      dispatch(browserHistory.push('/'))
+    dispatch(browserHistory.push('/'));
   };
 };
 
@@ -30,6 +30,6 @@ export const goToResults = () => {
 
 export const goToError = () => {
   return dispatch => {
-    dispatch( browserHistory.push( '/error' ) );
+    dispatch(browserHistory.push('/error'));
   };
 };

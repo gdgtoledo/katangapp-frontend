@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-import { createStore, applyMiddleware, combineReducers } from 'redux'
-import thunk from 'redux-thunk'
-import { routerReducer } from 'react-router-redux'
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import thunk from 'redux-thunk';
+import { routerReducer } from 'react-router-redux';
 
-import error from '../reducers/error'
-import intro from '../reducers/intro'
-import loading from '../reducers/loading'
-import positionAroundMe from '../reducers/positionAroundMe'
+import error from '../reducers/error';
+import intro from '../reducers/intro';
+import loading from '../reducers/loading';
+import positionAroundMe from '../reducers/positionAroundMe';
 
 const reducers = combineReducers({
   error,
@@ -31,9 +31,6 @@ const reducers = combineReducers({
   routing: routerReducer,
 });
 
-const store = createStore(
-  reducers,
-  applyMiddleware(thunk)
-);
+const store = createStore(reducers, applyMiddleware(thunk));
 
-export default store
+export default store;

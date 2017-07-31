@@ -14,19 +14,17 @@
  * limitations under the License.
  */
 
-import initialError from '../stores/initialError'
+import initialError from '../stores/initialError';
 
-import {
-  SET_ERROR,
-} from '../actions/errors.js'
+import { SET_ERROR } from '../actions/errors.js';
 
-const error = ( state = initialError, action ) => {
-  switch ( action.type ) {
+const error = (state = initialError, action) => {
+  switch (action.type) {
     case SET_ERROR:
-      return Object.assign( {}, state, { message: action.message } );
+      return Object.assign({}, state, { message: action.message });
     default:
-      return Object.assign( {}, state );
+      return Object.assign({}, state);
   }
 };
 
-export default error
+export default error;

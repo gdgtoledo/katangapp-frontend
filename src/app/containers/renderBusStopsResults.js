@@ -14,18 +14,16 @@
  * limitations under the License.
  */
 
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
-import Results from '../components/results/results'
+import Results from '../components/results/results';
 
-const mapStateToProps = ( state ) => {
+const mapStateToProps = state => {
   return {
-    results: state.positionAroundMe.busStops
-  }
+    results: state.positionAroundMe.busStops,
+  };
 };
 
-const RenderBusStopsResults = connect(
-  mapStateToProps
-)( Results );
+const RenderBusStopsResults = connect(mapStateToProps)(Results);
 
-export default RenderBusStopsResults
+export default RenderBusStopsResults;

@@ -14,19 +14,17 @@
  * limitations under the License.
  */
 
-import initialIntro from '../stores/initialIntro'
+import initialIntro from '../stores/initialIntro';
 
-import {
-  SET_INTRO_SHOWED
-} from '../actions/getBusStops.js'
+import { SET_INTRO_SHOWED } from '../actions/getBusStops.js';
 
-const intro = ( state = initialIntro, action ) => {
-  switch ( action.type ) {
+const intro = (state = initialIntro, action) => {
+  switch (action.type) {
     case SET_INTRO_SHOWED:
-      return Object.assign( {}, state, { state: action.state } );
+      return Object.assign({}, state, { state: action.state });
     default:
-      return Object.assign( {}, state );
+      return Object.assign({}, state);
   }
 };
 
-export default intro
+export default intro;

@@ -14,16 +14,13 @@
  * limitations under the License.
  */
 
-import React from 'react'
+import React from 'react';
 
-import Katanga from '../icons/katanga'
+import Katanga from '../icons/katanga';
 
-const Intro = ( { colorPrimary, colorSecondary, isIntroShowed } ) => (
-
-  <section className={isIntroShowed ? "ktg-intro ktg-intro--is-showed" : "ktg-intro"}>
+const Intro = ({ colorPrimary, colorSecondary, isIntroShowed }) =>
+  <section className={isIntroShowed ? 'ktg-intro ktg-intro--is-showed' : 'ktg-intro'}>
     <Katanga circleFillColor={colorPrimary} circleBorderColor={colorSecondary} busAndTextColor={colorSecondary} />
-  </section>
+  </section>;
 
-);
-
-export default Intro
+export default Intro;
