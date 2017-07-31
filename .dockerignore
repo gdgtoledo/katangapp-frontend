@@ -1,5 +1,6 @@
 .gitinore
 container.json
+project.json
 Dockerfile
 
 .git/
