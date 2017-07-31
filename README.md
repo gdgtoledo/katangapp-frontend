@@ -15,7 +15,7 @@ Puedes ver [la historia](http://www.latribunadetoledo.es/noticia.cfm/Local/20100
 Baja la última [release](https://github.com/swcraftersclm/katangapp-frontend/releases), o si tienes Docker en tu máquina, ejecuta el siguiente comando:
 
 ```shell
-docker run -d -p 7777:80 craftsmanshiptoledo/katanga-frontend:1.0.0-rc.1
+docker run -d -p 7777:80 swcraftersclm/katanga-frontend:1.0.0-rc.1
 ```
 
 Que levantará un contenedor con un servidor web Nginx con la aplicación de Katanga instalada, de modo que si abres un navegador en el puerto 7777 (http://localhost:7777) verás la aplicación funcionando.
@@ -61,7 +61,7 @@ Si además queremos construir una imagen de Docker, podremos ejecutar:
 npm run build-docker
 ```
 
-Este comando construirá una imagen bajo el repositorio `craftsmanshiptoledo/katanga-front`, con la versión indicada en el `package.json`, por ejemplo: `craftsmanshiptoledo/katanga-front:1.0.0-rc.1`.
+Este comando construirá una imagen bajo el repositorio `swcraftersclm/katanga-front`, con la versión indicada en el `package.json`, por ejemplo: `craftsmanshiptoledo/katanga-front:1.0.0-rc.1`.
 
 ### No nos mires, únete
 
