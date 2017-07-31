@@ -14,6 +14,13 @@
  * limitations under the License.
  */
 
-.#{$ns}-home {
-    @extend .#{$ns}-container;
-}
+import config from  '../app/config.js'
+
+export const fetchAroundMe = ( position ) => {
+
+    const endPoint = `${config.api.protocol}${config.api.domain}/${config.api.endpoints.busStops}?lt=` +
+                     `${position.coords.latitude}&ln=${position.coords.longitude}&r=${position.meters}`;
+
+    return fetch( endPoint, { mode: 'cors' } );
+
+};

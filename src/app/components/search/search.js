@@ -1,5 +1,5 @@
 /**
- *    Copyright 2016-today Software Craftmanship Toledo
+ *    Copyright 2016-today Software swcraftersclm
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ import React from 'react'
 import Geolocalizer from '../geolocalizer/geolocalizer.jsx'
 import Slider from '../slider/slider.jsx'
 
-const Search = ( { shouldBeHidden, meters, coords, setMetersAroundMe, getBusStopsAroundMe, setLoading } ) => (
+const Search = ( { shouldBeHidden, meters, coords, setMetersAroundMe, getBusStopsAroundMe, onProblemsWithGeolocation, setLoading } ) => (
 
   <main className={shouldBeHidden ? 'ktg-search ktg-search--is-hidden' : 'ktg-search'}>
 
@@ -36,6 +36,7 @@ const Search = ( { shouldBeHidden, meters, coords, setMetersAroundMe, getBusStop
       <Geolocalizer
         coords={coords}
         setCoords={getBusStopsAroundMe}
+        onError={onProblemsWithGeolocation}
         setLoading={setLoading} />
 
     </form>

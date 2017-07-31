@@ -1,5 +1,5 @@
 /**
- *    Copyright 2016-today Software Craftmanship Toledo
+ *    Copyright 2016-today Software swcraftersclm
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ import initialIntro from '../stores/initialIntro'
 
 import {
   SET_INTRO_SHOWED
-} from '../actions/actions.js'
+} from '../actions/getBusStops.js'
 
 const intro = ( state = initialIntro, action ) => {
   switch ( action.type ) {

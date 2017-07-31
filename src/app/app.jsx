@@ -1,5 +1,5 @@
 /**
- *    Copyright 2016-today Software Craftmanship Toledo
+ *    Copyright 2016-today Software swcraftersclm
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,6 +27,7 @@ import store from '../stores/store'
 
 import GetBusStopsGeoState from './containers/getBusStopsGeoState'
 import RenderBusStopsResults from './containers/renderBusStopsResults'
+import WeAreInTroubles from './containers/weAreInTroubles'
 
 const history = syncHistoryWithStore( browserHistory, store )
 
@@ -38,6 +39,7 @@ export default class App extends React.Component {
                     <Router history={history}>
                         <Route path='/' component={GetBusStopsGeoState}/>
                         <Route path="/results" component={RenderBusStopsResults}/>
+                        <Route path="/error" component={WeAreInTroubles}/>
                     </Router>
                 </div>
             </Provider>

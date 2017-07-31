@@ -1,5 +1,5 @@
 /**
- *    Copyright 2016-today Software Craftmanship Toledo
+ *    Copyright 2016-today Software swcraftersclm
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,10 +14,19 @@
  * limitations under the License.
  */
 
-import config from  '../app/config.js'
+//
+//  actions types
+//
 
-let fetchBusStopsAroundMe = ( position ) => {
-    return fetch( config.api.protocol + config.api.domain + '/' + config.api.endpoints.busStops + '?lt=' + position.coords.latitude + '&ln=' + position.coords.longitude + '&r=' + position.meters, { mode: 'cors' } );
-}
+export const SET_ERROR = 'SET_ERROR';
 
-export default fetchBusStopsAroundMe
+//
+//  actions creators
+//
+
+export const setError = ( message ) => {
+  return {
+    type: SET_ERROR,
+    message: message,
+  };
+};

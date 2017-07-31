@@ -14,6 +14,17 @@
  * limitations under the License.
  */
 
-.#{$ns}-home {
-    @extend .#{$ns}-container;
-}
+import React, { PropTypes } from 'react'
+
+const ButtonTertiaryOutline = ( { label, onClick } ) => (
+    <button className="ktg-btn ktg-btn--tertiary--outline" onClick={onClick}>
+      {label}
+    </button>
+);
+
+ButtonTertiaryOutline.propTypes = {
+  label: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
+};
+
+export default ButtonTertiaryOutline

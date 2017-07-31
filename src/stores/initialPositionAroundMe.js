@@ -1,5 +1,5 @@
 /**
- *    Copyright 2016-today Software Craftmanship Toledo
+ *    Copyright 2016-today Software swcraftersclm
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,8 +20,7 @@ const initialPositionAroundMe = {
         latitude: 10,
         longitude: 10
     },
-    busStops: [],
-    errors: []
-}
+    busStops: []
+};
 
 export default initialPositionAroundMe

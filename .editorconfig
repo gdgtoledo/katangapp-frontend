@@ -3,12 +3,17 @@
 end_of_line = lf
 insert_final_newline = true
 
-# Indentation override for all JS
+# Indentation override for all Js
 [./src/**.js]
 indent_style = space
 indent_size = 2
 
-# Indentation override for all JS
+# Indentation override for all Jsx
+[./src/**.jsx]
+indent_style = space
+indent_size = 4
+
+# Indentation override for all Scss
 [./src/**.scss]
 indent_style = space
 indent_size = 4

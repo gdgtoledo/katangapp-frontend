@@ -14,6 +14,22 @@
  * limitations under the License.
  */
 
-.#{$ns}-home {
-    @extend .#{$ns}-container;
-}
+import React, { PropTypes } from 'react'
+
+import ButtonTertiaryOutline from '../buttons/btn-tertiary-outline'
+
+const Error = ( { error, labelActionButton, onClickActionButton } ) => (
+  <section className="ktg-error ktg-error-container">
+    <h2 className="ktg-error__apologies">{ error }</h2>
+    <ButtonTertiaryOutline label={labelActionButton} onClick={onClickActionButton}/>
+  </section>
+);
+
+Error.propTypes = {
+  labelActionButton: PropTypes.string.isRequired,
+  onClickActionButton: PropTypes.func.isRequired,
+  error: PropTypes.string.isRequired,
+};
+
+export default Error
+

@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
-.#{$ns}-home {
-    @extend .#{$ns}-container;
-}
+const initialError = {
+  message: "",
+};
+
+export default initialError

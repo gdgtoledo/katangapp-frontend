@@ -1,5 +1,5 @@
 /**
- *    Copyright 2016-today Software Craftmanship Toledo
+ *    Copyright 2016-today Software swcraftersclm
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,15 +19,20 @@ $error__type---margin-bottom :      0;
 $error__type---font-weight :        $font--light---font-weight;
 
 $error__apologies---font-size:      25px;
-$error__apologies---font-weight:    $font--light---font-weight ;
+$error__apologies---font-weight:    $font--light---font-weight;
+$error__apologies---margin-bottom:  10px;
 
-$error__message---margin-bottom:    50px;
+$error__message---margin-bottom:    20px;
 $error__message---font-weight:      100;
+
+$error__btn---margin-top:           20px;
 
 .#{$ns}-error {
 
     &__apologies,
     &__message {
+        width: 80vw;
+        text-align: center;
         margin-top: $error__type---margin-bottom;
         font-weight: $error__message---font-weight;
     }
@@ -42,10 +47,14 @@ $error__message---font-weight:      100;
     &__apologies {
         font-size: $error__apologies---font-size;
         font-weight: $error__apologies---font-weight;
+        margin-bottom: $error__apologies---margin-bottom;
     }
 
     &__message {
         margin-bottom: $error__message---margin-bottom;
     }
 
+    .#{$ns}-btn {
+        margin-top: $error__btn---margin-top;
+    }
 }

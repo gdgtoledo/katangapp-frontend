@@ -1,5 +1,5 @@
 /**
- *    Copyright 2016-today Software Craftmanship Toledo
+ *    Copyright 2016-today Software swcraftersclm
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,11 +18,13 @@ import { createStore, applyMiddleware, combineReducers } from 'redux'
 import thunk from 'redux-thunk'
 import { routerReducer } from 'react-router-redux'
 
+import error from '../reducers/error'
 import intro from '../reducers/intro'
 import loading from '../reducers/loading'
 import positionAroundMe from '../reducers/positionAroundMe'
 
 const reducers = combineReducers({
+  error,
   loading,
   intro,
   positionAroundMe,

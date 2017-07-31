@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/craftsmanship-toledo/katangapp-frontend.svg?branch=dev)](https://travis-ci.org/craftsmanship-toledo/katangapp-frontend)
 
+[![Chat with us in gitter](https://badges.gitter.im/craftsmanshipToledo/katanga/craftsmanshipToledo.svg)]("https://gitter.im/craftsmanshipToledo/katanga")
+
 # Katanga
 
 Katanga es una aplicación opensource  para ver los tiempos de los autobuses de Toledo en cada parada.
@@ -10,10 +12,10 @@ Puedes ver [la historia](http://www.latribunadetoledo.es/noticia.cfm/Local/20100
 
 ## Instalación
 
-Baja la última [release](https://github.com/craftsmanship-toledo/katangapp-frontend/releases), o si tienes Docker en tu máquina, ejecuta el siguiente comando:
+Baja la última [release](https://github.com/swcraftersclm/katangapp-frontend/releases), o si tienes Docker en tu máquina, ejecuta el siguiente comando:
 
 ```shell
-docker run -d -p 7777:80 craftsmanshiptoledo/katanga-frontend:1.0.0-rc.1
+docker run -d -p 7777:80 swcraftersclm/katanga-frontend:1.0.0-rc.1
 ```
 
 Que levantará un contenedor con un servidor web Nginx con la aplicación de Katanga instalada, de modo que si abres un navegador en el puerto 7777 (http://localhost:7777) verás la aplicación funcionando.
@@ -27,7 +29,7 @@ Puedes usar [Katanga](http://katanga.wedeploy.io/) Desktop que está hospedada e
 Clona este repositorio
 
 ```shell
-git clone git@github.com:craftsmanship-toledo/katangapp-frontend.git
+git clone git@github.com:swcraftersclm/katangapp-frontend.git
 ```
 
 ### Dependencias
@@ -59,15 +61,15 @@ Si además queremos construir una imagen de Docker, podremos ejecutar:
 npm run build-docker
 ```
 
-Este comando construirá una imagen bajo el repositorio `craftsmanshiptoledo/katanga-front`, con la versión indicada en el `package.json`, por ejemplo: `craftsmanshiptoledo/katanga-front:1.0.0-rc.1`.
+Este comando construirá una imagen bajo el repositorio `swcraftersclm/katanga-front`, con la versión indicada en el `package.json`, por ejemplo: `swcraftersclm/katanga-front:1.0.0-rc.1`.
 
 ### No nos mires, únete
 
-Únete a nuestro chat room en [gitter](https://gitter.im/craftsmanshipToledo/katanga?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+Únete a nuestro chat room en [![Chat with us in gitter](https://badges.gitter.im/craftsmanshipToledo/katanga/craftsmanshipToledo.svg)]("https://gitter.im/craftsmanshipToledo/katanga")
 
 Puedes unirte de muchas formas, no solo haciendo commits, puedes preguntar al equipo acerca de estas tareas, abrir un issue en el proyecto, mejorar nuestro código y hacernos peticiones para la inclusión de estas mejoras etc.
 
-Si te animas a hacer commits puedes ver su formato y sus convenciones [aquí](https://github.com/craftsmanship-toledo/katangapp-frontend/wiki/Formato-de-commits).
+Si te animas a hacer commits puedes ver su formato y sus convenciones [aquí](https://github.com/swcraftersclm/katangapp-frontend/wiki/Formato-de-commits).
 
 ### Equipo
 

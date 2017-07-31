@@ -1,5 +1,5 @@
 /**
- *    Copyright 2016-today Software Craftmanship Toledo
+ *    Copyright 2016-today Software swcraftersclm
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -41,7 +41,8 @@ const Home = React.createClass({
           meters = {this.props.meters}
           coords = {this.props.coords}
           setMetersAroundMe = {this.props.setMetersAroundMe}
-          getBusStopsAroundMe = {this.props.getBusStopsAroundMe}
+          getBusStopsAroundMe = {this.props.getBusStopsAroundMeAndGoToResults}
+          onProblemsWithGeolocation = {this.props.setErrorWhenUserHaveProblemsWithGeolocation}
           setLoading = {this.props.setLoading} />
 
         <Loading isLoading={this.props.loading} />
@@ -57,8 +58,9 @@ Home.propTypes = {
   meters: PropTypes.number.isRequired,
   loading: PropTypes.bool.isRequired,
   setMetersAroundMe: PropTypes.func.isRequired,
-  getBusStopsAroundMe: PropTypes.func.isRequired,
-  setLoading: PropTypes.func
+  getBusStopsAroundMeAndGoToResults: PropTypes.func.isRequired,
+  onProblemsWithGeolocation: PropTypes.func,
+  setLoading: PropTypes.func,
 };
 
 export default Home
