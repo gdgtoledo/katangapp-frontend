@@ -15,11 +15,11 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class Geolocalizer extends React.Component {
-
-  constructor( props ) {
-    super( props );
+  constructor(props) {
+    super(props);
   }
 
   static defaultProps = {
@@ -29,31 +29,27 @@ export default class Geolocalizer extends React.Component {
   };
 
   static propTypes = {
-    setCoords: React.PropTypes.func,
-    setLoading: React.PropTypes.func,
-    onError: React.PropTypes.func
+    setCoords: PropTypes.func,
+    setLoading: PropTypes.func,
+    onError: PropTypes.func,
   };
 
   geolocalizeMe = () => {
-    let success = ( position )  => {
-      this.props.setCoords( { latitude: position.coords.latitude, longitude: position.coords.longitude } );
+    let success = position => {
+      this.props.setCoords({ latitude: position.coords.latitude, longitude: position.coords.longitude });
     };
-    let error = ( err ) => {
+    let error = err => {
       this.props.onError(err);
     };
-    if ( navigator.geolocation ) {
+    if (navigator.geolocation) {
       this.props.setLoading(true);
-      navigator.geolocation.getCurrentPosition( success, error );
+      navigator.geolocation.getCurrentPosition(success, error);
     } else {
       this.props.onError();
     }
   };
 
   render() {
-    return (
-      <button type='button' className='ktg-geolocalizer' onClick={this.geolocalizeMe}>
-      </button>
-    );
+    return <button type="button" className="ktg-geolocalizer" onClick={this.geolocalizeMe} />;
   }
-
 }
