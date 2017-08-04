@@ -1,21 +1,27 @@
 {
   "parser": "babel-eslint",
   "rules": {
-    "prettier/prettier": ["error", {
-      "singleQuote": true,
-      "trailingComma": "all",
-      "printWidth": 120,
-      "tabWidth": 2,
-      "bracketSpacing": true,
-      "jsxBracketSameLine": true
-    }]
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "all",
+        "printWidth": 120,
+        "tabWidth": 2,
+        "bracketSpacing": true,
+        "jsxBracketSameLine": true
+      }
+    ]
   },
   "env": {
     "es6": true,
-    "browser": true
+    "browser": true,
+    "jest": true,
+    "commonjs": true
   },
   "extends": [
-    "eslint:recommended"
+    "eslint:recommended",
+    "plugin:react/recommended"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -42,9 +48,6 @@
     "webpack": true,
     "__dirname": true,
     "module": true,
-    "process": true,
-    "describe": true,
-    "it": true,
-    "expect": true,
+    "process": true
   }
 }
