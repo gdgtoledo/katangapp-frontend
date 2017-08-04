@@ -14,7 +14,8 @@
  * limitations under the License.
  */
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import ButtonTertiaryOutline from '../buttons/btn-tertiary-outline';
 
