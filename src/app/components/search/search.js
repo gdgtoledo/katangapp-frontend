@@ -52,8 +52,8 @@ const Search = ({
 
 Search.propTypes = {
   shouldBeHidden: PropTypes.bool.isRequired,
-  meters: PropTypes.string.isRequired,
-  coords: PropTypes.string.isRequired,
+  meters: PropTypes.number.isRequired,
+  coords: PropTypes.object.isRequired,
   setMetersAroundMe: PropTypes.func.isRequired,
   getBusStopsAroundMe: PropTypes.func.isRequired,
   onProblemsWithGeolocation: PropTypes.func.isRequired,

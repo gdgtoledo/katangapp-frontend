@@ -16,15 +16,31 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import CreateClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 
 import Intro from '../intro/intro';
 import Search from '../search/search';
 import Loading from '../loading/loading';
 
-const Home = CreateClass({
+const Home = createReactClass({
   componentDidMount: function() {
     this.props.showIntroAndSetToShowed();
+  },
+
+  propTypes: {
+    meters: PropTypes.number.isRequired,
+    coords: PropTypes.object.isRequired,
+    loading: PropTypes.bool.isRequired,
+    setMetersAroundMe: PropTypes.func.isRequired,
+    getBusStopsAroundMeAndGoToResults: PropTypes.func.isRequired,
+    onProblemsWithGeolocation: PropTypes.func,
+    setLoading: PropTypes.func,
+    showIntroAndSetToShowed: PropTypes.func.isRequired,
+    colorPrimary: PropTypes.string,
+    colorSecondary: PropTypes.string,
+    isIntroShowed: PropTypes.bool,
+    shouldBeSearchHidden: PropTypes.bool,
+    setErrorWhenUserHaveProblemsWithGeolocation: PropTypes.func.isRequired,
   },
 
   render() {
@@ -51,14 +67,5 @@ const Home = CreateClass({
     );
   },
 });
-
-Home.propTypes = {
-  meters: PropTypes.number.isRequired,
-  loading: PropTypes.bool.isRequired,
-  setMetersAroundMe: PropTypes.func.isRequired,
-  getBusStopsAroundMeAndGoToResults: PropTypes.func.isRequired,
-  onProblemsWithGeolocation: PropTypes.func,
-  setLoading: PropTypes.func,
-};
 
 export default Home;
