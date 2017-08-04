@@ -15,6 +15,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Geolocalizer from '../geolocalizer/geolocalizer.jsx';
 import Slider from '../slider/slider.jsx';
@@ -48,5 +49,15 @@ const Search = ({
       />
     </form>
   </main>;
+
+Search.propTypes = {
+  shouldBeHidden: PropTypes.bool.isRequired,
+  meters: PropTypes.string.isRequired,
+  coords: PropTypes.string.isRequired,
+  setMetersAroundMe: PropTypes.func.isRequired,
+  getBusStopsAroundMe: PropTypes.func.isRequired,
+  onProblemsWithGeolocation: PropTypes.func.isRequired,
+  setLoading: PropTypes.func.isRequired,
+};
 
 export default Search;
