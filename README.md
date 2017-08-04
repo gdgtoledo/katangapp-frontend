@@ -79,7 +79,7 @@ Si te animas a hacer commits puedes ver su formato y sus convenciones
 | ![Javi](https://avatars3.githubusercontent.com/u/1202463?v=3&s=100) | Javier López de Ancos | [javierlopezdeancos](https://github.com/javierlopezdeancos) | [@javierland](https://twitter.com/javierland) | [javierlopez](http://public.javierlopezdeancos.wedeploy.io/) |
 | ![Manuel](https://avatars2.githubusercontent.com/u/951580?v=3&s=100) |   Manuel de la Peña   | [mdelapenya](https://github.com/`) | [@mdelapenya](https://twitter.com/mdelapenya) |                                          |
 | ![Felix](https://avatars0.githubusercontent.com/u/4701534?v=3&s=100) |     Felix Ortega      | [felixortegam](https://github.com/felixortegam) | [@felixortegam](https://twitter.com/felixortegam) |                                          |
-| ![Rafa](https://avatars1.githubusercontent.com/u/91924?v=4&s=460) |     Rafa García      | [rafagarcia](https://github.com/rafagarcia) | [@rafagarcia](https://twitter.com/rafagarcia) |                                          |
+| ![Rafa](https://avatars1.githubusercontent.com/u/91924?v=3&s=100) |     Rafa García      | [rafagarcia](https://github.com/rafagarcia) | [@rafagarcia](https://twitter.com/rafagarcia) |                                          |
 
 
 
