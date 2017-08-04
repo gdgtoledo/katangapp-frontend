@@ -15,54 +15,55 @@
  */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 export default class Slider extends React.Component {
-
-  constructor( props ) {
-    super( props );
+  constructor(props) {
+    super(props);
   }
 
   static defaultProps = {
     min: '0',
     max: '1000',
     step: '25',
-    setMeters: ( meters ) => { this.setState( { meters: meters } ) }
+    setMeters: meters => {
+      this.setState({ meters: meters });
+    },
   };
 
   static propTypes = {
-    min: React.PropTypes.string,
-    max: React.PropTypes.string,
-    step: React.PropTypes.string,
-    meters: React.PropTypes.number.isRequired,
-    setMeters: React.PropTypes.func
+    min: PropTypes.string,
+    max: PropTypes.string,
+    step: PropTypes.string,
+    meters: PropTypes.number.isRequired,
+    setMeters: PropTypes.func,
   };
 
   state = {
-    active: false
+    active: false,
   };
 
   showMeters = () => {
-    this.setState( { active: true } );
+    this.setState({ active: true });
   };
 
   hideMeters = () => {
-    this.setState( { active: false } );
+    this.setState({ active: false });
   };
 
   updateMeters = () => {
-    let meters = ReactDOM.findDOMNode( this.refs.metersAround ).value;
-    meters = parseInt( meters, 10 );
-    this.props.setMeters( meters );
+    let meters = this.metersAround.value;
+    meters = parseInt(meters, 10);
+    this.props.setMeters(meters);
   };
 
   render() {
     return (
-      <div id='ktg-slider' className='ktg-slider'>
+      <div id="ktg-slider" className="ktg-slider">
         <input
-          name='metersAround'
-          ref='metersAround'
-          type='range'
+          name="metersAround"
+          ref={node => (this.metersAround = node)}
+          type="range"
           className={this.state.active ? 'ktg-slider__input ktg-slider__input--is-active' : 'ktg-slider__input'}
           min={this.props.min}
           max={this.props.max}
@@ -70,16 +71,16 @@ export default class Slider extends React.Component {
           value={this.props.meters}
           onFocus={this.showMeters}
           onBlur={this.hideMeters}
-          onChange={this.updateMeters}/>
+          onChange={this.updateMeters}
+        />
         <output
-          htmlFor='metersAround'
-          ref='showMeters'
+          htmlFor="metersAround"
+          ref={node => (this.showMeters = node)}
           className={this.state.active ? 'ktg-slider__output is-active' : 'ktg-slider__output'}>
-            {this.props.meters}
-            <span className='ktg-slider__output-unit'>metros</span>
+          {this.props.meters}
+          <span className="ktg-slider__output-unit">metros</span>
         </output>
       </div>
     );
   }
-
 }
