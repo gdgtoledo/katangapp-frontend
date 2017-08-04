@@ -64,10 +64,11 @@ Los commits deben:
 1. Contener los cambios contenidos en la descripción de su mensaje.
 2. Estar debidamente separados y descritos.
 
-Los mensajes de los commits deberán ser:
+Los mensajes de los commits deberán:
 
-1. Cortos
-2. Descriptivos
+1. Ser cortos.
+2. Ser descriptivos.
+3. Incluir el identificador de la issue a la que corresponde.
 
 
 ### 4. Mantén el código linteado, formateado y con los test en verde.
