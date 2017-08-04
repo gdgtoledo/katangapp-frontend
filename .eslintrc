@@ -42,6 +42,9 @@
     "webpack": true,
     "__dirname": true,
     "module": true,
-    "process": true
+    "process": true,
+    "describe": true,
+    "it": true,
+    "expect": true,
   }
 }
