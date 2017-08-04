@@ -59,23 +59,27 @@ Si además queremos construir una imagen de Docker, podremos ejecutar:
 npm run build-docker
 ```
 
-Este comando construirá una imagen bajo el repositorio `swcraftersclm/katanga-front`, con la versión indicada en el `package.json`, por ejemplo: `swcraftersclm/katanga-front:1.0.0-rc.1`.
+Este comando construirá una imagen bajo el repositorio `swcraftersclm/katanga-front`, con la versión indicada en el 
+`package.json`, por ejemplo: `swcraftersclm/katanga-front:1.0.0-rc.1`.
 
 ### No nos mires, únete
 
 Únete a nuestro chat room en [![Chat with us in gitter](https://badges.gitter.im/craftsmanshipToledo/katanga/craftsmanshipToledo.svg)](https://gitter.im/craftsmanshipToledo/katanga)
 
-Puedes unirte de muchas formas, no solo haciendo commits, puedes preguntar al equipo acerca de estas tareas, abrir un issue en el proyecto, mejorar nuestro código y hacernos peticiones para la inclusión de estas mejoras etc.
+Puedes unirte de muchas formas, no solo haciendo commits, puedes preguntar al equipo acerca de estas tareas, abrir 
+un issue en el proyecto, mejorar nuestro código y hacernos peticiones para la inclusión de estas mejoras etc.
 
-Si te animas a hacer commits puedes ver su formato y sus convenciones [aquí](https://github.com/swcraftersclm/katangapp-frontend/wiki/Formato-de-commits).
+Si te animas a hacer commits puedes ver su formato y sus convenciones 
+[aquí](https://github.com/swcraftersclm/katangapp-frontend/wiki/Formato-de-commits).
 
-### Equipo
+### Core contributors
 
 | Pic                                      |         User          |                  Github                  |                 Twitter                  |                   Web                    |
 | ---------------------------------------- | :-------------------: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: |
 | ![Javi](https://avatars3.githubusercontent.com/u/1202463?v=3&s=100) | Javier López de Ancos | [javierlopezdeancos](https://github.com/javierlopezdeancos) | [@javierland](https://twitter.com/javierland) | [javierlopez](http://public.javierlopezdeancos.wedeploy.io/) |
-| ![manuel](https://avatars2.githubusercontent.com/u/951580?v=3&s=100) |   Manuel de la Peña   | [mdelapenya](https://github.com/mdelapenya) | [@mdelapenya](https://twitter.com/mdelapenya) |                                          |
+| ![Manuel](https://avatars2.githubusercontent.com/u/951580?v=3&s=100) |   Manuel de la Peña   | [mdelapenya](https://github.com/`) | [@mdelapenya](https://twitter.com/mdelapenya) |                                          |
 | ![Felix](https://avatars0.githubusercontent.com/u/4701534?v=3&s=100) |     Felix Ortega      | [felixortegam](https://github.com/felixortegam) | [@felixortegam](https://twitter.com/felixortegam) |                                          |
+| ![Rafa](https://avatars1.githubusercontent.com/u/91924?v=4&s=460) |     Rafa García      | [rafagarcia](https://github.com/rafagarcia) | [@rafagarcia](https://twitter.com/rafagarcia) |                                          |
 
 
 
