@@ -37,8 +37,7 @@ const Search = ({
       id="ktg-search_meters-around"
       className={
         shouldBeHidden ? 'ktg-search__meters-around ktg-search__meters-around--is-loading' : 'ktg-search__meters-around'
-      }
-    >
+      }>
       <Slider meters={meters} setMeters={setMetersAroundMe} />
 
       <Geolocalizer
