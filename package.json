@@ -11,7 +11,8 @@
   "license": "Apache 2",
   "main": "app/app.jsx",
   "scripts": {
-    "test": "./node_modules/.bin/jest --coverage",
+    "test": "./node_modules/.bin/jest",
+    "test-coverage": "./node_modules/.bin/jest --coverage",
     "lint": "./node_modules/.bin/eslint ./src/**/*.js --fix --ignore-path .gitignore",
     "build": "npm install && ./node_modules/.bin/webpack --config ./webpack.config.js",
     "build-docker": "docker build -t $npm_package_config_docker_user/$npm_package_config_docker_image:$npm_package_version .",
