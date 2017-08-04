@@ -15,7 +15,7 @@
  */
 
 import React from 'react';
-import PropTypes from 'prop-types';;
+import PropTypes from 'prop-types';
 
 const Error = ({ color }) =>
   <svg fill={color} height="18" viewBox="0 0 24 24" width="24">
