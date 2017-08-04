@@ -16,6 +16,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReactDOM from 'react-dom';
 
 export default class Slider extends React.Component {
   constructor(props) {
@@ -52,7 +53,7 @@ export default class Slider extends React.Component {
   };
 
   updateMeters = () => {
-    let meters = this.metersAround.value;
+    let meters = this.selectMetersAround.value;
     meters = parseInt(meters, 10);
     this.props.setMeters(meters);
   };
@@ -61,8 +62,8 @@ export default class Slider extends React.Component {
     return (
       <div id="ktg-slider" className="ktg-slider">
         <input
-          name="metersAround"
-          ref={node => (this.metersAround = node)}
+          name="selectMetersAround"
+          ref={node => (this.selectMetersAround = node)}
           type="range"
           className={this.state.active ? 'ktg-slider__input ktg-slider__input--is-active' : 'ktg-slider__input'}
           min={this.props.min}
@@ -74,8 +75,8 @@ export default class Slider extends React.Component {
           onChange={this.updateMeters}
         />
         <output
-          htmlFor="metersAround"
-          ref={node => (this.showMeters = node)}
+          htmlFor="selectMetersAround"
+          ref={node => (this.metersSelected = node)}
           className={this.state.active ? 'ktg-slider__output is-active' : 'ktg-slider__output'}>
           {this.props.meters}
           <span className="ktg-slider__output-unit">metros</span>
