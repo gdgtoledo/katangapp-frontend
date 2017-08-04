@@ -14,18 +14,20 @@
  * limitations under the License.
  */
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import CreateClass from 'create-react-class';
 
 import Intro from '../intro/intro';
 import Search from '../search/search';
 import Loading from '../loading/loading';
 
-const Home = React.createClass({
+const Home = CreateClass({
   componentDidMount: function() {
     this.props.showIntroAndSetToShowed();
   },
 
-  render: function() {
+  render() {
     return (
       <div className="ktg-home">
         <Intro
