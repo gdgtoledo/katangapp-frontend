@@ -15,6 +15,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Katanga from '../icons/katanga';
 
@@ -22,5 +23,11 @@ const Intro = ({ colorPrimary, colorSecondary, isIntroShowed }) =>
   <section className={isIntroShowed ? 'ktg-intro ktg-intro--is-showed' : 'ktg-intro'}>
     <Katanga circleFillColor={colorPrimary} circleBorderColor={colorSecondary} busAndTextColor={colorSecondary} />
   </section>;
+
+Intro.propTypes = {
+  colorPrimary: PropTypes.string.isRequired,
+  colorSecondary: PropTypes.string.isRequired,
+  isIntroShowed: PropTypes.bool,
+};
 
 export default Intro;
