@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import timer from './timer';
 import colors from '../../styles/colors';
@@ -29,6 +30,12 @@ const BusRoute = ({ idbr, name, time }) => {
       </td>
     </tr>
   );
+};
+
+BusRoute.propTypes = {
+  idbr: PropTypes.number,
+  name: PropTypes.string,
+  time: PropTypes.number,
 };
 
 export default BusRoute;
