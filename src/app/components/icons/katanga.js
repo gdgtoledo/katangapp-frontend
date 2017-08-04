@@ -14,7 +14,8 @@
  * limitations under the License.
  */
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Katanga = ({ circleFillColor, circleBorderColor, busAndTextColor }) =>
   <svg className="ktg-logo-katanga" width="677px" height="677px" viewBox="0 0 677 677">
