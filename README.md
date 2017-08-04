@@ -70,7 +70,7 @@ Puedes unirte de muchas formas, no solo haciendo commits, puedes preguntar al eq
 un issue en el proyecto, mejorar nuestro código y hacernos peticiones para la inclusión de estas mejoras etc.
 
 Si te animas a hacer commits puedes ver su formato y sus convenciones 
-[aquí](https://github.com/swcraftersclm/katangapp-frontend/wiki/Formato-de-commits).
+[aquí](CONTRIBUTING.md#3-formato-de-los-commits).
 
 ### Core contributors
 
