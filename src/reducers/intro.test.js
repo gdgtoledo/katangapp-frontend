@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { SET_INTRO_SHOWED } from '../actions/getBusStops';
 import intro from './intro';
 
