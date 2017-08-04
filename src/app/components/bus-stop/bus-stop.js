@@ -1,4 +1,6 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import BusRoute from '../bus-route/bus-route';
 import colors from '../../styles/colors';
 import IconBusStop from '../icons/busStop';
@@ -34,6 +36,9 @@ const BusStop = ({ idbs, description, meters, routes }) =>
   </article>;
 
 BusStop.propTypes = {
+  idbs: PropTypes.number,
+  description: PropTypes.string,
+  meters: PropTypes.number,
   routes: PropTypes.array,
 };
 
