@@ -1,0 +1,112 @@
+$bus-stop---border-color: $color-grey-light-20;
+$bus-stop---border: 1px solid $bus-stop---border-color;
+$bus-stop__distance---color: $color-grey-light-5;
+$bus-stop__distance--strong---color: $color-secondary;
+$bus-stop__header---border-bottom: $bus-stop---border;
+
+.#{$ns}-bus-stop {
+    @include breakpoint($break-mobile) {
+        border-top: $bus-stop---border;
+        margin-bottom: 50px;
+    }
+
+    margin-bottom: 0;
+    border: $bus-stop---border;
+    border-top: 0;
+
+    &:first-child {
+        border-top: $bus-stop---border;
+    }
+
+    &__table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    &__header {
+        width: 100%;
+
+        border-spacing: 0px;
+        border-bottom: $bus-stop__header---border-bottom;
+
+        th {
+            text-align: left;
+        }
+
+        tr th {
+            padding: 20px;
+        }
+    }
+
+    &__body {
+
+    }
+
+    &__info {
+        @include breakpoint($break-mobile) {
+            display: inline-block;
+            width: 83%;
+        }
+
+        display: block;
+        width:   100%;
+        vertical-align: middle;
+
+        word-wrap: break-word;
+    }
+
+    &__icon {
+        @include breakpoint($break-tablet) {
+            display: inline-block;
+            width: 17%;
+        }
+
+        display: none;
+        width: 100%;
+
+        vertical-align: middle;
+    }
+
+    &__icon svg {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    &__description {
+        @include breakpoint($break-tablet) {
+            font-size: rem(40px);
+            line-height: 45px;
+        }
+
+        display: block;
+
+        margin: 0;
+
+        text-align: left;
+        font-weight: 100;
+        line-height: rem(26px);
+        font-size: 26px;
+    }
+
+    &__distance {
+        @include breakpoint($break-mobile) {
+            font-size: rem(13px);
+        }
+
+        display: block;
+
+        margin: 10px 0 0 0;
+
+        text-align: left;
+        font-weight: 500;
+        font-size: rem(15px);
+        color: $bus-stop__distance---color;
+
+        &--strong {
+            font-weight: 500;
+            color: $bus-stop__distance--strong---color;
+        }
+    }
+
+}

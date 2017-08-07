@@ -1,0 +1,59 @@
+/**
+ *    Copyright 2016-today Software swcraftersclm
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+$ns: 'ktg' !default;
+
+$base---font-size: 14px;
+$base---font-family: 'Quicksand', sans-serif;
+
+$break-mobile:      640px !default;
+$break-tablet:      850px !default;
+$break-desktop:     1024px !default;
+$break-wide:        1600px !default;
+
+$noquery:           'no-media-query' !default;
+
+// Fonts
+
+$font--light---font-weight:   100;
+$font--normal---font-weight:  400;
+$font--bold---font-weight:    600;
+
+// Layers
+
+$layer-under-all:   -99 !default;
+$layer-third-down:   -3 !default;
+$layer-second-down:  -2 !default;
+$layer-first-down:   -1 !default;
+$layer-normal:        0 !default;
+$layer-first-up:      1 !default;
+$layer-second-up:     2 !default;
+$layer-third-up:      3 !default;
+$layer-above-all:    99 !default;
+
+$layers: (
+  under-all: $layer-under-all,
+  third-down: $layer-third-down,
+  second-down: $layer-second-down,
+  first-down: $layer-first-down,
+  normal: $layer-normal,
+  first-up: $layer-first-up,
+  second-up: $layer-second-up,
+  third-up: $layer-third-up,
+  above-all: $layer-above-all
+) !default;
+
+$browser-not-supported-class: 'ie-not-supported' !default;

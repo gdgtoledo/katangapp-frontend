@@ -1,0 +1,155 @@
+/**
+ *    Copyright 2016-today Software swcraftersclm
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+$this: #{$ns}-slider;
+
+.#{$this} {
+    color: white;
+    text-align: center;
+
+    &__input, input[type=range] {
+        margin: 0 20px;
+
+        -webkit-appearance: none;
+        width: 80vw;
+        cursor: pointer;
+
+        @include breakpoint($break-tablet) {
+           width: 30vw;
+        }
+
+        &::-webkit-slider-runnable-track {
+            height: 1px;
+            border: none;
+
+            background: $color-secondary;
+
+            opacity: 1;
+        }
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+
+            height: 25px;
+            width: 25px;
+
+            margin-top: -12px;
+            border: none;
+            border-radius: 50%;
+
+            background: $color-primary;
+        }
+
+        &::-moz-range-track {
+            height: 1px;
+
+            background: white;
+
+            border: none;
+        }
+
+        &::-moz-range-thumb {
+            height: 25px;
+            width: 25px;
+
+            background: $color-primary;
+
+            border: none;
+            border-radius: 50%;
+        }
+
+        &:-moz-focusring {
+            outline: 1px solid white;
+            outline-offset: -1px;
+        }
+
+        &::-ms-track {
+            height: 1px;
+
+            background: transparent;
+            color: transparent;
+
+            border-color: transparent;
+            border-width: 6px 0;
+        }
+
+        &::-ms-fill-lower {
+            background: #777;
+            border-radius: 10px;
+        }
+
+        &::-ms-fill-upper {
+            background: white;
+            border-radius: 10px;
+        }
+
+        ::-ms-thumb {
+            height: 25px;
+            width: 25px;
+
+            border: none;
+            border-radius: 50%;
+            background: $color-primary;
+        }
+
+        &::-ms-fill-lower {
+            background: #888;
+        }
+
+        &:focus {
+            outline: none;
+
+            &::-webkit-slider-runnable-track {
+                background: #ccc;
+            }
+
+            &::-ms-fill-upper {
+                background: #ccc;
+            }
+        }
+
+        &--is-active {
+
+            &::-webkit-slider-runnable-track {
+                opacity: 0.3;
+                transition: all 3s ease-out;
+            }
+        }
+    }
+
+    &__output {
+        display: block;
+        margin-top: 2vh;
+        opacity: 0.3;
+
+        color: $color-secondary;
+
+        font-size: rem(36px);
+        font-weight: 200;
+        text-align: center;
+
+        transition: all 0.5s ease-out;
+
+        &.is-active {
+            opacity: 1;
+        }
+
+    }
+
+    &__output-unit {
+        font-size: rem(15px);
+    }
+}

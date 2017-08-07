@@ -1,0 +1,39 @@
+/**
+ *    Copyright 2016-today Software swcraftersclm
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+$color-primary: #FFDA04;
+$color-secondary: black;
+$color-tertiary: #FFCD00;
+$color-quaternary: white;
+
+$color-grey-base:    #8c8c8c;
+$color-grey-light-5: lighten($color-grey-base, 5);
+$color-grey-light-10: lighten($color-grey-base, 10);
+$color-grey-light-15: lighten($color-grey-base, 15);
+$color-grey-light-20: lighten($color-grey-base, 20);
+$color-grey-light-25: lighten($color-grey-base, 25);
+$color-grey-light-30: lighten($color-grey-base, 30);
+$color-grey-light-35: lighten($color-grey-base, 35);
+$color-grey-light-40: lighten($color-grey-base, 40);
+
+$color-grey-dark-5: darken($color-grey-base, 5);
+$color-grey-dark-10: darken($color-grey-base, 10);
+$color-grey-dark-15: darken($color-grey-base, 15);
+$color-grey-dark-20: darken($color-grey-base, 20);
+$color-grey-dark-25: darken($color-grey-base, 25);
+
+$color-aux-primary: #d41717;
+$color-aux-secondary: #02a740;

@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - "7"
+
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then docker login --username=$DOCKER_USER --password=$DOCKER_PASS; fi'
+  
+install:
+  - npm run build
+
+script:
+  - npm run build-docker
+
+after_success:
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ] && [ "$TRAVIS_BRANCH" = "dev" ]; then npm run publish-docker; fi'
