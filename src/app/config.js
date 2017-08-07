@@ -17,7 +17,7 @@
 const config = {
   api: {
     protocol: 'https://',
-    domain: 'secret-depths-4660.herokuapp.com',
+    domain: 'backend-katanga.wedeploy.io',
     endpoints: {
       busStops: 'main',
     },
