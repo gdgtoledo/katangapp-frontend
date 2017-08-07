@@ -14,7 +14,8 @@
  * limitations under the License.
  */
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const BusStop = ({ circleFillColor, circleBorderColor, busColor }) =>
   <svg width="549" height="549" viewBox="0 0 549 549">

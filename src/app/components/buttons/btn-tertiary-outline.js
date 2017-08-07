@@ -14,7 +14,8 @@
  * limitations under the License.
  */
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const ButtonTertiaryOutline = ({ label, onClick }) =>
   <button className="ktg-btn ktg-btn--tertiary--outline" onClick={onClick}>

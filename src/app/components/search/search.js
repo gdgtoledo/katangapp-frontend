@@ -15,6 +15,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Geolocalizer from '../geolocalizer/geolocalizer.jsx';
 import Slider from '../slider/slider.jsx';
@@ -37,8 +38,7 @@ const Search = ({
       id="ktg-search_meters-around"
       className={
         shouldBeHidden ? 'ktg-search__meters-around ktg-search__meters-around--is-loading' : 'ktg-search__meters-around'
-      }
-    >
+      }>
       <Slider meters={meters} setMeters={setMetersAroundMe} />
 
       <Geolocalizer
@@ -49,5 +49,15 @@ const Search = ({
       />
     </form>
   </main>;
+
+Search.propTypes = {
+  shouldBeHidden: PropTypes.bool.isRequired,
+  meters: PropTypes.number.isRequired,
+  coords: PropTypes.object.isRequired,
+  setMetersAroundMe: PropTypes.func.isRequired,
+  getBusStopsAroundMe: PropTypes.func.isRequired,
+  onProblemsWithGeolocation: PropTypes.func.isRequired,
+  setLoading: PropTypes.func.isRequired,
+};
 
 export default Search;
