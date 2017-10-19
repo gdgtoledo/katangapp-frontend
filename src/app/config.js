@@ -16,8 +16,8 @@
 
 const config = {
   api: {
-    protocol: 'https://',
-    domain: 'backend-katanga.wedeploy.io',
+    protocol: 'http://',
+    domain: 'backend:9001',
     endpoints: {
       busStops: 'main',
     },
