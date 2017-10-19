@@ -1,6 +1,6 @@
 {
   "name": "katangapp-front",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.2",
   "config": {
     "docker": {
       "user": "swcraftersclm",
@@ -15,7 +15,7 @@
     "test-coverage": "./node_modules/.bin/jest --coverage",
     "lint": "./node_modules/.bin/eslint --ext .js --ext .jsx src/ --fix --color",
     "build": "npm install && ./node_modules/.bin/webpack --config ./webpack.config.js",
-    "build-docker": "docker build -t $npm_package_config_docker_user/$npm_package_config_docker_image:$npm_package_version .",
+    "build-docker": "docker build -t $npm_package_config_docker_user/$npm_package_config_docker_image:$npm_package_version . --no-cache",
     "publish-docker": "docker push $npm_package_config_docker_user/$npm_package_config_docker_image:$npm_package_version",
     "start": "./node_modules/.bin/webpack-dev-server --env.dev --config ./webpack.config.js"
   },

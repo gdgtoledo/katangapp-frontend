@@ -16,8 +16,8 @@
 
 const config = {
   api: {
-    protocol: 'https://',
-    domain: 'secret-depths-4660.herokuapp.com',
+    protocol: 'http://',
+    domain: 'backend:9001',
     endpoints: {
       busStops: 'main',
     },
