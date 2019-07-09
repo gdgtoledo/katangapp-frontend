@@ -16,8 +16,8 @@
 
 const config = {
   api: {
-    protocol: 'http://',
-    domain: 'backend:9001',
+    protocol: 'https://',
+    domain: 'backend:9000',
     endpoints: {
       busStops: 'main',
     },
